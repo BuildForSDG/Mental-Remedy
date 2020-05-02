@@ -1,5 +1,6 @@
 A web app for findind innovative ways that can link mental health specialists to your community.
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1c5fc8ef3dac434aa4ea5f6c9a0e83c6)](https://app.codacy.com/gh/BuildForSDG/Mental-Remedy?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Mental-Remedy&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://img.shields.io/badge/Code%20Quality-D-red)](https://img.shields.io/badge/Code%20Quality-D-red)
 
 
