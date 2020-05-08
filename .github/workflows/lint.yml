@@ -27,3 +27,4 @@ jobs:
           # Enable linters
           eslint: true
           prettier: false
+          vercel: false
