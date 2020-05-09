@@ -1,0 +1,44 @@
+:root {
+  /* Background for light theme */
+  --bg: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  --bg-fallback: #4facfe;
+
+  /* Color for light theme */
+  --color: #434343;
+
+  /* font sizes */
+  --small-text: calc(10px + 2vmin);
+  --medium-text: calc(10px + 4vmin);
+  --large-text: calc(10px + 5vmin);
+  --super-large: calc(20px + 9vmin);
+
+  /* Font families */
+  --russo: 'Russo One', sans-serif;
+  --lato: 'Lato', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Common CSS classes */
+.heading {
+  font-size: var(--super-large);
+  font-family: var(--russo);
+  font-weight: 100;
+}
+.sub-heading {
+  font-size: var(--large-text);
+  font-family: var(--russo);
+  font-weight: 100;
+}
+.medium-text {
+  font-size: var(--medium-text);
+  font-family: var(--lato);
+}
+.small-text {
+  font-size: var(--small-text);
+  font-family: var(--lato);
+}
