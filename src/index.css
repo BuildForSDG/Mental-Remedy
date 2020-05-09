@@ -23,21 +23,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 /* Common CSS classes */
 .heading {
   font-size: var(--super-large);
   font-family: var(--russo);
   font-weight: 100;
 }
+
 .sub-heading {
   font-size: var(--large-text);
   font-family: var(--russo);
   font-weight: 100;
 }
+
 .medium-text {
   font-size: var(--medium-text);
   font-family: var(--lato);
 }
+
 .small-text {
   font-size: var(--small-text);
   font-family: var(--lato);
