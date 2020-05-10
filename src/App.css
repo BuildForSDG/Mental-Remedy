@@ -1,6 +1,11 @@
 main {
+  text-align: center;
   margin-left: 4rem;
   color: var(--color);
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .skew {
@@ -26,8 +31,114 @@ main {
 
 input {
   border: 3px solid var(--bg-fallback);
-  height: 40px;
-  width: 300px;
+  height: var(--search-box-h);
+  width: var(--search-box-w);
   border-radius: 50px;
   padding: 0 10px;
+  outline: none;
+}
+
+/*** Navbar Component ***/
+.navbar-wrapper {
+  position: fixed;
+  height: 100vh;
+  width: 4rem;
+
+  --bg: #434343; /* changing the value of a css variable */
+
+  background: var(--bg);
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.nav-active {
+  width: var(--nav-width);
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item {
+  width: 100%;
+  padding: 3px;
+}
+
+.menu {
+  position: fixed;
+  top: 0.2rem;
+  left: 5rem;
+
+  --color: #434343;
+
+  color: var(--color);
+  transition: 0.5s;
+}
+
+.nav-link {
+  height: 3.5rem;
+  margin-left: 0.8rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  --color: #4facfe;
+
+  color: var(--color);
+}
+
+#home {
+  margin-top: 3rem;
+}
+
+.link-des {
+  margin-left: 0.8rem;
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
+
+.menu-active {
+  left: var(--left);
+
+  --color: #4facfe;
+
+  color: var(--color);
+  transform: rotate(360deg);
+}
+
+/* Media Queries */
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  :root {
+    --nav-width: 60% !important;
+    --left: 50% !important;
+    --search-box-h: 3rem !important;
+    --search-box-w: 90% !important;
+  }
+}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+*/
+
+@media (max-width: 480px) {
+  :root {
+    --nav-width: 80% !important;
+    --left: 70% !important;
+    --search-box-h: 3rem !important;
+    --search-box-w: 90% !important;
+  }
 }

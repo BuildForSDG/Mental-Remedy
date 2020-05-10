@@ -15,6 +15,16 @@
   /* Font families */
   --russo: 'Russo One', sans-serif;
   --lato: 'Lato', sans-serif;
+
+  /* Navbar width */
+  --nav-width: 40%;
+
+  /* Menu icon */
+  --left: 30%;
+
+  /* Seach box size */
+  --search-box-h: 4rem;
+  --search-box-w: 70%;
 }
 
 body {
@@ -22,6 +32,31 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/**** Scrollbar ****/
+/* width */
+::-webkit-scrollbar {
+  width: 0.44rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  --bg: #434343;
+  background: var(--bg);
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Common CSS classes */
@@ -45,4 +80,14 @@ body {
 .small-text {
   font-size: var(--small-text);
   font-family: var(--lato);
+}
+
+.blue-text {
+  --color: #4facfe;
+  color: var(--color);
+}
+
+.black-text {
+  --color: #434343;
+  color: var(--color);
 }
