@@ -15,7 +15,7 @@ class NavList extends Component {
         <ul className="nav-list">
             <NavItem linkDes="Home" icon={<FaHome/>} id="home" menuOpen={menuOpen} />
             <NavItem linkDes="About" icon={<IoIosPeople/>} menuOpen={menuOpen} />
-            <NavItem linkDes="Mental illnesses" icon={<GiHealing/>} menuOpen={menuOpen} />
+            <NavItem linkDes="Mental Disorders" icon={<GiHealing/>} menuOpen={menuOpen} />
             <NavItem linkDes="Specialists" icon={<GiDoctorFace/>} menuOpen={menuOpen} />
         </ul>
     );

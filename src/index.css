@@ -21,6 +21,10 @@
 
   /* Menu icon */
   --left: 30%;
+
+  /* Seach box size */
+  --search-box-h: 4rem;
+  --search-box-w: 70%;
 }
 
 body {

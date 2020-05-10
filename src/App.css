@@ -1,9 +1,41 @@
 main {
   text-align: center;
   margin-left: 4rem;
+  color: var(--color);
   height: auto;
-  min-height: 120vh;
+  min-height: 100vh;
   overflow: hidden;
+  z-index: 1;
+}
+
+.skew {
+  margin-top: -200px;
+  padding: 200px 0;
+  transform: skew(0deg, -10deg);
+  background: var(--bg);
+}
+
+.content {
+  text-align: center;
+  transform: skew(0deg, 10deg);
+  padding-top: 100px;
+}
+
+.content h1 {
+  font-size: var(--large-text);
+}
+
+.content p {
+  font-size: var(--small-text);
+}
+
+input {
+  border: 3px solid var(--bg-fallback);
+  height: var(--search-box-h);
+  width: var(--search-box-w);
+  border-radius: 50px;
+  padding: 0 10px;
+  outline: none;
 }
 
 /*** Navbar Component ***/
@@ -14,6 +46,7 @@ main {
   --bg: #434343; /* changing the value of a css variable */
   background: var(--bg);
   transition: 0.5s;
+  z-index: 2;
 }
 
 .nav-active {
@@ -32,12 +65,13 @@ main {
 
 .nav-item {
   width: 100%;
+  padding: 3px;
 }
 
 .menu {
   position: fixed;
   top: 0.2rem;
-  left: 4rem;
+  left: 5rem;
   --color: #434343;
   color: var(--color);
   transition: 0.5s;
@@ -76,7 +110,7 @@ main {
 /* Media Queries */
 
 /*
-  ##Device = Desktops
+##Device = Desktops
 */
 
 @media (min-width: 1281px) {
@@ -111,6 +145,8 @@ main {
   :root {
     --nav-width: 60% !important;
     --left: 50% !important;
+    --search-box-h: 3rem !important;
+    --search-box-w: 90% !important;
   }
 }
 
@@ -122,5 +158,7 @@ main {
   :root {
     --nav-width: 80% !important;
     --left: 70% !important;
+    --search-box-h: 3rem !important;
+    --search-box-w: 90% !important;
   }
 }
