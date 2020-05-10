@@ -1,3 +1,28 @@
 main {
   margin-left: 4rem;
+  color: #fff;
+}
+.skew {
+  margin-top: -200px;
+  padding: 200px 0;
+  transform: skew(0deg, -10deg);
+  background: var(--bg);
+}
+.content {
+  text-align: center;
+  transform: skew(0deg, 10deg);
+  padding-top: 100px;
+}
+.content h1 {
+  font-size: var(--large-text);
+}
+.content p {
+  font-size: var(--small-text);
+}
+input {
+  border: 3px solid var(--bg-fallback);
+  height: 40px;
+  width: 300px;
+  border-radius: 50px;
+  padding: 0px;
 }
