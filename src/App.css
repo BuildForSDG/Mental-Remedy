@@ -74,7 +74,9 @@ input {
   position: fixed;
   top: 0.2rem;
   left: 5rem;
+
   --color: #434343;
+
   color: var(--color);
   transition: 0.5s;
 }
@@ -85,7 +87,9 @@ input {
   text-decoration: none;
   display: flex;
   align-items: center;
+
   --color: #4facfe;
+
   color: var(--color);
 }
 
