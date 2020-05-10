@@ -9,10 +9,55 @@ main {
 }
 
 /*** Navbar Component ***/
-.navbar-wrapper {
+nav {
   position: fixed;
   height: 100vh;
   width: 4rem;
   --bg: #434343; /* changing the value of a css variable */
   background: var(--bg);
+  transition: 0.5s;
+}
+nav:hover {
+  width: 40%;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-item {
+  width: 100%;
+}
+#menu {
+  position: fixed;
+  top: 0.2rem;
+  left: 4rem;
+  --color: #434343;
+  color: var(--color);
+  transition: 0.5s;
+}
+.nav-link {
+  height: 3.5rem;
+  margin-left: 0.8rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  --color: #4facfe;
+  font-size: var(--medium-text);
+  color: var(--color);
+}
+.link-des {
+  margin-left: 0.8rem;
+  display: none;
+}
+nav:hover .link-des {
+  display: block;
+}
+nav:hover #menu {
+  left: 40%;
+  transform: rotate(360deg);
 }

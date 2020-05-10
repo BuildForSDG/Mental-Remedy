@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
+import NavList from './NavList';
 
 class NavBar extends Component {
   render() {
     return (
-        <nav className="navbar-wrapper">
-          <ul className="nav-list">
-            <li className="nav-item"><a href="/" className="nav-link"><span className="link-des"></span></a></li>
-            <li className="nav-item"><a href="/" className="nav-link"><span className="link-des"></span></a></li>
-            <li className="nav-item"><a href="/" className="nav-link"><span className="link-des"></span></a></li>
-            <li className="nav-item"><a href="/" className="nav-link"><span className="link-des"></span></a></li>
-            <li className="nav-item"><a href="/" className="nav-link"><span className="link-des"></span></a></li>
-          </ul>
+      <div className="navbar-wrapper">
+        <nav>
+          <NavList />
         </nav>
+      </div>
     );
   }
 }
