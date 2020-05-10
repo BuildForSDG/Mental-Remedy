@@ -1,6 +1,6 @@
 main {
   margin-left: 4rem;
-  color: #fff;
+  color: var(--color);
 }
 
 .skew {
