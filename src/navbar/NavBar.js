@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineClose } from 'react-icons/ai';
 import NavList from './NavList';
 
 class NavBar extends Component {
@@ -22,7 +23,7 @@ class NavBar extends Component {
       <>
         <nav className={menuOpen ? 'navbar-wrapper nav-active' : 'navbar-wrapper'}>
         <a href="/" className={menuOpen ? 'medium-text blue menu menu-active' : 'medium-text blue menu'} onClick={this.toggleMenu} >
-        <GiHamburgerMenu/>
+        {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
             </a>
           <NavList menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
         </nav>
