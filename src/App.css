@@ -43,7 +43,9 @@ input {
   position: fixed;
   height: 100vh;
   width: 4rem;
+
   --bg: #434343; /* changing the value of a css variable */
+
   background: var(--bg);
   transition: 0.5s;
   z-index: 2;
@@ -102,40 +104,14 @@ input {
 
 .menu-active {
   left: var(--left);
+
   --color: #4facfe;
+
   color: var(--color);
   transform: rotate(360deg);
 }
 
 /* Media Queries */
-
-/*
-##Device = Desktops
-*/
-
-@media (min-width: 1281px) {
-}
-
-/*
-##Device = Laptops, Desktops
-*/
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-}
-
-/*
-##Device = Tablets, Ipads (portrait)
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-/*
-##Device = Tablets, Ipads (landscape)
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-}
 
 /*
 ##Device = Low Resolution Tablets, Mobiles (Landscape)
