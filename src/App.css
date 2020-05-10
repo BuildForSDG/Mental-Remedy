@@ -1,8 +1,3 @@
-.testing-bg {
-  background: var(--bg-fallback);
-  background-image: var(--bg);
-  color: var(--color);
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+main {
+  margin-left: 4rem;
 }
