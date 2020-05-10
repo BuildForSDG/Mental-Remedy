@@ -24,6 +24,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/**** Scrollbar ****/
+/* width */
+::-webkit-scrollbar {
+  width: 0.44rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  --bg: #434343;
+  background: var(--bg);
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 /* Common CSS classes */
 .heading {
   font-size: var(--super-large);
