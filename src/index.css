@@ -15,6 +15,12 @@
   /* Font families */
   --russo: 'Russo One', sans-serif;
   --lato: 'Lato', sans-serif;
+
+  /* Navbar width */
+  --nav-width: 40%;
+
+  /* Menu icon */
+  --left: 30%;
 }
 
 body {
@@ -70,4 +76,14 @@ body {
 .small-text {
   font-size: var(--small-text);
   font-family: var(--lato);
+}
+
+.blue-text {
+  --color: #4facfe;
+  color: var(--color);
+}
+
+.black-text {
+  --color: #434343;
+  color: var(--color);
 }

@@ -1,7 +1,5 @@
 main {
-  background: var(--bg-fallback);
-  background-image: var(--bg);
-  color: var(--color);
+  text-align: center;
   margin-left: 4rem;
   height: auto;
   min-height: 120vh;
@@ -9,7 +7,7 @@ main {
 }
 
 /*** Navbar Component ***/
-nav {
+.navbar-wrapper {
   position: fixed;
   height: 100vh;
   width: 4rem;
@@ -17,9 +15,11 @@ nav {
   background: var(--bg);
   transition: 0.5s;
 }
-nav:hover {
-  width: 40%;
+
+.nav-active {
+  width: var(--nav-width);
 }
+
 .nav-list {
   display: flex;
   list-style: none;
@@ -29,10 +29,12 @@ nav:hover {
   flex-direction: column;
   align-items: center;
 }
+
 .nav-item {
   width: 100%;
 }
-#menu {
+
+.menu {
   position: fixed;
   top: 0.2rem;
   left: 4rem;
@@ -40,6 +42,7 @@ nav:hover {
   color: var(--color);
   transition: 0.5s;
 }
+
 .nav-link {
   height: 3.5rem;
   margin-left: 0.8rem;
@@ -47,17 +50,77 @@ nav:hover {
   display: flex;
   align-items: center;
   --color: #4facfe;
-  font-size: var(--medium-text);
   color: var(--color);
 }
+
+#home {
+  margin-top: 3rem;
+}
+
 .link-des {
   margin-left: 0.8rem;
-  display: none;
-}
-nav:hover .link-des {
   display: block;
 }
-nav:hover #menu {
-  left: 40%;
+
+.d-none {
+  display: none;
+}
+
+.menu-active {
+  left: var(--left);
+  --color: #4facfe;
+  color: var(--color);
   transform: rotate(360deg);
+}
+
+/* Media Queries */
+
+/*
+  ##Device = Desktops
+*/
+
+@media (min-width: 1281px) {
+}
+
+/*
+##Device = Laptops, Desktops
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/*
+##Device = Tablets, Ipads (portrait)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/*
+##Device = Tablets, Ipads (landscape)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
+
+/*
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  :root {
+    --nav-width: 60% !important;
+    --left: 50% !important;
+  }
+}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+*/
+
+@media (max-width: 480px) {
+  :root {
+    --nav-width: 80% !important;
+    --left: 70% !important;
+  }
 }
