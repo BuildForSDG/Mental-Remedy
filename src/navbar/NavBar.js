@@ -25,7 +25,7 @@ class NavBar extends Component {
         <a href="/" className={menuOpen ? 'medium-text blue menu menu-active' : 'medium-text blue menu'} onClick={this.toggleMenu} >
         {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
             </a>
-          <NavList menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
+          <NavList menuOpen={menuOpen} />
         </nav>
       </>
     );
