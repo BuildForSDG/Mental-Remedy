@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import App from '../src/app';
-import NavBar from '../src/navbar/NavBar';
+import App from './app';
+import NavBar from './navbar/NavBar';
 
 describe('app module', () => {
   it('renders without crashing', () => {
