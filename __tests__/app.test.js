@@ -1,14 +1,20 @@
-import App from '../src/index';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { shallow, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import App from '../src/app';
+import NavBar from '../src/navbar/NavBar';
 
 describe('app module', () => {
-  test('it exists', async () => {
-    expect(await App).toBeDefined();
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App/>, div);
+    ReactDOM.unmountComponentAtNode(div);
   });
 
-  test('it returns program name with SDGs', async () => {
-    const result = await App();
-    const sdgPos = (result || '').indexOf('SDG');
-    // eslint-disable-next-line no-magic-numbers
-    expect(sdgPos).toBeGreaterThanOrEqual(1);
+  configure({ adapter: new Adapter() });
+  it('Checks if navbar is rendered', () => {
+    const wrapper = shallow(<App/>);
+    expect(wrapper.contains(<NavBar/>)).toBe(true);
   });
 });

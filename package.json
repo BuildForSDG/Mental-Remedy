@@ -1,12 +1,9 @@
 {
-  "name": "js-starter",
+  "name": "mental-remedy",
   "version": "0.0.1",
   "private": false,
   "description": "A boilerplate for starting js code",
-  "keywords": [
-    "js-starter",
-    "boilerplate"
-  ],
+  "keywords": ["js-starter", "boilerplate"],
   "homepage": "https://github.com/BuildForSDG/js-starter#readme",
   "bugs": {
     "url": "https://github.com/BuildForSDG/js-starter/issues"
@@ -32,9 +29,7 @@
     "test:cover": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "browserslist": [
-    "last 1 Chrome versions"
-  ],
+  "browserslist": ["last 1 Chrome versions"],
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -45,14 +40,20 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "@testing-library/jest-dom": "^5.7.0",
+    "@testing-library/react": "^10.0.4",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.4.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.19.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^25.4.0",
     "parcel-bundler": "^1.12.4",
+    "react-test-renderer": "^16.13.1",
     "remark-lint-list-item-indent": "^2.0.0"
   }
 }
