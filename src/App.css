@@ -114,6 +114,9 @@ input {
   color: var(--color);
   transform: rotate(360deg);
 }
+.about {
+  height: 100vh;
+}
 
 /* Media Queries */
 
