@@ -32,7 +32,11 @@ module.exports = {
     'no-param-reassign': ['error', { props: false }],
     'class-methods-use-this': 0,
     'react/prop-types': 0,
+    'spaced-comment': 0,
+    'object-shorthand': 0,
     'no-ternary': 0,
+    'sort-keys': 0,
+    'no-console': 0,
     'sort-imports': [
       'error',
       {
