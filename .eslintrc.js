@@ -33,6 +33,7 @@ module.exports = {
     'class-methods-use-this': 0,
     "react/prop-types": 0,
     "no-ternary": 0,
+    "sort-keys": 0,
     'sort-imports': [
       'error',
       {

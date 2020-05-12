@@ -8,7 +8,7 @@ class LandingPage extends Component {
           <div className="content">
             <h1 className="heading">Mental Remedy</h1>
             <p className="small-text">Linking mental health specialist to the community.</p>
-            <input className="small-text" type="text" name="box" placeholder="mental disorders, specialists...." />
+            <input className="small-text" type="text" name="box" placeholder="mental disorders, specialists, city/state...." />
           </div>
         </div>
       </main>
