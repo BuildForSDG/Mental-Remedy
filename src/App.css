@@ -118,17 +118,17 @@ input {
 .about {
   margin-top: 3rem;
   align-items: center;
-
   height: 90vh;
 }
 
 .about h1 {
   width: 50%;
-  text-align: center !important;
+  text-align: center;
   margin: 0 auto;
-  color: var(--color) !important;
+  color: var(--color);
   border-bottom: 5px solid var(--bg-fallback);
 }
+
 .about p {
   margin-top: 3rem;
   text-align: center;
