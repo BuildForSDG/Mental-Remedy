@@ -31,13 +31,14 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'no-param-reassign': ['error', { props: false }],
     'class-methods-use-this': 0,
-    "react/prop-types": 0,
-    "no-ternary": 0,
+    'react/prop-types': 0,
+    'no-ternary': 0,
     'sort-imports': [
       'error',
       {
         ignoreCase: true,
         ignoreDeclarationSort: true,
+        code: 80,
         ignoreMemberSort: true,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
       }

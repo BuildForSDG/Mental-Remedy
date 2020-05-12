@@ -114,8 +114,24 @@ input {
   color: var(--color);
   transform: rotate(360deg);
 }
+
 .about {
-  height: 100vh;
+  margin-top: 3rem;
+  align-items: center;
+
+  height: 90vh;
+}
+
+.about h1 {
+  width: 50%;
+  text-align: center !important;
+  margin: 0 auto;
+  color: var(--color) !important;
+  border-bottom: 5px solid var(--bg-fallback);
+}
+.about p {
+  margin-top: 3rem;
+  text-align: center;
 }
 
 /* Media Queries */
