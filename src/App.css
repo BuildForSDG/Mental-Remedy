@@ -118,7 +118,7 @@ input {
 .about {
   margin-top: 3rem;
   align-items: center;
-  height: 90vh;
+  height: 70vh;
 }
 
 .about h1 {
@@ -130,6 +130,24 @@ input {
 }
 
 .about p {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.container {
+  border: 5px solid black;
+  height: 70vh;
+}
+
+.container h1 {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--color);
+  border-bottom: 5px solid var(--bg-fallback);
+}
+
+.container p {
   margin-top: 3rem;
   text-align: center;
 }
