@@ -74,7 +74,9 @@
   color: var(--color);
   transform: rotate(360deg);
 }
+
 /*** LandingPage Component ***/
+
 main {
   text-align: center;
   margin-left: 4rem;
