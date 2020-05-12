@@ -5,6 +5,7 @@ const Context = React.createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
+    // Functions for changing the state value are to be created here
     case 'TOGGLEMENU':
       return {
         ...state,
@@ -20,8 +21,9 @@ class Provider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dispatch: (action) => this.setState((state) => reducer(state, action)),
-      menuOpen: false
+      // All states are to be created here
+      menuOpen: false,
+      dispatch: (action) => this.setState((state) => reducer(state, action))
     };
   }
 
@@ -31,6 +33,8 @@ class Provider extends Component {
   }
 }
 
+// Consumer will be used in the components that require access to these states
 export const { Consumer } = Context;
 
+// Provider accepts a value prop to be passed to consuming components that are its descendants
 export default Provider;
