@@ -22,6 +22,7 @@ class NavList extends Component {
 }
 
 NavList.propTypes = {
+  // Name all the props and set their type
   menuOpen: PropTypes.bool
 };
 

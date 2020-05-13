@@ -12,6 +12,7 @@ class NavBar extends Component {
 
   toggleMenu(event, menuOpen, dispatch) {
     event.preventDefault();
+    // Change the value of a state in the context API
     dispatch({ type: 'TOGGLEMENU', payload: !menuOpen });
   }
 
@@ -19,6 +20,7 @@ class NavBar extends Component {
     return (
       <Consumer>
         {(value) => {
+          // Get states from context API
           const { menuOpen, dispatch } = value;
           return (
             <nav className={menuOpen ? 'navbar-wrapper nav-active' : 'navbar-wrapper'}>
