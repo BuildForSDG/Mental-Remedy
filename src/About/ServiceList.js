@@ -7,10 +7,9 @@ export default class ServiceList extends Component {
   }
 
   render() {
-    const { services } = this.props;
     return (
       <ul className="services">
-        {services.map((service) => (
+        {this.props.services.map((service) => (
           <Service service={service} key={service.id} />
         ))}
       </ul>

@@ -188,6 +188,7 @@ input {
     --search-box-h: 3rem !important;
     --search-box-w: 90% !important;
   }
+
   .services {
     margin-top: 3rem;
     list-style: none;
@@ -209,6 +210,7 @@ input {
     --search-box-h: 3rem !important;
     --search-box-w: 90% !important;
   }
+
   .services {
     margin-top: 3rem;
     list-style: none;

@@ -35,7 +35,6 @@ class Provider extends Component {
       //fetch data from backend
       const ser = await services;
       ser.map((key) => this.setState({ services: [...this.state.services, key] }));
-      console.log(this.state.services);
     } catch (error) {
       console.error(error);
     }
