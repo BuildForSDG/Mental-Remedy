@@ -9,7 +9,7 @@ export default class ServiceList extends Component {
   render() {
     const { services } = this.props;
     return (
-      <ul>
+      <ul className="services">
         {services.map((service) => (
           <Service service={service} key={service.id} />
         ))}

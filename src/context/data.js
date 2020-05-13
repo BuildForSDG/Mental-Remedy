@@ -1,9 +1,12 @@
 import img1 from './images/awareness.svg';
+import img2 from './images/specialist.svg';
+import img3 from './images/forum.svg';
+import img4 from './images/appointment.svg';
 
 const services = [
   {
     id: 1,
-    title: 'create awarness',
+    title: 'Create awarness',
     description:
       'Educate the community on mental health and change their view and how they approach this topic of mental health.',
     image: img1
@@ -13,20 +16,20 @@ const services = [
     title: 'Specialist plattform',
     description:
       'A platform where specialist can list their practices hence patients can view their profile and book appointments online',
-    image: './images/specialist.svg'
+    image: img2
   },
   {
     id: 3,
     title: 'Forum',
     description:
       'A forum where individuals can share posts/questions , get answers from specialist and view other peoples questions and answers.',
-    image: './images/awareness.svg'
+    image: img3
   },
   {
     id: 4,
     title: 'Book appointments',
     description: 'Patients can book appointments online after having access to diffrent specialist profiles.',
-    image: './images/awareness.svg'
+    image: img4
   }
 ];
 

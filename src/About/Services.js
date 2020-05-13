@@ -10,7 +10,8 @@ export default class Services extends Component {
           const { getServices, services } = value;
           return (
             <div className="container">
-              <h1 className="sub-heading">What we Do</h1>
+              <h1 className="heading">What we Do</h1>
+              <hr />
               <ServiceList services={services} getServices={() => getServices()} />
             </div>
           );

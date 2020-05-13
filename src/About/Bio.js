@@ -12,7 +12,8 @@ export default class Bio extends Component {
   render() {
     return (
       <div className="about">
-        <h1 className="sub-heading">About Us</h1>
+        <h1 className="heading">About Us</h1>
+        <hr />
         <p className="medium-text">{this.state.info}</p>
       </div>
     );
