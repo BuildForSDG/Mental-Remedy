@@ -22,6 +22,8 @@ class Provider extends Component {
     this.state = {
       // All states are to be created here
       menuOpen: false,
+      aboutInfo:
+        'Due to the Stigma and scrutiny associated with mental illnesses, individuals who notice change in behavioural attitude may desist from seeking professional help cause of this stigma. Our main goal is to educate and establish effective means of communication between specialists and the community.',
       services: [],
       getServices: () => this.getServices(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
