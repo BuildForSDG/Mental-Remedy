@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import services from './data';
 
 const Context = React.createContext();
+let isMounted = true;
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -36,10 +37,19 @@ class Provider extends Component {
       this.setState({ services: [] });
       //fetch data from backend
       const ser = await services;
-      ser.map((key) => this.setState({ services: [...this.state.services, key] }));
+      ser.map((key) => (
+        isMounted ? this.setState({ services: [...this.state.services, key] }) : null));
     } catch (error) {
       console.error(error);
     }
+  }
+
+  componentDidMount() {
+    isMounted = true;
+  }
+
+  componentWillUnmount() {
+    isMounted = false;
   }
 
   render() {
