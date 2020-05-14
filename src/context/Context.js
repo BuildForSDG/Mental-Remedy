@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import services from './data';
 
 const Context = React.createContext();
+
+// This global variable is used to identify whether component is mounted or unmouted
 let isMounted = true;
 
 const reducer = (state, action) => {
