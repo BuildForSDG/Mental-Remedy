@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Service from './Service';
 
-export default class ServiceList extends Component {
+class ServiceList extends Component {
   componentDidMount() {
     this.props.getServices();
   }
@@ -16,3 +17,10 @@ export default class ServiceList extends Component {
     );
   }
 }
+
+ServiceList.propTypes = {
+  // Name all the props and set their type
+  services: PropTypes.array.isRequired
+};
+
+export default ServiceList;
