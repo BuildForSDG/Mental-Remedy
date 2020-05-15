@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Service extends Component {
   render() {
@@ -12,3 +13,8 @@ export default class Service extends Component {
     );
   }
 }
+
+Service.propTypes = {
+  // Name all the props and set their type
+  service: PropTypes.object.isRequired
+};

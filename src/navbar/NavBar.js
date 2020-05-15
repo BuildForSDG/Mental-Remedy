@@ -2,32 +2,36 @@ import React, { Component } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import NavList from './NavList';
+import { Consumer } from '../context/Context';
 
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      menuOpen: false
-    };
     this.toggleMenu = this.toggleMenu.bind(this);
   }
 
-  toggleMenu(event) {
+  toggleMenu(event, menuOpen, dispatch) {
     event.preventDefault();
-    this.setState({ menuOpen: !this.state.menuOpen });
+    // Change the value of a state in the context API
+    dispatch({ type: 'TOGGLEMENU', payload: !menuOpen });
   }
 
   render() {
-    const { menuOpen } = this.state;
     return (
-      <>
-        <nav className={menuOpen ? 'navbar-wrapper nav-active' : 'navbar-wrapper'}>
-        <a href="/" className={menuOpen ? 'medium-text blue menu menu-active' : 'medium-text blue menu'} onClick={this.toggleMenu} >
-        {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
-            </a>
-          <NavList menuOpen={menuOpen} />
-        </nav>
-      </>
+      <Consumer>
+        {(value) => {
+          // Get states from context API
+          const { menuOpen, dispatch } = value;
+          return (
+            <nav className={menuOpen ? 'navbar-wrapper nav-active' : 'navbar-wrapper'}>
+              <a href="/" className={menuOpen ? 'medium-text blue menu menu-active' : 'medium-text blue menu'} onClick={(event) => this.toggleMenu(event, menuOpen, dispatch)} >
+                {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
+              </a>
+              <NavList menuOpen={menuOpen} />
+            </nav>
+          );
+        }}
+      </Consumer>
     );
   }
 }

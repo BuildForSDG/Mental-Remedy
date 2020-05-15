@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-/* GiHealthPotion */
+import PropTypes from 'prop-types';
 import {
   GiHealing, GiDoctorFace
 } from 'react-icons/gi';
@@ -21,5 +20,10 @@ class NavList extends Component {
     );
   }
 }
+
+NavList.propTypes = {
+  // Name all the props and set their type
+  menuOpen: PropTypes.bool
+};
 
 export default NavList;
