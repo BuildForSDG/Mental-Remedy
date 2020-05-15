@@ -3,6 +3,9 @@ import services from './data';
 
 const Context = React.createContext();
 
+// This global variable is used to identify whether component is mounted or unmouted
+let isMounted = true;
+
 const reducer = (state, action) => {
   switch (action.type) {
     // Functions for changing the state value are to be created here
@@ -36,10 +39,19 @@ class Provider extends Component {
       this.setState({ services: [] });
       //fetch data from backend
       const ser = await services;
-      ser.map((key) => this.setState({ services: [...this.state.services, key] }));
+      ser.map((key) => (
+        isMounted ? this.setState({ services: [...this.state.services, key] }) : null));
     } catch (error) {
       console.error(error);
     }
+  }
+
+  componentDidMount() {
+    isMounted = true;
+  }
+
+  componentWillUnmount() {
+    isMounted = false;
   }
 
   render() {

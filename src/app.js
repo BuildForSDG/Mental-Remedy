@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <Provider>
-        <NavBar/>
+        <NavBar />
         <LandingPage />
       </Provider>
     );
