@@ -75,6 +75,15 @@
   transform: rotate(360deg);
 }
 
+.dd-icon {
+  margin: auto;
+  margin-left: 0.3rem;
+}
+
+.drop-down {
+  display: block;
+}
+
 /*** LandingPage Component ***/
 
 main {

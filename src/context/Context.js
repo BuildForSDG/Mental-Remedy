@@ -25,6 +25,8 @@ class Provider extends Component {
     this.state = {
       // All states are to be created here
       menuOpen: false,
+      dropDownOpen: false,
+      user: { id: 1, email: '' },
       aboutInfo:
         'Due to the Stigma and scrutiny associated with mental illnesses, individuals who notice change in behavioural attitude may desist from seeking professional help cause of this stigma. Our main goal is to educate and establish effective means of communication between specialists and the community.',
       services: [],

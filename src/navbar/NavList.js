@@ -5,17 +5,24 @@ import {
 } from 'react-icons/gi';
 import { FaHome } from 'react-icons/fa';
 import { IoIosPeople } from 'react-icons/io';
+import { FiLogIn } from 'react-icons/fi';
 import NavItem from './NavItem';
+import DropDown from './DropDown';
 
 class NavList extends Component {
   render() {
-    const { menuOpen } = this.props;
+    const { menuOpen, user, dropDownOpen } = this.props;
     return (
         <ul className="nav-list">
             <NavItem linkDes="Home" icon={<FaHome/>} id="home" menuOpen={menuOpen} />
             <NavItem linkDes="About" icon={<IoIosPeople/>} menuOpen={menuOpen} />
             <NavItem linkDes="Mental Disorders" icon={<GiHealing/>} menuOpen={menuOpen} />
             <NavItem linkDes="Specialists" icon={<GiDoctorFace/>} menuOpen={menuOpen} />
+            {user.id ? (
+              <DropDown dropDownOpen={dropDownOpen} menuOpen={menuOpen} />
+            ) : (
+              <NavItem linkDes="Login" icon={<FiLogIn/>} menuOpen={menuOpen} />
+            )}
         </ul>
     );
   }
