@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { services } from './data';
+import { services, mentalDisorders } from './data';
 
 const Context = React.createContext();
 
@@ -32,10 +32,12 @@ class Provider extends Component {
       menuOpen: false,
       dropDownOpen: false,
       user: { id: 1, email: '' },
+      mentalDisorders: [],
       aboutInfo:
         'Due to the Stigma and scrutiny associated with mental illnesses, individuals who notice change in behavioural attitude may desist from seeking professional help cause of this stigma. Our main goal is to educate and establish effective means of communication between specialists and the community.',
       services: [],
       getServices: () => this.getServices(),
+      getMdlist: () => this.getMdlist(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
     this.getServices = this.getServices.bind(this);
@@ -48,6 +50,19 @@ class Provider extends Component {
       const ser = await services;
       ser.map((key) => (
         isMounted ? this.setState({ services: [...this.state.services, key] }) : null));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async getMdlist() {
+    try {
+      this.setState({ mentalDisorders: [] });
+      //fetch data from backend
+      const mdlist = await mentalDisorders;
+      mdlist.map((key) => (
+        isMounted ? this.setState({ mentalDisorders: [...this.state.mentalDisorders, key] }) : null
+      ));
     } catch (error) {
       console.error(error);
     }

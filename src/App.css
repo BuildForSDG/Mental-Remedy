@@ -53,6 +53,12 @@
   color: var(--color);
 }
 
+.nav-link:hover {
+  --color: rgba(255, 255, 0, 0.5);
+
+  color: var(--color);
+}
+
 #home {
   margin-top: 3rem;
 }
@@ -73,6 +79,12 @@
 
   color: var(--color);
   transform: rotate(360deg);
+}
+
+.menu-active:hover {
+  --color: rgba(255, 255, 0, 0.5);
+
+  color: var(--color);
 }
 
 .dd-icon {
@@ -201,6 +213,66 @@ input {
 .service:hover::before {
   right: 0;
   top: 0;
+}
+
+/*** Mental Disorders preview list ***/
+.md-preview {
+  height: auto;
+
+  --bg: #fff;
+
+  background: var(--bg);
+  width: 100%;
+}
+
+.md-list-prev {
+  list-style: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.md-item-prev {
+  border: 1px solid transparent;
+  background: var(--bg-fallback);
+  background-image: var(--bg);
+  color: var(--color);
+  width: 100%;
+  display: grid;
+  text-align: left;
+  height: auto;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.short-des {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 2rem;
+}
+
+.md-item-prev:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.md-item-prev:hover button {
+  color: var(--bg-fallback);
+}
+
+.md-item-prev button {
+  border: none;
+  outline: none;
+
+  --color: #fff;
+
+  color: var(--color);
+  text-align: right;
+  background: transparent;
+  cursor: pointer;
 }
 
 /* Media Queries */
