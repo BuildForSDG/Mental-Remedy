@@ -101,8 +101,15 @@ body {
 
 .large-btn {
   outline: none;
-  border: 1px solid #fff;
-  background: var(--bg-fallback);
+  border: 1px solid var(--bg-fallback);
+  box-shadow: 0px 1px 10px 1px var(--bg-fallback);
+
+  --bg: #fff;
+
+  --color: #4facfe;
+
+  color: var(--color);
+  background: var(--bg);
   padding: 1rem;
   margin: 1rem;
   cursor: pointer;
@@ -110,6 +117,17 @@ body {
 }
 
 .large-btn:hover {
-  --bg-fallback: rgba(0, 0, 0, 0.5);
-  background: var(--bg-fallback);
+  --bg: #4facfe;
+
+  --color: #fff;
+
+  border: 1px solid var(--color);
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.p-1 {
+  margin: 1rem;
 }

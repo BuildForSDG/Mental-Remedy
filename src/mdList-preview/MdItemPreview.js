@@ -5,7 +5,7 @@ export default class MdItemPreview extends Component {
     const { mentalDisorder, mdList } = this.props;
     return (
         <>
-            {mdList.indexOf(mentalDisorder) < 4 ? (
+            {mdList.indexOf(mentalDisorder) < 6 ? (
                 <li className="md-item-prev">
                     <div className="title">
                       <h5 className="small-heading">{mentalDisorder.title}</h5>
