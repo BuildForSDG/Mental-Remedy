@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import MdItemPreview from './MdItemPreview';
 import { mentalDisorders } from '../context/data';
 
-export default class MdListPreview extends Component {
+class MdListPreview extends Component {
   componentDidMount() {
     this.props.getMdlist();
   }
@@ -18,3 +19,9 @@ export default class MdListPreview extends Component {
     );
   }
 }
+
+MdListPreview.propTypes = {
+  mdList: PropTypes.array
+};
+
+export default MdListPreview;

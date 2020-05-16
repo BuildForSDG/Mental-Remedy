@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class MdItemPreview extends Component {
+class MdItemPreview extends Component {
   render() {
     const { mentalDisorder, mdList } = this.props;
     return (
@@ -19,3 +20,10 @@ export default class MdItemPreview extends Component {
     );
   }
 }
+
+MdItemPreview.propTypes = {
+  mentalDisorder: PropTypes.object,
+  mdList: PropTypes.array
+};
+
+export default MdItemPreview;
