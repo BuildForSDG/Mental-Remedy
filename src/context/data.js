@@ -124,6 +124,96 @@ const mentalDisorders = [
         id: 207,
         type: 'Common',
         description: 'fatigue or pressure of speech'
+      },
+      {
+        id: 104,
+        title: 'Anxiety disorder',
+        description:
+          "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
+        diagnosis: 'Usually self-diagnosable',
+        symptoms: [
+          {
+            id: 601,
+            type: 'Cognitive',
+            description: 'lack of concentration, racing thoughts, or unwanted thoughts'
+          },
+          {
+            id: 602,
+            type: 'Behavioural',
+            description: 'hypervigilance, irritability, or restlessness'
+          },
+          {
+            id: 603,
+            type: 'Whole Body',
+            description: 'fatigue or sweating'
+          },
+          {
+            id: 604,
+            type: 'Common',
+            description: 'anxiety, excessive worry, angor animi, fear, insomnia, nausea, palpitations, or trembling'
+          }
+        ],
+        treatment: 'Treatment includes counselling or medication, including antidepressants.'
+      },
+      {
+        id: 105,
+        title: 'Anxiety disorder',
+        description:
+          "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
+        diagnosis: 'Usually self-diagnosable',
+        symptoms: [
+          {
+            id: 605,
+            type: 'Cognitive',
+            description: 'lack of concentration, racing thoughts, or unwanted thoughts'
+          },
+          {
+            id: 606,
+            type: 'Behavioural',
+            description: 'hypervigilance, irritability, or restlessness'
+          },
+          {
+            id: 607,
+            type: 'Whole Body',
+            description: 'fatigue or sweating'
+          },
+          {
+            id: 608,
+            type: 'Common',
+            description: 'anxiety, excessive worry, angor animi, fear, insomnia, nausea, palpitations, or trembling'
+          }
+        ],
+        treatment: 'Treatment includes counselling or medication, including antidepressants.'
+      },
+      {
+        id: 106,
+        title: 'Anxiety disorder',
+        description:
+          "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
+        diagnosis: 'Usually self-diagnosable',
+        symptoms: [
+          {
+            id: 609,
+            type: 'Cognitive',
+            description: 'lack of concentration, racing thoughts, or unwanted thoughts'
+          },
+          {
+            id: 610,
+            type: 'Behavioural',
+            description: 'hypervigilance, irritability, or restlessness'
+          },
+          {
+            id: 611,
+            type: 'Whole Body',
+            description: 'fatigue or sweating'
+          },
+          {
+            id: 612,
+            type: 'Common',
+            description: 'anxiety, excessive worry, angor animi, fear, insomnia, nausea, palpitations, or trembling'
+          }
+        ],
+        treatment: 'Treatment includes counselling or medication, including antidepressants.'
       }
     ],
     treatment: 'Treatment is usually lifelong and often involves a combination of medications and psychotherapy.'
@@ -132,7 +222,7 @@ const mentalDisorders = [
 
 const specialists = [
   {
-    id: 501,
+    id: 506,
     profile_pic: male,
     name: 'Dr. Irungu Joseph',
     location: '23553, Ralph Bunche Rd Nelson Awori Centre 3RD Floor Room B7, Nairobi',
