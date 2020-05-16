@@ -32,7 +32,10 @@ class NavList extends Component {
 
 NavList.propTypes = {
   // Name all the props and set their type
-  menuOpen: PropTypes.bool
+  menuOpen: PropTypes.bool,
+  user: PropTypes.object,
+  dropDownOpen: PropTypes.bool,
+  dispatch: PropTypes.func
 };
 
 export default NavList;
