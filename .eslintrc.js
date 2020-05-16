@@ -33,6 +33,7 @@ module.exports = {
     'class-methods-use-this': 0,
     'react/prop-types': 0,
     'spaced-comment': 0,
+    'max-lines': 0,
     'object-shorthand': 0,
     'no-ternary': 0,
     'sort-keys': 0,
