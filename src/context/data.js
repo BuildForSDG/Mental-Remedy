@@ -2,13 +2,15 @@ import img1 from './images/awareness.svg';
 import img2 from './images/specialist.svg';
 import img3 from './images/forum.svg';
 import img4 from './images/appointment.svg';
-
+import male from './images/male.svg';
+import female from './images/female.svg';
 
 const mentalDisorders = [
   {
     id: 101,
     title: 'Anxiety disorder',
-    description: 'A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one\'s daily activities.',
+    description:
+      "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
     diagnosis: 'Usually self-diagnosable',
     symptoms: [
       {
@@ -37,12 +39,14 @@ const mentalDisorders = [
   {
     id: 102,
     title: 'Clinical depression',
-    description: 'Also known as major depression, a mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life. The persistent feeling of sadness or loss of interest that characterises major depression can lead to a range of behavioural and physical symptoms. Depression can also be associated with thoughts of suicide. Depression can also be associated with thoughts of suicide. The good news is that with the right treatment and support, someone with depression can make a full recovery.',
+    description:
+      'Also known as major depression, a mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life. The persistent feeling of sadness or loss of interest that characterises major depression can lead to a range of behavioural and physical symptoms. Depression can also be associated with thoughts of suicide. Depression can also be associated with thoughts of suicide. The good news is that with the right treatment and support, someone with depression can make a full recovery.',
     symptoms: [
       {
         id: 301,
         type: 'Mood',
-        description: 'anxiety, apathy, general discontent, guilt, hopelessness, loss of interest, loss of interest or pleasure in activities, mood swings, or sadness'
+        description:
+          'anxiety, apathy, general discontent, guilt, hopelessness, loss of interest, loss of interest or pleasure in activities, mood swings, or sadness'
       },
       {
         id: 302,
@@ -86,12 +90,14 @@ const mentalDisorders = [
       {
         id: 201,
         type: 'Mood',
-        description: 'mood swings, sadness, elevated mood, anger, anxiety, apathy, apprehension, euphoria, general discontent, guilt, hopelessness, loss of interest, or loss of interest or pleasure in activities'
+        description:
+          'mood swings, sadness, elevated mood, anger, anxiety, apathy, apprehension, euphoria, general discontent, guilt, hopelessness, loss of interest, or loss of interest or pleasure in activities'
       },
       {
         id: 202,
         type: 'Cognitive',
-        description: 'unwanted thoughts, delusion, lack of concentration, racing thoughts, slowness in activity, or false belief of superiority'
+        description:
+          'unwanted thoughts, delusion, lack of concentration, racing thoughts, slowness in activity, or false belief of superiority'
       },
       {
         id: 203,
@@ -101,7 +107,8 @@ const mentalDisorders = [
       {
         id: 204,
         type: 'Behavioural',
-        description: 'irritability, risk-taking behaviours, disorganised behaviour, aggression, agitation, crying, excess desire for sex, hyperactivity, impulsivity, restlessness, or self-harm'
+        description:
+          'irritability, risk-taking behaviours, disorganised behaviour, aggression, agitation, crying, excess desire for sex, hyperactivity, impulsivity, restlessness, or self-harm'
       },
       {
         id: 205,
@@ -120,6 +127,609 @@ const mentalDisorders = [
       }
     ],
     treatment: 'Treatment is usually lifelong and often involves a combination of medications and psychotherapy.'
+  }
+];
+
+const specialists = [
+  {
+    id: 501,
+    profile_pic: male,
+    name: 'Dr. Irungu Joseph',
+    location: '23553, Ralph Bunche Rd Nelson Awori Centre 3RD Floor Room B7, Nairobi',
+    gender: 'Male',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 511,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 512,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 513,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 514,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 515,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 516,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 502,
+    profile_pic: male,
+    name: 'Dr. Maleek cherry',
+    location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
+    gender: 'male',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 517,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 518,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 519,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 520,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 521,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 523,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 503,
+    profile_pic: male,
+    name: 'Dr. Wesley pipes',
+    location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
+    gender: 'female',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 524,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 518,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 525,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 526,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 527,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 528,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 504,
+    profile_pic: male,
+    name: 'Dr. John francis',
+    location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
+    gender: 'male',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 529,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 530,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 531,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 534,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 535,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 536,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 505,
+    profile_pic: female,
+    name: 'Dr. jane hyacinth',
+    location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
+    gender: 'female',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 537,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 538,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 539,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 540,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 541,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 542,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 506,
+    profile_pic: male,
+    name: 'Dr.Jon Jones',
+    location: 'Parklands/Highridge Third Parklands Ave ',
+    gender: 'male',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 543,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 545,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 546,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 547,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 548,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 549,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 507,
+    profile_pic: female,
+    name: 'Dr. marylin cornrow',
+    location: '25th Ave luthuli rd',
+    gender: 'female',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 550,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 551,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 552,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 553,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 554,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 555,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 508,
+    profile_pic: male,
+    name: 'Dr. Mike Lyson',
+    location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
+    gender: 'male',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 556,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 557,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 558,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 559,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 560,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 561,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 509,
+    profile_pic: female,
+    name: 'Dr. Harley Bean',
+    location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
+    gender: 'female',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 562,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 563,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 564,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 565,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 566,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 567,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
+  },
+  {
+    id: 510,
+    profile_pic: male,
+    name: 'Dr. Richard Broke',
+    location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
+    gender: 'male',
+    languages: 'English, Kiswahili',
+    liscence_number: 12345,
+    hospital_associations: 'Kenyatta Hospital',
+    education: [
+      {
+        id: 568,
+        type: 'education',
+        facility: 'University of Nairobi'
+      },
+      {
+        id: 569,
+        type: 'training',
+        facility: 'Mathare Hospital'
+      }
+    ],
+    reviews: [
+      {
+        id: 570,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 571,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 572,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      },
+      {
+        id: 573,
+        email: 'ali@doc.com',
+        intials: 'Ali',
+        initial_status: 'hidden',
+        review:
+          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        date_posted: Date.now()
+      }
+    ]
   }
 ];
 
@@ -153,4 +763,4 @@ const services = [
   }
 ];
 
-export { services, mentalDisorders };
+export { services, mentalDisorders, specialists };
