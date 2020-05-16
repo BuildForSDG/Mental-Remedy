@@ -38,6 +38,7 @@ module.exports = {
     'no-ternary': 0,
     'sort-keys': 0,
     'no-console': 0,
+    'multiline-ternary': 0,
     'sort-imports': [
       'error',
       {

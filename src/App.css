@@ -75,6 +75,32 @@
   transform: rotate(360deg);
 }
 
+.dd-icon {
+  position: relative;
+  margin: auto;
+  margin-left: 0.3rem;
+  transition: 0.5s;
+}
+
+.drop-down {
+  display: none;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+
+.dd-active {
+  display: flex;
+}
+
+.dd-link {
+  text-decoration: none;
+  padding: 5px;
+
+  --color: #4facfe;
+
+  color: var(--color);
+}
+
 /*** LandingPage Component ***/
 
 main {
@@ -187,6 +213,10 @@ input {
   .services {
     grid-template-columns: auto auto;
     grid-gap: 20px;
+  }
+
+  .nav-active {
+    overflow: scroll;
   }
 
   :root {
