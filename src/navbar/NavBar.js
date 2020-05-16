@@ -14,6 +14,7 @@ class NavBar extends Component {
     event.preventDefault();
     // Change the value of a state in the context API
     dispatch({ type: 'TOGGLEMENU', payload: !menuOpen });
+    dispatch({ type: 'TOGGLEDROPDOWN', payload: false });
   }
 
   render() {
@@ -32,7 +33,8 @@ class NavBar extends Component {
                 onClick={(event) => this.toggleMenu(event, menuOpen, dispatch)} >
                 {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
               </a>
-              <NavList menuOpen={menuOpen} user={user} dropDownOpen={dropDownOpen} />
+              <NavList menuOpen={menuOpen} user={user}
+              dropDownOpen={dropDownOpen} dispatch={dispatch} />
             </nav>
           );
         }}

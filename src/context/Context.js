@@ -14,6 +14,11 @@ const reducer = (state, action) => {
         ...state,
         menuOpen: action.payload
       };
+    case 'TOGGLEDROPDOWN':
+      return {
+        ...state,
+        dropDownOpen: action.payload
+      };
     default:
       return state;
   }

@@ -11,7 +11,9 @@ import DropDown from './DropDown';
 
 class NavList extends Component {
   render() {
-    const { menuOpen, user, dropDownOpen } = this.props;
+    const {
+      menuOpen, user, dropDownOpen, dispatch
+    } = this.props;
     return (
         <ul className="nav-list">
             <NavItem linkDes="Home" icon={<FaHome/>} id="home" menuOpen={menuOpen} />
@@ -19,7 +21,7 @@ class NavList extends Component {
             <NavItem linkDes="Mental Disorders" icon={<GiHealing/>} menuOpen={menuOpen} />
             <NavItem linkDes="Specialists" icon={<GiDoctorFace/>} menuOpen={menuOpen} />
             {user.id ? (
-              <DropDown dropDownOpen={dropDownOpen} menuOpen={menuOpen} />
+              <DropDown dropDownOpen={dropDownOpen} menuOpen={menuOpen} dispatch={dispatch} />
             ) : (
               <NavItem linkDes="Login" icon={<FiLogIn/>} menuOpen={menuOpen} />
             )}
