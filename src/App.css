@@ -177,6 +177,53 @@ input {
   top: 0;
 }
 
+/* specialist */
+.upper-container {
+  height: 150px;
+  background: var(--bg-fallback);
+}
+.profile-card {
+  background-color: #fff;
+  width: 15rem;
+  height: 35rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px 1px var(--bg-fallback);
+}
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin: 0 auto 10px;
+}
+
+.location {
+  color: var(--bg-fallback);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+.btns button {
+  border: 1px solid var(--bg-fallback);
+
+  padding: 5px 15px;
+  font-style: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+.btn1 {
+  color: var(--bg-fallback);
+  background: white;
+}
+
+.btn2 {
+  color: #fff;
+  background: var(--bg-fallback);
+}
 /* Media Queries */
 
 /*
