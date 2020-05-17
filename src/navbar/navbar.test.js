@@ -1,6 +1,7 @@
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { FiLogIn } from 'react-icons/fi';
 import NavBar from './NavBar';
 import NavList from './NavList';
 import NavItem from './NavItem';
@@ -38,7 +39,7 @@ describe('Navbar Component', () => {
   });
 });
 
-describe('Navlist Component', () => {
+describe('NavList Component', () => {
   it('showes dropdown menu only when user is logged in', () => {
     // confirm dropdown is hidden user isn't logged in
     let wrapper = mount(<NavList menuOpen={false} dropDownMenu={false}
@@ -48,5 +49,18 @@ describe('Navlist Component', () => {
     wrapper = mount(<NavList menuOpen={false} dropDownMenu={false}
       dispatch={() => {} } user={{ id: 1 }} />);
     expect(wrapper.find('DropDown').length).toEqual(1);
+  });
+});
+
+describe('NavItem Component', () => {
+  it('toggles classes for link description when menu is open/closed', () => {
+    // confirm default class
+    let wrapper = mount(<NavItem menuOpen={false} id=""
+      linkDes="testing" icon={<FiLogIn/>} />);
+    expect(wrapper.find('[data-link-des]').hasClass('d-none')).toBe(true);
+    // confirm it's class is toggled
+    wrapper = mount(<NavItem menuOpen={true} id=""
+    linkDes="testing" icon={<FiLogIn/>} />);
+    expect(wrapper.find('[data-link-des]').hasClass('link-des')).toBe(true);
   });
 });

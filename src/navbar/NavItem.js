@@ -19,7 +19,7 @@ class NavItem extends Component {
         <li className="nav-item">
             <a href="/" className="nav-link medium-text" id={id} onClick={this.handleClick} >
                 {icon}
-                <span className={menuOpen ? 'link-des' : 'd-none'}>{linkDes}</span>
+                <span data-link-des className={menuOpen ? 'link-des' : 'd-none'}>{linkDes}</span>
             </a>
         </li>
     );
