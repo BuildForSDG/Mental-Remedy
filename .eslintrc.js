@@ -42,6 +42,7 @@ module.exports = {
     'sort-keys': 0,
     'max-len': 0,
     'no-console': 0,
+    'multiline-ternary': 0,
     'sort-imports': [
       'error',
       {

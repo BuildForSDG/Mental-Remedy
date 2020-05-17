@@ -12,12 +12,14 @@ class NavItem extends Component {
   }
 
   render() {
-    const { menuOpen } = this.props;
+    const {
+      menuOpen, id, icon, linkDes
+    } = this.props;
     return (
         <li className="nav-item">
-            <a href="/" className="nav-link medium-text" id={this.props.id} onClick={this.handleClick} >
-                {this.props.icon}
-                <span className={menuOpen ? 'link-des' : 'd-none'}>{this.props.linkDes}</span>
+            <a href="/" className="nav-link medium-text" id={id} onClick={this.handleClick} >
+                {icon}
+                <span className={menuOpen ? 'link-des' : 'd-none'}>{linkDes}</span>
             </a>
         </li>
     );
