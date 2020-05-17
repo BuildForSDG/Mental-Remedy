@@ -34,7 +34,7 @@ NavList.propTypes = {
   // Name all the props and set their type
   menuOpen: PropTypes.bool.isRequired,
   user: PropTypes.object.isRequired,
-  dropDownOpen: PropTypes.bool.isRequired,
+  dropDownOpen: PropTypes.bool,
   dispatch: PropTypes.func.isRequired
 };
 

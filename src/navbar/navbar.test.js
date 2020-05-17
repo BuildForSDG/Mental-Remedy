@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { mount } from 'enzyme';
+import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { FiLogIn } from 'react-icons/fi';
 import NavBar from './NavBar';
@@ -41,13 +41,15 @@ describe('Navbar Component', () => {
 
 describe('NavList Component', () => {
   it('showes dropdown menu only when user is logged in', () => {
+    const dropDownOpen = false;
     // confirm dropdown is hidden user isn't logged in
-    let wrapper = mount(<NavList menuOpen={false} dropDownMenu={false}
-      dispatch={() => {} } user={{ }} />);
+    const wrapper = shallow(<NavList menuOpen={false} dropDownOpen={dropDownOpen}
+      dispatch={() => {} } user={{ }}/>);
     expect(wrapper.find('DropDown').length).toEqual(0);
     // Confirm dropdown exists when user is logged in
-    wrapper = mount(<NavList menuOpen={false} dropDownMenu={false}
-      dispatch={() => {} } user={{ id: 1 }} />);
+    wrapper.setProps({
+      menuOpen: false, dispatch: () => {}, user: { id: 1 }, dropDownOpen: false
+    });
     expect(wrapper.find('DropDown').length).toEqual(1);
   });
 });
@@ -55,12 +57,13 @@ describe('NavList Component', () => {
 describe('NavItem Component', () => {
   it('toggles classes for link description when menu is open/closed', () => {
     // confirm default class
-    let wrapper = mount(<NavItem menuOpen={false} id=""
+    const wrapper = mount(<NavItem menuOpen={false} id=""
       linkDes="testing" icon={<FiLogIn/>} />);
     expect(wrapper.find('[data-link-des]').hasClass('d-none')).toBe(true);
     // confirm it's class is toggled
-    wrapper = mount(<NavItem menuOpen={true} id=""
-    linkDes="testing" icon={<FiLogIn/>} />);
+    wrapper.setProps({
+      menuOpen: true, icon: <FiLogIn/>, linkDes: 'testing'
+    });
     expect(wrapper.find('[data-link-des]').hasClass('link-des')).toBe(true);
   });
 });

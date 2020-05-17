@@ -34,7 +34,7 @@ class DropDown extends Component {
 
 DropDown.propTypes = {
   menuOpen: PropTypes.bool.isRequired,
-  dropDownOpen: PropTypes.bool.isRequired,
+  dropDownOpen: PropTypes.bool,
   dispatch: PropTypes.func.isRequired
 };
 
