@@ -21,7 +21,8 @@ class MdListPreview extends Component {
 }
 
 MdListPreview.propTypes = {
-  mdList: PropTypes.array
+  mdList: PropTypes.array.isRequired,
+  getMdlist: PropTypes.func.isRequired
 };
 
 export default MdListPreview;

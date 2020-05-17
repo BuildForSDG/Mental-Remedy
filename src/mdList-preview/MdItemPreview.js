@@ -22,8 +22,8 @@ class MdItemPreview extends Component {
 }
 
 MdItemPreview.propTypes = {
-  mentalDisorder: PropTypes.object,
-  mdList: PropTypes.array
+  mentalDisorder: PropTypes.object.isRequired,
+  mdList: PropTypes.array.isRequired
 };
 
 export default MdItemPreview;
