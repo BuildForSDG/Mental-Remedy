@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { services, mentalDisorders } from './data';
 
-const Context = React.createContext();
+export const Context = React.createContext();
 
 // This global variable is used to identify whether component is mounted or unmouted
 let isMounted = true;

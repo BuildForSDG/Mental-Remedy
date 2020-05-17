@@ -27,9 +27,9 @@ class NavBar extends Component {
           } = value;
           return (
             <nav className={menuOpen ? 'navbar-wrapper nav-active' : 'navbar-wrapper'}>
-              <a href="/" className={menuOpen
+              <a data-menu-btn href="/" className={menuOpen
                 ? 'medium-text blue menu menu-active'
-                : 'medium-text blue menu'}
+                : 'medium-text blue menu inactive'}
                 onClick={(event) => this.toggleMenu(event, menuOpen, dispatch)} >
                 {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
               </a>
