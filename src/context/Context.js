@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { services } from './data';
+import { services, specialists } from './data';
 
 const Context = React.createContext();
 
@@ -36,6 +36,8 @@ class Provider extends Component {
         'Due to the Stigma and scrutiny associated with mental illnesses, individuals who notice change in behavioural attitude may desist from seeking professional help cause of this stigma. Our main goal is to educate and establish effective means of communication between specialists and the community.',
       services: [],
       getServices: () => this.getServices(),
+      specialists: [],
+      getSpecialists: () => this.getSpecialists(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
     this.getServices = this.getServices.bind(this);
@@ -46,8 +48,18 @@ class Provider extends Component {
       this.setState({ services: [] });
       //fetch data from backend
       const ser = await services;
-      ser.map((key) => (
-        isMounted ? this.setState({ services: [...this.state.services, key] }) : null));
+      ser.map((key) => (isMounted ? this.setState({ services: [...this.state.services, key] }) : null));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async getSpecialists() {
+    try {
+      this.setState({ specialists: [] });
+      //fetch data from the backend
+      const spec = await specialists;
+      spec.map((key) => (isMounted ? this.setState({ specialists: [...this.state.specialists, key] }) : null));
     } catch (error) {
       console.error(error);
     }
