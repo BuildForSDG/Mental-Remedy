@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React, { Component } from 'react';
 import IntroHeader from '../intro/IntroHeader';
 import About from '../About/About';
