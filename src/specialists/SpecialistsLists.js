@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Specialist from './Specialist';
 
-export default class SpecialistsLists extends Component {
+class SpecialistsLists extends Component {
   componentDidMount() {
     this.props.getSpecialists();
   }
@@ -17,3 +18,10 @@ export default class SpecialistsLists extends Component {
     );
   }
 }
+
+SpecialistsLists.propTypes = {
+  // Name all the props and set their type
+  specialists: PropTypes.array.isRequired
+};
+
+export default SpecialistsLists;

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
-export default class Specialist extends Component {
+class Specialist extends Component {
   render() {
     const { specialist, specialists } = this.props;
     return (
@@ -27,3 +28,10 @@ export default class Specialist extends Component {
     );
   }
 }
+
+Specialist.propTypes = {
+  // Name all the props and set their type
+  specialist: PropTypes.object.isRequired
+};
+
+export default Specialist;
