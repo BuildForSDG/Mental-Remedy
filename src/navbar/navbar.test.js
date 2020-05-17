@@ -1,20 +1,20 @@
 import React from 'react';
-import { configure, mount } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import NavBar from './NavBar';
 import NavList from './NavList';
 import NavItem from './NavItem';
 import { Context } from '../context/Context';
 
+Enzyme.configure({ adapter: new Adapter() });
 
-describe('Navbar Module', () => {
-  configure({ adapter: new Adapter() });
-  it('renders without crashing', () => {
+describe('Navbar Component', () => {
+  it('toggles classes and menu icon in navbar component', () => {
     const wrapper = mount(<NavBar/>, {
       wrappingComponent: Context.Provider,
       wrappingComponentProps: {
         value: {
-          menuOpen: false, dispatch: () => {}, user: { id: 1, email: '' }, dropDownMenu: false
+          menuOpen: false, dispatch: () => {}, user: { id: 1 }, dropDownMenu: false
         }
       }
     });
@@ -36,23 +36,17 @@ describe('Navbar Module', () => {
     // Confirm icons are toggled
     expect(wrapper.find('[data-menu-btn]').find('AiOutlineClose').length).toEqual(1);
   });
+});
 
-  /*
-   *it('renders without crashing', () => {
-   *const div = document.createElement('div');
-   *const menu = false;
-   *const dropDown = false;
-   *const element = getElementWithContext({
-   *  value: {
-   *    menuOpen: menu,
-   *    dispatch: () => !menu,
-   *    user: { id: 1, email: '' },
-   *    dropDownMenu: dropDown
-   *  }
-   *}, <NavBar/>);
-   *const navbar = renderer.create(element);
-   *ReactDOM.render(navbar, div);
-   *ReactDOM.unmountComponentAtNode(div);
-   *});
-   */
+describe('Navlist Component', () => {
+  it('showes dropdown menu only when user is logged in', () => {
+    // confirm dropdown is hidden user isn't logged in
+    let wrapper = mount(<NavList menuOpen={false} dropDownMenu={false}
+      dispatch={() => {} } user={{ }} />);
+    expect(wrapper.find('DropDown').length).toEqual(0);
+    // Confirm dropdown exists when user is logged in
+    wrapper = mount(<NavList menuOpen={false} dropDownMenu={false}
+      dispatch={() => {} } user={{ id: 1 }} />);
+    expect(wrapper.find('DropDown').length).toEqual(1);
+  });
 });
