@@ -8,11 +8,10 @@ class SpecialistsLists extends Component {
   }
 
   render() {
-    const { specialists } = this.props;
     return (
       <ul className="specialists">
         {this.props.specialists.map((specialist) => (
-          <Specialist specialist={specialist} key={specialist.id} specialists={specialists} />
+          <Specialist specialist={specialist} key={specialist.id} specialists={this.props.specialists} />
         ))}
       </ul>
     );
