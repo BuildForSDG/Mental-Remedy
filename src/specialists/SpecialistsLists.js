@@ -9,7 +9,7 @@ export default class SpecialistsLists extends Component {
   render() {
     const { specialists } = this.props;
     return (
-      <ul>
+      <ul className="specialists">
         {this.props.specialists.map((specialist) => (
           <Specialist specialist={specialist} key={specialist.id} specialists={specialists} />
         ))}

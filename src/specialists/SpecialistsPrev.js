@@ -9,8 +9,9 @@ export default class SpecialistsPrev extends Component {
         {(value) => {
           const { getSpecialists, specialists } = value;
           return (
-            <div>
-              <h1>Specialists Preview</h1>
+            <div className="preview">
+              <h1 className="sub-heading">Specialists Preview</h1>
+              <hr />
               <SpecialistsLists specialists={specialists} getSpecialists={() => getSpecialists()} />
             </div>
           );

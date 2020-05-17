@@ -6,7 +6,7 @@ export default class Specialist extends Component {
     const { specialist, specialists } = this.props;
     return (
       <>
-        {specialists.indexOf(specialist) < 4 ? (
+        {specialists.indexOf(specialist) < 3 ? (
           <div className="profile-card">
             <img src={specialist.profile_pic} alt="" className="profile-pic" height="120" />
             <h1 className="medium-text ">{specialist.name}</h1>

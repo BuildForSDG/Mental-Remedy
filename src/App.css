@@ -178,10 +178,6 @@ input {
 }
 
 /* specialist */
-.upper-container {
-  height: 150px;
-  background: var(--bg-fallback);
-}
 .profile-card {
   background-color: #fff;
   width: 15rem;
@@ -207,6 +203,7 @@ input {
   display: flex;
   justify-content: space-between;
 }
+
 .btns button {
   border: 1px solid var(--bg-fallback);
 
@@ -215,14 +212,47 @@ input {
   cursor: pointer;
   margin: 10px;
 }
+
 .btn1 {
   color: var(--bg-fallback);
   background: white;
+  transition: 0.8s ease-in-out;
+}
+
+.btn1:hover {
+  color: white;
+  background: var(--bg-fallback);
 }
 
 .btn2 {
   color: #fff;
   background: var(--bg-fallback);
+  transition: 0.8s ease-in-out;
+}
+
+.btn2:hover {
+  color: var(--bg-fallback);
+  background: white;
+}
+
+.preview h1 {
+  margin-bottom: 0;
+}
+
+.preview hr {
+  border: 2px solid var(--bg-fallback);
+  margin: 0 5rem 0 5rem;
+}
+
+.specialists {
+  list-style: none;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 25px 0;
+  margin: 0;
+  text-align: center;
 }
 /* Media Queries */
 
@@ -232,6 +262,10 @@ input {
 
 @media (min-width: 481px) and (max-width: 767px) {
   .services {
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+  .specialists {
     grid-template-columns: auto auto;
     grid-gap: 20px;
   }
@@ -250,6 +284,11 @@ input {
 
 @media (max-width: 480px) {
   .services {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+
+  .specialists {
     grid-template-columns: auto;
     grid-gap: 20px;
   }
