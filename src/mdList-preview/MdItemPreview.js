@@ -12,7 +12,6 @@ class MdItemPreview extends Component {
                       <h5 className="small-heading">{mentalDisorder.title}</h5>
                     </div>
                     <div className="short-des">{mentalDisorder.description}</div>
-                    <p className="d-none des">{mentalDisorder.description}</p>
                     <button className="small-heading">Learn More</button>
                 </li>
             ) : (<span></span>)}

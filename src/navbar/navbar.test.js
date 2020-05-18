@@ -42,7 +42,7 @@ describe('Navbar Component', () => {
 describe('NavList Component', () => {
   it('showes dropdown menu only when user is logged in', () => {
     const dropDownOpen = false;
-    // confirm dropdown is hidden user isn't logged in
+    // confirm dropdown is hidden if user isn't logged in
     const wrapper = shallow(<NavList menuOpen={false} dropDownOpen={dropDownOpen}
       dispatch={() => {} } user={{ }}/>);
     expect(wrapper.find('DropDown').length).toEqual(0);
@@ -50,7 +50,7 @@ describe('NavList Component', () => {
     wrapper.setProps({
       menuOpen: false, dispatch: () => {}, user: { id: 1 }, dropDownOpen: false
     });
-    expect(wrapper.find('DropDown').length).toEqual(1);
+    expect(wrapper.find('DropDown').props().dropDownOpen).toBe(false);
   });
 });
 
@@ -60,7 +60,7 @@ describe('NavItem Component', () => {
     const wrapper = mount(<NavItem menuOpen={false} id=""
       linkDes="testing" icon={<FiLogIn/>} />);
     expect(wrapper.find('[data-link-des]').hasClass('d-none')).toBe(true);
-    // confirm it's class is toggled
+    // confirm its class is toggled
     wrapper.setProps({
       menuOpen: true, icon: <FiLogIn/>, linkDes: 'testing'
     });

@@ -40,6 +40,7 @@ module.exports = {
     'no-console': 0,
     'multiline-ternary': 0,
     'no-magic-numbers': 0,
+    'no-return-assign': 0,
     'sort-imports': [
       'error',
       {

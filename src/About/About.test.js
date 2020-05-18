@@ -46,14 +46,14 @@ describe('Services component', () => {
       }
     });
     // confirm services are consumed and passed down to ServiceList component
-    expect(wrapper.find('ServiceList').props().services.length).toBeGreaterThanOrEqual(1);
+    expect(wrapper.find('ServiceList').props().services.length).toBeGreaterThan(1);
     // confirm get services method is consumed and passed down to ServiceList component
     expect(wrapper.find('ServiceList').props().getServices()).toBe('success');
   });
 });
 
 describe('ServiceList component', () => {
-  it('receive data in props', () => {
+  it('receives data in props', () => {
     // receive sample data in props
     const wrapper = mount(<ServiceList services={services} getServices={() => 'success'} />);
     // confirm services are recieved in props
@@ -64,13 +64,10 @@ describe('ServiceList component', () => {
 });
 
 describe('Service component', () => {
-  const service = {
-    id: 2,
-    title: 'Specialist plattform',
-    description:
-      'A platform for specialist ',
-    image: 'demo.svg'
-  };
+  let service = {};
+  services.map((key) => (
+    services.indexOf(key) < 1 ? service = key : null
+  ));
   it('receives data in props', () => {
     // receive sample data in props
     const wrapper = mount(<Service service={service} />);
