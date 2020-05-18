@@ -11,7 +11,7 @@ export default class Bio extends Component {
             <div className="about">
               <h1 className="heading">About Us</h1>
               <hr />
-              <p className="medium-text">{aboutInfo}</p>
+              <p data-about-info className="medium-text">{aboutInfo}</p>
             </div>
           );
         }}

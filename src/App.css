@@ -18,7 +18,7 @@
 .nav-list {
   display: flex;
   list-style: none;
-  padding: 0;
+  padding: 1.3rem 0 0 0;
   height: 100%;
   margin: 0;
   flex-direction: column;
@@ -53,8 +53,10 @@
   color: var(--color);
 }
 
-#home {
-  margin-top: 3rem;
+.nav-link:hover {
+  --color: #fff;
+
+  color: var(--color);
 }
 
 .link-des {
@@ -73,6 +75,12 @@
 
   color: var(--color);
   transform: rotate(360deg);
+}
+
+.menu-active:hover {
+  --color: #fff;
+
+  color: var(--color);
 }
 
 .dd-icon {
@@ -101,6 +109,11 @@
   color: var(--color);
 }
 
+.dd-link:hover {
+  --color: #fff;
+
+  color: var(--color);
+}
 /*** LandingPage Component ***/
 
 main {
@@ -203,6 +216,65 @@ input {
   top: 0;
 }
 
+/*** Mental Disorders preview list ***/
+.md-preview {
+  height: auto;
+
+  --bg: #fff;
+
+  background: var(--bg);
+  width: 100%;
+}
+
+.md-list-prev {
+  list-style: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.md-item-prev {
+  border: 1px solid transparent;
+  --bg: #fff;
+
+  background: var(--bg);
+  box-shadow: 0 1px 10px 1px var(--bg-fallback);
+  color: var(--color);
+  width: 100%;
+  display: grid;
+  text-align: left;
+  height: auto;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.short-des {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: auto;
+}
+
+.md-item-prev:hover {
+  background: var(--bg-fallback);
+}
+
+.md-item-prev button {
+  border: none;
+  outline: none;
+  color: var(--bg-fallback);
+  text-align: right;
+  background: transparent;
+  cursor: pointer;
+}
+
+.md-item-prev:hover button {
+  --bg-fallback: #fff;
+}
+
 /* specialist */
 .profile-card {
   background-color: #fff;
@@ -295,6 +367,11 @@ input {
     overflow: scroll;
   }
 
+  .md-list-prev {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
+
   :root {
     --nav-width: 60% !important;
     --left: 50% !important;
@@ -311,6 +388,11 @@ input {
   .services {
     grid-template-columns: auto;
     grid-gap: 20px;
+  }
+
+  .md-list-prev {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
   }
 
   .specialists {
