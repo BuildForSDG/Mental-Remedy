@@ -248,8 +248,7 @@ const specialists = [
         email: 'ali@doc.com',
         intials: 'Ali',
         initial_status: 'hidden',
-        review:
-          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        review: 'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them.',
         date_posted: Date.now()
       },
       {

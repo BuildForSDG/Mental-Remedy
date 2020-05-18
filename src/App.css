@@ -216,6 +216,7 @@ input {
   top: 0;
 }
 
+<<<<<<< HEAD
 /*** Mental Disorders preview list ***/
 .md-preview {
   height: auto;
@@ -274,6 +275,84 @@ input {
   cursor: pointer;
 }
 
+=======
+/* specialist */
+.profile-card {
+  background-color: #fff;
+  width: 15rem;
+  height: 35rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px 1px var(--bg-fallback);
+}
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin: 0 auto 10px;
+}
+
+.location {
+  color: var(--bg-fallback);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns button {
+  border: 1px solid var(--bg-fallback);
+  padding: 5px 15px;
+  font-style: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn1 {
+  color: var(--bg-fallback);
+  background: white;
+  transition: 0.8s ease-in-out;
+}
+
+.btn1:hover {
+  color: white;
+  background: var(--bg-fallback);
+}
+
+.btn2 {
+  color: #fff;
+  background: var(--bg-fallback);
+  transition: 0.8s ease-in-out;
+}
+
+.btn2:hover {
+  color: var(--bg-fallback);
+  background: white;
+}
+
+.preview h1 {
+  margin-bottom: 0;
+}
+
+.preview hr {
+  border: 2px solid var(--bg-fallback);
+  margin: 0 5rem 0 5rem;
+}
+
+.specialists {
+  list-style: none;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  padding: 25px 0;
+  margin: 0;
+  text-align: center;
+}
+>>>>>>> 6f43e2ffee92547125f472b68cbebd2f2851ad7d
 /* Media Queries */
 
 /*
@@ -313,9 +392,15 @@ input {
     grid-gap: 20px;
   }
 
+<<<<<<< HEAD
   .md-list-prev {
     grid-template-columns: auto;
     grid-template-rows: auto;
+=======
+  .specialists {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+>>>>>>> 6f43e2ffee92547125f472b68cbebd2f2851ad7d
   }
 
   :root {

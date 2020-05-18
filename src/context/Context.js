@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { services, mentalDisorders } from './data';
+import { services, mentalDisorders, specialists } from './data';
 
 export const Context = React.createContext();
 
@@ -38,6 +38,8 @@ class Provider extends Component {
       services: [],
       getServices: () => this.getServices(),
       getMdlist: () => this.getMdlist(),
+      specialists: [],
+      getSpecialists: () => this.getSpecialists(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
     this.getServices = this.getServices.bind(this);
@@ -48,8 +50,18 @@ class Provider extends Component {
       this.setState({ services: [] });
       //fetch data from backend
       const ser = await services;
-      ser.map((key) => (
-        isMounted ? this.setState({ services: [...this.state.services, key] }) : null));
+      ser.map((key) => (isMounted ? this.setState({ services: [...this.state.services, key] }) : null));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async getSpecialists() {
+    try {
+      this.setState({ specialists: [] });
+      //fetch data from the backend
+      const spec = await specialists;
+      spec.map((key) => (isMounted ? this.setState({ specialists: [...this.state.specialists, key] }) : null));
     } catch (error) {
       console.error(error);
     }
