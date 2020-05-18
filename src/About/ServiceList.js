@@ -19,8 +19,9 @@ class ServiceList extends Component {
 }
 
 ServiceList.propTypes = {
-  // Name all the props and set their type
-  services: PropTypes.array.isRequired
+  // Name all the props and set their types
+  services: PropTypes.array.isRequired,
+  getServices: PropTypes.func.isRequired
 };
 
 export default ServiceList;

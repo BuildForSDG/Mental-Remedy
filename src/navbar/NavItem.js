@@ -13,13 +13,13 @@ class NavItem extends Component {
 
   render() {
     const {
-      menuOpen, id, icon, linkDes
+      menuOpen, icon, linkDes
     } = this.props;
     return (
         <li className="nav-item">
-            <a href="/" className="nav-link medium-text" id={id} onClick={this.handleClick} >
+            <a href="/" className="nav-link medium-text" onClick={this.handleClick} >
                 {icon}
-                <span className={menuOpen ? 'link-des' : 'd-none'}>{linkDes}</span>
+                <span data-link-des className={menuOpen ? 'link-des' : 'd-none'}>{linkDes}</span>
             </a>
         </li>
     );
@@ -28,7 +28,9 @@ class NavItem extends Component {
 
 NavItem.propTypes = {
   // Name all the props and set their type
-  menuOpen: PropTypes.bool
+  menuOpen: PropTypes.bool.isRequired,
+  icon: PropTypes.object.isRequired,
+  linkDes: PropTypes.string.isRequired
 };
 
 export default NavItem;

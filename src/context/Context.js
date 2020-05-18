@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { services, specialists } from './data';
+import { services, mentalDisorders, specialists } from './data';
 
-const Context = React.createContext();
+export const Context = React.createContext();
 
 // This global variable is used to identify whether component is mounted or unmouted
 let isMounted = true;
@@ -32,10 +32,12 @@ class Provider extends Component {
       menuOpen: false,
       dropDownOpen: false,
       user: { id: 1, email: '' },
+      mentalDisorders: [],
       aboutInfo:
         'Due to the Stigma and scrutiny associated with mental illnesses, individuals who notice change in behavioural attitude may desist from seeking professional help cause of this stigma. Our main goal is to educate and establish effective means of communication between specialists and the community.',
       services: [],
       getServices: () => this.getServices(),
+      getMdlist: () => this.getMdlist(),
       specialists: [],
       getSpecialists: () => this.getSpecialists(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
@@ -60,6 +62,19 @@ class Provider extends Component {
       //fetch data from the backend
       const spec = await specialists;
       spec.map((key) => (isMounted ? this.setState({ specialists: [...this.state.specialists, key] }) : null));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async getMdlist() {
+    try {
+      this.setState({ mentalDisorders: [] });
+      //fetch data from backend
+      const mdlist = await mentalDisorders;
+      mdlist.map((key) => (
+        isMounted ? this.setState({ mentalDisorders: [...this.state.mentalDisorders, key] }) : null
+      ));
     } catch (error) {
       console.error(error);
     }
