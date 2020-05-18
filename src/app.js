@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import NavBar from './navbar/NavBar';
 import './App.css';
 import LandingPage from './pages/LandingPage';
-import Provider from './context/Context';
+import NotFound from './pages/NotFound';
+import Specialists from './pages/Specialists';
 
 class App extends Component {
   render() {
     return (
-      <Provider>
+      <>
         <NavBar />
-        <LandingPage />
-      </Provider>
+        <Switch>
+          <Route exact path="/" component={LandingPage} />
+          <Route exact path="/specialists" component={Specialists} />
+          <Route exact component={NotFound} />
+        </Switch>
+      </>
     );
   }
 }
