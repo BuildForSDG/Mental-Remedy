@@ -374,8 +374,8 @@ input {
   margin-top: 1rem;
 }
 
-.swiper-button-prev:after,
-.swiper-button-next:after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   color: var(--bg-fallback);
   font-weight: bolder;
 }
