@@ -6,24 +6,23 @@ class Specialist extends Component {
   render() {
     return (
       <>
-        {this.props.specialists.indexOf(this.props.specialist) < 3 ? (
-          <div className="profile-card">
+      {this.props.specialists.indexOf(this.props.specialist) < 7 ? (
+          <div className="profile-card swiper-slide">
             <img src={this.props.specialist.profile_pic} alt="" className="profile-pic" height="120" />
             <h1 className="medium-text ">{this.props.specialist.name}</h1>
             <h4 className="small-text location">
-              <FaMapMarkerAlt />
-              {this.props.specialist.location}
+              <FaMapMarkerAlt /><br/>
+              <span className="black-text small-headingy">City: </span>{this.props.specialist.city}
             </h4>
-            <p className="intro">{this.props.specialist.reviews[0].review}</p>
+            <p className="review small-text">{this.props.specialist.reviews[0].review}</p>
+            <button className="small-heading plain-btn">More reviews</button>
             <div className="btns">
               <button className="btn1">View Profile</button>
               <button className="btn2">Book Appointment</button>
             </div>
           </div>
-        ) : (
-          <span></span>
-        )}
-      </>
+      ) : (<span></span>)}
+    </>
     );
   }
 }

@@ -7,12 +7,18 @@ export default class SpecialistsPrev extends Component {
     return (
       <Consumer>
         {(value) => {
-          const { getSpecialists, specialists } = value;
+          const { getSpecialists, specialists, startSlider } = value;
           return (
-            <div className="preview">
+            <div className="preview" onLoad={() => startSlider()}>
               <h1 className="sub-heading">Specialists Preview</h1>
               <hr />
-              <SpecialistsLists specialists={specialists} getSpecialists={() => getSpecialists()} />
+              <div className="swiper-container">
+                <SpecialistsLists specialists={specialists}
+                getSpecialists={() => getSpecialists()} startSlider={() => startSlider()} />
+                <div className="swiper-pagination"></div>
+                <div className="swiper-button-next"></div>
+                <div className="swiper-button-prev"></div>
+              </div>
             </div>
           );
         }}
