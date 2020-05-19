@@ -124,6 +124,18 @@ body {
   border: 1px solid var(--color);
 }
 
+.plain-btn {
+  border: none;
+  outline: none;
+  color: var(--bg-fallback);
+  background: transparent;
+  cursor: pointer;
+}
+
+.right {
+  text-align: right;
+}
+
 .m-1 {
   margin: 1rem;
 }

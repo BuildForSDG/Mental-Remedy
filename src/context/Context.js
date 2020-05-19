@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { services, mentalDisorders, specialists } from './data';
+import startSlider from '../swiper';
 
 export const Context = React.createContext();
 
@@ -40,6 +41,7 @@ class Provider extends Component {
       getMdlist: () => this.getMdlist(),
       specialists: [],
       getSpecialists: () => this.getSpecialists(),
+      startSlider: () => startSlider(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
     this.getServices = this.getServices.bind(this);
