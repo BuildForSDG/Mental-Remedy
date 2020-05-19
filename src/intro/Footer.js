@@ -9,8 +9,8 @@ export default class Footer extends Component {
             <div className="row">
               {/* column 1*/}
               <div className="col">
-                <h1 className="medium-text">Contact Info</h1>
                 <ul className="list-unstyled">
+                  <h1 className="small-text">Contact Info</h1>
                   <li>Phone:000 000 0000</li>
                   <li>Temp place</li>
                   <li>345 holder street</li>
@@ -20,12 +20,24 @@ export default class Footer extends Component {
               {/* column 1*/}
               <div className="col">
                 <ul className="list-unstyled">
-                  <li className="small-text">Home</li>
-                  <li className="small-text">About</li>
-                  <li className="small-text">Mental Disoders</li>
-                  <li className="small-text">Specialists</li>
-                  <li className="small-text">My account</li>
+                  <li>Home</li>
+                  <li>About</li>
+                  <li>Mental Disoders</li>
+                  <li>Specialists</li>
+                  <li>My account</li>
                 </ul>
+              </div>
+              {/* column 3*/}
+              <div className="col">
+                <div>
+                  <h1 className="heading">Mental </h1>
+                </div>
+              </div>
+              {/* column 3 and a half*/}
+              <div className="col">
+                <div>
+                  <h1 className="heading">Remedy</h1>
+                </div>
               </div>
             </div>
             {/* footer bottom */}
