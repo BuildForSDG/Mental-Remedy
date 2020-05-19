@@ -5,6 +5,7 @@ export default class SpecialistsPage extends Component {
   render() {
     return (
       <main>
+        <h1>Specialists</h1>
         <Specialists />
       </main>
     );

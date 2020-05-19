@@ -10,7 +10,6 @@ export default class Specialists extends Component {
           const { getSpecialists, specialists } = value;
           return (
             <div>
-              <h1>Specialists</h1>
               <SpecialistsList specialists={specialists} getSpecialists={() => getSpecialists()} />
             </div>
           );

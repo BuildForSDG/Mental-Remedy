@@ -8,7 +8,7 @@ export default class SpecialistsList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="spc">
         {this.props.specialists.map((specialist) => (
           <Specialist specialist={specialist} key={specialist.id} />
         ))}
