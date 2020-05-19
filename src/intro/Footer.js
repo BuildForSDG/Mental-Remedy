@@ -19,22 +19,12 @@ export default class Footer extends Component {
               </div>
               {/* column 1*/}
               <div className="col">
-                <h1 className="medium-text">lorem your ipsum</h1>
                 <ul className="list-unstyled">
-                  <li>lorem</li>
-                  <li>your</li>
-                  <li>ipsum</li>
-                  <li>responsibly</li>
-                </ul>
-              </div>
-              {/* column 1*/}
-              <div className="col">
-                <h1 className="medium-text">lorem your ipsum</h1>
-                <ul className="list-unstyled">
-                  <li>lorem</li>
-                  <li>your</li>
-                  <li>ipsum</li>
-                  <li>responsibly</li>
+                  <li className="small-text">Home</li>
+                  <li className="small-text">About</li>
+                  <li className="small-text">Mental Disoders</li>
+                  <li className="small-text">Specialists</li>
+                  <li className="small-text">My account</li>
                 </ul>
               </div>
             </div>
