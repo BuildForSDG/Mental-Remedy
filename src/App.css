@@ -262,25 +262,34 @@ input {
   background: var(--bg-fallback);
 }
 
-.md-item-prev button {
-  border: none;
-  outline: none;
-  color: var(--bg-fallback);
-  text-align: right;
-  background: transparent;
-  cursor: pointer;
-}
-
 .md-item-prev:hover button {
   --bg-fallback: #fff;
 }
 
-/* specialist */
+/*** Specialist ***/
+.preview {
+  height: auto;
+  min-height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+
+.specialists {
+  list-style: none;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
 .profile-card {
   background-color: #fff;
-  width: 15rem;
-  height: 35rem;
-  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: 0 0.2rem;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 1px 10px 1px var(--bg-fallback);
@@ -295,6 +304,13 @@ input {
 
 .location {
   color: var(--bg-fallback);
+}
+
+.review {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .btns {
@@ -341,15 +357,27 @@ input {
   margin: 0 5rem 0 5rem;
 }
 
-.specialists {
-  list-style: none;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 20px;
-  padding: 25px 0;
-  margin: 0;
-  text-align: center;
+/* Swiper */
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-pagination-bullets {
+  margin-top: 1rem;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: var(--bg-fallback);
+  font-weight: bolder;
 }
 /* Media Queries */
 
