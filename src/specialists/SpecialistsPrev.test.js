@@ -9,7 +9,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('SpecialistPrev Module', () => {
   it('render without crashing', () => {
-    // Add sample data to MdPreview component using context
+    // Add sample data to SpecialistsPrev component using context
     const wrapper = mount(<SpecialistsPrev />, {
       wrappingComponent: Context.Provider,
       wrappingComponentProps: {
@@ -18,9 +18,9 @@ describe('SpecialistPrev Module', () => {
         }
       }
     });
-    // confirm sample data is consumed and passed down to MdListPreview component
+    // confirm sample data is consumed and passed down to SpecialistsLists component
     expect(wrapper.find('SpecialistsLists').props().specialists.length).toBeGreaterThan(1);
-    // confirm getMdList method is consumed and passed down to MdListPreview component
+    // confirm getSpecialists method is consumed and passed down to SpecialistsLists component
     expect(wrapper.find('SpecialistsLists').props().getSpecialists()).toBe('success');
   });
 });

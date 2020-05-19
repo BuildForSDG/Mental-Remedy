@@ -6,7 +6,7 @@ class Specialist extends Component {
   render() {
     return (
       <>
-      {this.props.specialists.indexOf(this.props.specialist) < 5 ? (
+      {this.props.specialists.indexOf(this.props.specialist) < 7 ? (
           <div className="profile-card swiper-slide">
             <img src={this.props.specialist.profile_pic} alt="" className="profile-pic" height="120" />
             <h1 className="medium-text ">{this.props.specialist.name}</h1>
