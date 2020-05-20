@@ -17,7 +17,7 @@ export default class Footer extends Component {
                   <li>Africa</li>
                 </ul>
               </div>
-              {/* column 1*/}
+              {/* column 2*/}
               <div className="col">
                 <ul className="list-unstyled">
                   <li>Home</li>
