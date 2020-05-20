@@ -12,6 +12,7 @@
   --medium-text: calc(10px + 4vmin);
   --large-text: calc(10px + 5vmin);
   --super-large: calc(20px + 9vmin);
+  --simple-text: 1.3rem;
 
   /* Font families */
   --russo: 'Russo One', sans-serif;

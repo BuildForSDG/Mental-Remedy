@@ -127,6 +127,96 @@ const mentalDisorders = [
       }
     ],
     treatment: 'Treatment is usually lifelong and often involves a combination of medications and psychotherapy.'
+  },
+  {
+    id: 104,
+    title: 'Anxiety disorder',
+    description:
+      "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
+    diagnosis: 'Usually self-diagnosable',
+    symptoms: [
+      {
+        id: 601,
+        type: 'Cognitive',
+        description: 'lack of concentration, racing thoughts, or unwanted thoughts'
+      },
+      {
+        id: 602,
+        type: 'Behavioural',
+        description: 'hypervigilance, irritability, or restlessness'
+      },
+      {
+        id: 603,
+        type: 'Whole Body',
+        description: 'fatigue or sweating'
+      },
+      {
+        id: 604,
+        type: 'Common',
+        description: 'anxiety, excessive worry, angor animi, fear, insomnia, nausea, palpitations, or trembling'
+      }
+    ],
+    treatment: 'Treatment includes counselling or medication, including antidepressants.'
+  },
+  {
+    id: 105,
+    title: 'Anxiety disorder',
+    description:
+      "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
+    diagnosis: 'Usually self-diagnosable',
+    symptoms: [
+      {
+        id: 605,
+        type: 'Cognitive',
+        description: 'lack of concentration, racing thoughts, or unwanted thoughts'
+      },
+      {
+        id: 606,
+        type: 'Behavioural',
+        description: 'hypervigilance, irritability, or restlessness'
+      },
+      {
+        id: 607,
+        type: 'Whole Body',
+        description: 'fatigue or sweating'
+      },
+      {
+        id: 608,
+        type: 'Common',
+        description: 'anxiety, excessive worry, angor animi, fear, insomnia, nausea, palpitations, or trembling'
+      }
+    ],
+    treatment: 'Treatment includes counselling or medication, including antidepressants.'
+  },
+  {
+    id: 106,
+    title: 'Anxiety disorder',
+    description:
+      "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
+    diagnosis: 'Usually self-diagnosable',
+    symptoms: [
+      {
+        id: 609,
+        type: 'Cognitive',
+        description: 'lack of concentration, racing thoughts, or unwanted thoughts'
+      },
+      {
+        id: 610,
+        type: 'Behavioural',
+        description: 'hypervigilance, irritability, or restlessness'
+      },
+      {
+        id: 611,
+        type: 'Whole Body',
+        description: 'fatigue or sweating'
+      },
+      {
+        id: 612,
+        type: 'Common',
+        description: 'anxiety, excessive worry, angor animi, fear, insomnia, nausea, palpitations, or trembling'
+      }
+    ],
+    treatment: 'Treatment includes counselling or medication, including antidepressants.'
   }
 ];
 
@@ -135,6 +225,7 @@ const specialists = [
     id: 501,
     profile_pic: male,
     name: 'Dr. Irungu Joseph',
+    city: 'Nairobi',
     location: '23553, Ralph Bunche Rd Nelson Awori Centre 3RD Floor Room B7, Nairobi',
     gender: 'Male',
     languages: 'English, Kiswahili',
@@ -158,8 +249,7 @@ const specialists = [
         email: 'ali@doc.com',
         intials: 'Ali',
         initial_status: 'hidden',
-        review:
-          'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
+        review: 'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them.',
         date_posted: Date.now()
       },
       {
@@ -195,6 +285,7 @@ const specialists = [
     id: 502,
     profile_pic: male,
     name: 'Dr. Maleek cherry',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'male',
     languages: 'English, Kiswahili',
@@ -255,6 +346,7 @@ const specialists = [
     id: 503,
     profile_pic: male,
     name: 'Dr. Wesley pipes',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'female',
     languages: 'English, Kiswahili',
@@ -315,6 +407,7 @@ const specialists = [
     id: 504,
     profile_pic: male,
     name: 'Dr. John francis',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'male',
     languages: 'English, Kiswahili',
@@ -375,6 +468,7 @@ const specialists = [
     id: 505,
     profile_pic: female,
     name: 'Dr. jane hyacinth',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'female',
     languages: 'English, Kiswahili',
@@ -435,6 +529,7 @@ const specialists = [
     id: 506,
     profile_pic: male,
     name: 'Dr.Jon Jones',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave ',
     gender: 'male',
     languages: 'English, Kiswahili',
@@ -495,6 +590,7 @@ const specialists = [
     id: 507,
     profile_pic: female,
     name: 'Dr. marylin cornrow',
+    city: 'Nairobi',
     location: '25th Ave luthuli rd',
     gender: 'female',
     languages: 'English, Kiswahili',
@@ -555,6 +651,7 @@ const specialists = [
     id: 508,
     profile_pic: male,
     name: 'Dr. Mike Lyson',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'male',
     languages: 'English, Kiswahili',
@@ -615,6 +712,7 @@ const specialists = [
     id: 509,
     profile_pic: female,
     name: 'Dr. Harley Bean',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'female',
     languages: 'English, Kiswahili',
@@ -675,6 +773,7 @@ const specialists = [
     id: 510,
     profile_pic: male,
     name: 'Dr. Richard Broke',
+    city: 'Nairobi',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'male',
     languages: 'English, Kiswahili',

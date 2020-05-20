@@ -18,7 +18,7 @@
 .nav-list {
   display: flex;
   list-style: none;
-  padding: 0;
+  padding: 1.3rem 0 0 0;
   height: 100%;
   margin: 0;
   flex-direction: column;
@@ -53,8 +53,10 @@
   color: var(--color);
 }
 
-#home {
-  margin-top: 3rem;
+.nav-link:hover {
+  --color: #fff;
+
+  color: var(--color);
 }
 
 .link-des {
@@ -73,6 +75,12 @@
 
   color: var(--color);
   transform: rotate(360deg);
+}
+
+.menu-active:hover {
+  --color: #fff;
+
+  color: var(--color);
 }
 
 .dd-icon {
@@ -101,6 +109,11 @@
   color: var(--color);
 }
 
+.dd-link:hover {
+  --color: #fff;
+
+  color: var(--color);
+}
 /*** LandingPage Component ***/
 
 main {
@@ -203,6 +216,169 @@ input {
   top: 0;
 }
 
+/*** Mental Disorders preview list ***/
+.md-preview {
+  height: auto;
+
+  --bg: #fff;
+
+  background: var(--bg);
+  width: 100%;
+}
+
+.md-list-prev {
+  list-style: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.md-item-prev {
+  border: 1px solid transparent;
+  --bg: #fff;
+
+  background: var(--bg);
+  box-shadow: 0 1px 10px 1px var(--bg-fallback);
+  color: var(--color);
+  width: 100%;
+  display: grid;
+  text-align: left;
+  height: auto;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.short-des {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: auto;
+}
+
+.md-item-prev:hover {
+  background: var(--bg-fallback);
+}
+
+.md-item-prev:hover button {
+  --bg-fallback: #fff;
+}
+
+/*** Specialist ***/
+.preview {
+  height: auto;
+  min-height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+
+.specialists {
+  list-style: none;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.profile-card {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 0.2rem;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px 1px var(--bg-fallback);
+}
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin: 0 auto 10px;
+}
+
+.location {
+  color: var(--bg-fallback);
+}
+
+.review {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns button {
+  border: 1px solid var(--bg-fallback);
+  padding: 5px 15px;
+  font-style: 20px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn1 {
+  color: var(--bg-fallback);
+  background: white;
+  transition: 0.8s ease-in-out;
+}
+
+.btn1:hover {
+  color: white;
+  background: var(--bg-fallback);
+}
+
+.btn2 {
+  color: #fff;
+  background: var(--bg-fallback);
+  transition: 0.8s ease-in-out;
+}
+
+.btn2:hover {
+  color: var(--bg-fallback);
+  background: white;
+}
+
+.preview h1 {
+  margin-bottom: 0;
+}
+
+.preview hr {
+  border: 2px solid var(--bg-fallback);
+  margin: 0 5rem 0 5rem;
+}
+
+/* Swiper */
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-pagination-bullets {
+  margin-top: 1rem;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--bg-fallback);
+  font-weight: bolder;
+}
 /* Media Queries */
 
 /*
@@ -219,6 +395,11 @@ input {
     overflow: scroll;
   }
 
+  .md-list-prev {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
+
   :root {
     --nav-width: 60% !important;
     --left: 50% !important;
@@ -233,6 +414,16 @@ input {
 
 @media (max-width: 480px) {
   .services {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+
+  .md-list-prev {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  .specialists {
     grid-template-columns: auto;
     grid-gap: 20px;
   }

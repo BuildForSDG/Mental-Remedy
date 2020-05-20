@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { IoIosArrowDropdown, IoIosArrowDropup, IoIosChatbubbles } from 'react-icons/io';
 import { MdAccountCircle } from 'react-icons/md';
+import PropTypes from 'prop-types';
 import { FiLogOut } from 'react-icons/fi';
 import { FaBookmark } from 'react-icons/fa';
 import DropDownLink from './DropDownLink';
 
-export default class DropDown extends Component {
+class DropDown extends Component {
   handleClick(event, dispatch, dropDownOpen) {
     event.preventDefault();
     dispatch({ type: 'TOGGLEDROPDOWN', payload: !dropDownOpen });
@@ -30,3 +31,11 @@ export default class DropDown extends Component {
     );
   }
 }
+
+DropDown.propTypes = {
+  menuOpen: PropTypes.bool.isRequired,
+  dropDownOpen: PropTypes.bool,
+  dispatch: PropTypes.func.isRequired
+};
+
+export default DropDown;

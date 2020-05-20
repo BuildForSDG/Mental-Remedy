@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-
-export default class DropDownLink extends Component {
+class DropDownLink extends Component {
   handleClick(event) {
     event.preventDefault();
   }
@@ -17,3 +17,10 @@ export default class DropDownLink extends Component {
     );
   }
 }
+
+DropDownLink.propTypes = {
+  ddText: PropTypes.string.isRequired,
+  ddIcon: PropTypes.object.isRequired
+};
+
+export default DropDownLink;
