@@ -45,6 +45,7 @@ module.exports = {
     'multiline-ternary': 0,
     'no-magic-numbers': 0,
     'no-return-assign': 0,
+    'linebreak-style': 0,
     'sort-imports': [
       'error',
       {
