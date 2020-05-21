@@ -12,16 +12,16 @@ class NavItem extends Component {
   }
 
   render() {
-    const {
-      menuOpen, icon, linkDes
-    } = this.props;
+    const { menuOpen, icon, linkDes } = this.props;
     return (
-        <li className="nav-item">
-            <a href="/" className="nav-link medium-text" onClick={this.handleClick} >
-                {icon}
-                <span data-link-des className={menuOpen ? 'link-des' : 'd-none'}>{linkDes}</span>
-            </a>
-        </li>
+      <li className="nav-item">
+        <a href="/" className="nav-link medium-text" onClick={this.handleClick}>
+          {icon}
+          <span data-link-des className={menuOpen ? 'link-des' : 'd-none'}>
+            {linkDes}
+          </span>
+        </a>
+      </li>
     );
   }
 }
