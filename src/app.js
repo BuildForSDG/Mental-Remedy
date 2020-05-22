@@ -10,10 +10,8 @@ class App extends Component {
   render() {
     return (
       <Provider>
-        <div className="page-wrapper">
-          <NavBar />
-          <LandingPage />
-        </div>
+        <NavBar />
+        <LandingPage />
         <Footer />
       </Provider>
     );

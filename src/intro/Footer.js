@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Footer extends Component {
   render() {
     return (
-      <div>
+      <div className="wrap-footer">
         <div className="main-footer">
           <div className="footer-container">
             <div className="row">
@@ -29,15 +29,10 @@ export default class Footer extends Component {
               </div>
               {/* column 3*/}
               <div className="col">
-                <div>
-                  <h1 className="heading">Mental </h1>
-                </div>
-              </div>
-              {/* column 3 and a half*/}
-              <div className="col">
-                <div>
-                  <h1 className="heading">Remedy</h1>
-                </div>
+                <ul className="list-unstyled">
+                  <li>Nairobi </li>
+                  <li>Johannesburg </li>
+                </ul>
               </div>
             </div>
             {/* footer bottom */}
