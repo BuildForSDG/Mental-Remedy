@@ -30,6 +30,7 @@ export default class Footer extends Component {
               {/* column 3*/}
               <div className="col">
                 <ul className="list-unstyled">
+                  <h1 className="small-text">Cities</h1>
                   <li>Nairobi </li>
                   <li>Johannesburg </li>
                 </ul>
