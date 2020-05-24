@@ -11,14 +11,14 @@ export default class Footer extends Component {
               <div className="col">
                 <ul className="list-unstyled">
                   <h1 className="small-text">Contact Info</h1>
-                  <li>Phone:000 000 0000</li>
+                  <li>Phone: 00000 00000</li>
                   <li>Temp place</li>
                   <li>345 holder street</li>
                   <li>Africa</li>
                 </ul>
               </div>
               {/* column 2*/}
-              <div className="col">
+              <div className="col2">
                 <ul className="list-unstyled">
                   <li>Home</li>
                   <li>About</li>
@@ -28,7 +28,7 @@ export default class Footer extends Component {
                 </ul>
               </div>
               {/* column 3*/}
-              <div className="col">
+              <div className="col3">
                 <ul className="list-unstyled">
                   <h1 className="small-text">Cities</h1>
                   <li>Nairobi </li>

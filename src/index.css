@@ -105,10 +105,6 @@ body {
   color: var(--color);
 }
 
-.page-wrapper {
-  min-height: 100%;
-}
-
 .list-unstyled {
   list-style: none;
 }
