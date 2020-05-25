@@ -385,6 +385,7 @@ main {
 }
 
 .spc {
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 20px;

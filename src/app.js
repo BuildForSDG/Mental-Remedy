@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import Provider from './context/Context';
 import NavBar from './navbar/NavBar';
 import './App.css';
 import LandingPage from './pages/LandingPage';
@@ -9,13 +10,15 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar />
-        <Router>
-          <Switch>
-            <Route exact path="/" component={LandingPage} />
-            <Route exact path="/specialists" component={SpecialistsPage} />
-          </Switch>
-        </Router>
+        <Provider>
+          <NavBar />
+          <Router>
+            <Switch>
+              <Route exact path="/" render={(props) => <LandingPage {...props} />} />
+              <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
+            </Switch>
+          </Router>
+        </Provider>
       </>
     );
   }
