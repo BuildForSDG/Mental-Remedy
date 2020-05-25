@@ -401,6 +401,7 @@ main {
 
 .name {
   width: 16rem;
+  margin-bottom: 2rem;
 }
 
 .city {
