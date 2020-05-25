@@ -11,28 +11,28 @@ export default class Footer extends Component {
               <div className="col">
                 <ul className="list-unstyled">
                   <h1 className="small-text">Contact</h1>
-                  <li>Phone: 00000 00000</li>
-                  <li>Temp place</li>
-                  <li>345 holder street</li>
-                  <li>Africa</li>
+                  <li className="footer-row">Phone: 00000 00000</li>
+                  <li className="footer-row2">Temp place</li>
+                  <li className="footer-row3">345 holder street</li>
+                  <li className="footer-row4">Africa</li>
                 </ul>
               </div>
               {/* column 2*/}
               <div className="col2">
                 <ul className="list-unstyled">
                   <h1 className="small-text">Home</h1>
-                  <li>About</li>
-                  <li>Mental Disoders</li>
-                  <li>Specialists</li>
-                  <li>My account</li>
+                  <li className="footer-row">About</li>
+                  <li className="footer-row2">Mental Disoders</li>
+                  <li className="footer-row3">Specialists</li>
+                  <li className="footer-row4">My account</li>
                 </ul>
               </div>
               {/* column 3*/}
               <div className="col3">
                 <ul className="list-unstyled">
                   <h1 className="small-text">Cities</h1>
-                  <li>Nairobi </li>
-                  <li>Johannesburg </li>
+                  <li className="footer-row">Nairobi </li>
+                  <li className="footer-row2">Johannesburg </li>
                 </ul>
               </div>
             </div>
