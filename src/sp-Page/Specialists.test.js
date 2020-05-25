@@ -20,8 +20,8 @@ describe('SpecialistPage Module', () => {
       }
     });
     // confirm sample data is consumed and passed down to SpecialistsLists component
-    expect(wrapper.find('SpecialistsLists').props().specialists.length).toBeGreaterThan(1);
+    expect(wrapper.find('SpecialistsList').props().specialists.length).toBeGreaterThan(1);
     // confirm getSpecialists method is consumed and passed down to SpecialistsLists component
-    expect(wrapper.find('SpecialistsLists').props().getSpecialists()).toBe('success');
+    expect(wrapper.find('SpecialistsList').props().getSpecialists()).toBe('success');
   });
 });
