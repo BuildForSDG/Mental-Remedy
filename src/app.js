@@ -9,17 +9,15 @@ import SpecialistsPage from './pages/SpecialistsPage';
 class App extends Component {
   render() {
     return (
-      <>
+      <Router>
         <Provider>
           <NavBar />
-          <Router>
-            <Switch>
-              <Route exact path="/" render={(props) => <LandingPage {...props} />} />
-              <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
-            </Switch>
-          </Router>
+          <Switch>
+            <Route exact path="/" render={(props) => <LandingPage {...props} />} />
+            <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
+          </Switch>
         </Provider>
-      </>
+      </Router>
     );
   }
 }
