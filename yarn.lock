@@ -6530,13 +6530,6 @@ react-icons@^3.10.0:
   dependencies:
     camelcase "^5.0.0"
 
-react-id-swiper@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-id-swiper/-/react-id-swiper-3.0.0.tgz#110cc0d5a84c5f6e2c6247ca71f12f5783ebd020"
-  integrity sha512-80iJPfxPeuLpMxvAYIS9uw38MLngRoZ51RmL5ya5y/+Qw/H/ZxMBwIGfBRKU4REl+tJxARMHvESbwQUEdJgzqA==
-  dependencies:
-    object-assign "^4.1.1"
-
 react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.6, react-is@^16.9.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
