@@ -6,7 +6,9 @@ module.exports = {
     jest: true
   },
   plugins: ['react'],
-  extends: ['airbnb-base', 'eslint:all', 'plugin:react/recommended'],
+  extends: ['airbnb-base',
+    'eslint:all',
+    'plugin:react/recommended'],
   parser: 'babel-eslint',
   globals: {
     Atomics: 'readonly',
@@ -42,8 +44,6 @@ module.exports = {
     'sort-keys': 0,
     'max-len': 0,
     'no-console': 0,
-    'multiline-ternary': 0,
-    'no-magic-numbers': 0,
     'no-return-assign': 0,
     'linebreak-style': 0,
     'sort-imports': [
@@ -52,7 +52,10 @@ module.exports = {
         ignoreCase: true,
         ignoreDeclarationSort: true,
         ignoreMemberSort: true,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single']
+        memberSyntaxSortOrder: ['none',
+          'all',
+          'multiple',
+          'single']
       }
     ]
   }
