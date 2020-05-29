@@ -7,6 +7,11 @@ import { FaBookmark } from 'react-icons/fa';
 import DropDownLink from './DropDownLink';
 
 class DropDown extends Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   handleClick(event, dispatch, dropDownOpen) {
     event.preventDefault();
     dispatch({ type: 'TOGGLEMENU', payload: true });
