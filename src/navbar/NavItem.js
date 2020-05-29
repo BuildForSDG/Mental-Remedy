@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+import { Consumer } from '../context/Context';
 
 class NavItem extends Component {
   constructor(props) {
@@ -7,30 +9,39 @@ class NavItem extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(event) {
+  handleClick(event, dispatch) {
     event.preventDefault();
+    this.props.history.push(`/${this.props.link}`);
+    dispatch({ type: 'TOGGLEMENU', payload: false });
   }
 
   render() {
-    const { menuOpen, icon, linkDes } = this.props;
+    const { icon, linkDes } = this.props;
     return (
-      <li className="nav-item">
-        <a href="/" className="nav-link medium-text" onClick={this.handleClick}>
-          {icon}
-          <span data-link-des className={menuOpen ? 'link-des' : 'd-none'}>
-            {linkDes}
-          </span>
-        </a>
-      </li>
+      <Consumer>
+        {(value) => {
+          return (
+            <li className="nav-item">
+              <a href="/" className="nav-link medium-text"
+              onClick={(event) => this.handleClick(event, value.dispatch)}>
+              {icon}
+              <span data-link-des className={value.menuOpen ? 'link-des' : 'd-none'}>
+               {linkDes}
+              </span>
+              </a>
+          </li>
+          );
+        }}
+      </Consumer>
     );
   }
 }
 
 NavItem.propTypes = {
   // Name all the props and set their type
-  menuOpen: PropTypes.bool.isRequired,
   icon: PropTypes.object.isRequired,
-  linkDes: PropTypes.string.isRequired
+  linkDes: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
 };
 
-export default NavItem;
+export default withRouter(NavItem);

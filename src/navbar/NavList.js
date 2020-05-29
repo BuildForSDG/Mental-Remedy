@@ -12,16 +12,16 @@ class NavList extends Component {
     const { menuOpen, user, dropDownOpen, dispatch } = this.props;
     return (
       <ul className="nav-list">
-        <NavItem linkDes="Home" icon={<FaHome />} menuOpen={menuOpen} />
-        <NavItem linkDes="About" icon={<IoIosPeople />} menuOpen={menuOpen} />
-        <NavItem linkDes="Mental Disorders" icon={<GiHealing />} menuOpen={menuOpen} />
+        <NavItem link="" linkDes="Home" icon={<FaHome />} />
+        <NavItem link="about" linkDes="About" icon={<IoIosPeople />} />
+        <NavItem link="mental-disorders" linkDes="Mental Disorders" icon={<GiHealing />} />
 
-        <NavItem linkDes="Specialists" icon={<GiDoctorFace />} menuOpen={menuOpen} />
+        <NavItem link="specialists" linkDes="Specialists" icon={<GiDoctorFace />} />
 
         {user.id ? (
           <DropDown dropDownOpen={dropDownOpen} menuOpen={menuOpen} dispatch={dispatch} />
         ) : (
-          <NavItem linkDes="Login" icon={<FiLogIn />} menuOpen={menuOpen} />
+          <NavItem link="login" linkDes="Login" icon={<FiLogIn />} />
         )}
       </ul>
     );

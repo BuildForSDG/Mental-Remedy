@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 
 class DropDownLink extends Component {
   handleClick(event) {
     event.preventDefault();
+    this.props.history.push(`/${this.props.link}`);
   }
 
   render() {
@@ -23,4 +25,4 @@ DropDownLink.propTypes = {
   ddIcon: PropTypes.object.isRequired
 };
 
-export default DropDownLink;
+export default withRouter(DropDownLink);

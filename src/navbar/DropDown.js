@@ -23,9 +23,9 @@ class DropDown extends Component {
     <span className="small-text dd-icon blue-text">{dropDownOpen ? <IoIosArrowDropup/> : <IoIosArrowDropdown/>}</span></span>
             </a>
             <div className={dropDownOpen ? 'drop-down dd-active' : 'drop-down'}>
-                <DropDownLink ddText="My Appointments" ddIcon={<FaBookmark/>} />
-                <DropDownLink ddText="Forum" ddIcon={<IoIosChatbubbles/>} />
-                <DropDownLink ddText="Logout" ddIcon={<FiLogOut/>} />
+                <DropDownLink link="user-appointments" ddText="My Appointments" ddIcon={<FaBookmark/>} />
+                <DropDownLink link="forum" ddText="Forum" ddIcon={<IoIosChatbubbles/>} />
+                <DropDownLink link="logout" ddText="Logout" ddIcon={<FiLogOut/>} />
             </div>
         </li>
     );
