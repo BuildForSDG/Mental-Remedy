@@ -16,7 +16,6 @@ class NavItem extends Component {
   }
 
   render() {
-    const { icon, linkDes } = this.props;
     return (
       <Consumer>
         {(value) => {
@@ -24,9 +23,9 @@ class NavItem extends Component {
             <li className="nav-item">
               <a href="/" className="nav-link medium-text"
               onClick={(event) => this.handleClick(event, value.dispatch)}>
-              {icon}
+              {this.props.icon}
               <span data-link-des className={value.menuOpen ? 'link-des' : 'd-none'}>
-               {linkDes}
+               {this.props.linkDes}
               </span>
               </a>
           </li>
