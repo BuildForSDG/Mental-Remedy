@@ -10,9 +10,14 @@ export default class Filter extends Component {
             type="text"
             className="search-field name"
             placeholder="Name..."
-            onChange={(event) => this.setState({ name: event.target.value })}
           />
-          <input type="text" className="search-field city" placeholder="City..." />
+          <select name="cities" className="search-field city" id="select-city">
+            <option value="1">Nairobi</option>
+            <option value="2">Accra</option>
+            <option value="3">Kampala</option>
+            <option value="4">Addis Ababa</option>
+            <option value="5">Lagos</option>
+          </select>
         </form>
       </div>
     );
