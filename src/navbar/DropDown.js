@@ -9,6 +9,7 @@ import DropDownLink from './DropDownLink';
 class DropDown extends Component {
   handleClick(event, dispatch, dropDownOpen) {
     event.preventDefault();
+    dispatch({ type: 'TOGGLEMENU', payload: true });
     dispatch({ type: 'TOGGLEDROPDOWN', payload: !dropDownOpen });
   }
 
