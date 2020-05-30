@@ -11,7 +11,12 @@ export default class Specialists extends Component {
           const { getSpecialists, specialists } = value;
           return (
             <div>
-              <Filter />
+              <Filter
+              list={specialists}
+              getList={getSpecialists}
+              dispatchType="FILTERSPECIALISTS"
+              cityFilter={true}
+              nameFilter={true} />
               <SpecialistsList specialists={specialists} getSpecialists={() => getSpecialists()} />
             </div>
           );

@@ -1,21 +1,37 @@
 import React, { Component } from 'react';
+import { Consumer } from '../context/Context';
+import FilterByName from './FilterByName';
+import FilterByCity from './FilterByCity';
 
 export default class Filter extends Component {
   render() {
     return (
-      <div>
-        <form>
-          <h1>Find the Best Specialist</h1>
-          <input type="text" className="search-field name" placeholder="Name..." />
-          <select name="cities" className="search-field city" id="select-city">
-            <option value="1">Nairobi</option>
-            <option value="2">Accra</option>
-            <option value="3">Kampala</option>
-            <option value="4">Addis Ababa</option>
-            <option value="5">Lagos</option>
-          </select>
-        </form>
-      </div>
+      <Consumer>
+        {(value) => {
+          return (
+            <div>
+              <form onSubmit={(event) => event.preventDefault()}>
+                <h1>Find the Best Specialist</h1>
+                {/* Filter by name */}
+                {this.props.nameFilter ? (
+                  <FilterByName
+                  getList={value.getSpecialists}
+                  list={value.specialists}
+                  dispatchType={this.props.dispatchType}
+                 />
+                ) : <span></span>}
+                {/* Filter by city */}
+                {this.props.cityFilter ? (
+                  <FilterByCity
+                   getList={value.getSpecialists}
+                   list={value.specialists}
+                   dispatchType={this.props.dispatchType}
+                   />) : <span></span>}
+              </form>
+            </div>
+          );
+        }}
+      </Consumer>
     );
   }
 }
