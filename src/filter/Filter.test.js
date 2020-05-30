@@ -17,6 +17,7 @@ describe('Filter Component', () => {
         nameFilter={true}
         />
     );
+
     //confirm FilterByName component exists if nameFilter is set to true
     expect(wrapper.find('FilterByName').length).toEqual(1);
 
