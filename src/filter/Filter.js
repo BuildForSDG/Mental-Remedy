@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Consumer } from '../context/Context';
 import FilterByName from './FilterByName';
 import FilterByCity from './FilterByCity';
 
@@ -26,7 +25,6 @@ export default class Filter extends Component {
                    />) : <span></span>}
               </form>
             </div>
-          );
-
+    );
   }
 }
