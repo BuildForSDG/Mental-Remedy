@@ -1,8 +1,10 @@
+/* eslint-disable linebreak-style */
 import React, { Component } from 'react';
 import NavBar from './navbar/NavBar';
 import './App.css';
 import LandingPage from './pages/LandingPage';
 import Provider from './context/Context';
+import Footer from './footer/Footer';
 
 class App extends Component {
   render() {
@@ -10,6 +12,7 @@ class App extends Component {
       <Provider>
         <NavBar />
         <LandingPage />
+        <Footer />
       </Provider>
     );
   }
