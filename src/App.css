@@ -384,6 +384,7 @@ main {
   font-weight: bolder;
 }
 
+<<<<<<< HEAD
 .spc {
   margin-top: 2rem;
   display: grid;
@@ -407,6 +408,48 @@ main {
 .city {
   width: 10rem;
 }
+=======
+/* footer css */
+.wrap-footer {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.main-footer {
+  padding-left: 4%;
+  position: relative;
+  width: 100%;
+  color: var(--color);
+  border-top: 3px solid var(--bg-fallback);
+  border-radius: 30%;
+}
+
+.footer-bottom {
+  background-color: var(--bg-fallback);
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  width: 100%;
+  font-size: var(--small-text);
+  font-family: var(--lato);
+  text-align: left;
+}
+
+.footer-container {
+  float: left;
+  width: 100%;
+}
+
+>>>>>>> 6e8c8c2e907809515882291b1cd49fbd7fc9f308
 /* Media Queries */
 
 /*
@@ -461,9 +504,14 @@ main {
     grid-gap: 20px;
   }
 
+<<<<<<< HEAD
   .spc {
     grid-template-columns: auto;
     grid-gap: 20px;
+=======
+  .row {
+    flex-direction: column;
+>>>>>>> 6e8c8c2e907809515882291b1cd49fbd7fc9f308
   }
 
   :root {
