@@ -13,6 +13,7 @@ class NavItem extends Component {
     event.preventDefault();
     this.props.history.push(`/${this.props.link}`);
     dispatch({ type: 'TOGGLEMENU', payload: false });
+    dispatch({ type: 'TOGGLEDROPDOWN', payload: false });
   }
 
   render() {
