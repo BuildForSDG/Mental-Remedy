@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import FilterByName from './FilterByName';
 import FilterByCity from './FilterByCity';
+import FilterByTitle from './FilterByTitle';
 
-export default class Filter extends Component {
+class Filter extends Component {
   render() {
     return (
             <div>
               <form onSubmit={(event) => event.preventDefault()}>
-                <h1>Find the Best Specialist</h1>
+                <h1 className="small-text">Search</h1>
                 {/* Filter by name */}
                 {this.props.nameFilter ? (
                   <FilterByName
@@ -23,8 +25,24 @@ export default class Filter extends Component {
                    list={this.props.list}
                    dispatchType={this.props.dispatchType}
                    />) : <span></span>}
+                {/* Filter by name */}
+                {this.props.titleFilter ? (
+                  <FilterByTitle
+                  getList={this.props.getList}
+                  list={this.props.list}
+                  dispatchType={this.props.dispatchType}
+                 />
+                ) : <span></span>}
               </form>
             </div>
     );
   }
 }
+
+Filter.propTypes = {
+  list: PropTypes.array.isRequired,
+  dispatchType: PropTypes.string.isRequired,
+  getList: PropTypes.func.isRequired
+};
+
+export default Filter;

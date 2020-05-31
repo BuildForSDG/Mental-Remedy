@@ -25,6 +25,11 @@ const reducer = (state, action) => {
         ...state,
         specialists: action.payload
       };
+    case 'FILTERMDLIST':
+      return {
+        ...state,
+        mentalDisorders: action.payload
+      };
     case 'SEARCH':
       return {
         ...state,
