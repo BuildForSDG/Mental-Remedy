@@ -384,7 +384,6 @@ main {
   font-weight: bolder;
 }
 
-<<<<<<< HEAD
 .spc {
   margin-top: 2rem;
   display: grid;
@@ -408,7 +407,6 @@ main {
 .city {
   width: 10rem;
 }
-=======
 /* footer css */
 .wrap-footer {
   overflow: hidden;
@@ -449,7 +447,6 @@ main {
   width: 100%;
 }
 
->>>>>>> 6e8c8c2e907809515882291b1cd49fbd7fc9f308
 /* Media Queries */
 
 /*
@@ -504,14 +501,13 @@ main {
     grid-gap: 20px;
   }
 
-<<<<<<< HEAD
   .spc {
     grid-template-columns: auto;
     grid-gap: 20px;
-=======
+  }
+
   .row {
     flex-direction: column;
->>>>>>> 6e8c8c2e907809515882291b1cd49fbd7fc9f308
   }
 
   :root {
