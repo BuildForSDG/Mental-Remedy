@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Md from './Md';
 
-export default class MdList extends Component {
+class MdList extends Component {
   componentDidMount() {
     this.props.getMdList();
   }
@@ -16,3 +17,10 @@ export default class MdList extends Component {
     );
   }
 }
+
+MdList.propTypes = {
+  mdList: PropTypes.array.isRequired,
+  getMdList: PropTypes.func.isRequired
+};
+
+export default MdList;

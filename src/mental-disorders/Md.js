@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class Md extends Component {
+class Md extends Component {
   render() {
     return (
             <div className="md-item-prev md-item">
@@ -13,3 +14,9 @@ export default class Md extends Component {
     );
   }
 }
+
+Md.propTypes = {
+  md: PropTypes.object.isRequired
+};
+
+export default Md;
