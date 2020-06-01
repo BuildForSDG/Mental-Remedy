@@ -2,6 +2,7 @@ import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { FiLogIn } from 'react-icons/fi';
+import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './NavBar';
 import NavList from './NavList';
 import NavItem from './NavItem';
@@ -11,7 +12,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Navbar Component', () => {
   it('toggles classes and menu icon in navbar component', () => {
-    const wrapper = mount(<NavBar/>, {
+    const wrapper = mount(<Router><NavBar/></Router>, {
       wrappingComponent: Context.Provider,
       wrappingComponentProps: {
         value: {
@@ -57,12 +58,22 @@ describe('NavList Component', () => {
 describe('NavItem Component', () => {
   it('toggles classes for link description when menu is open/closed', () => {
     // confirm default class
-    const wrapper = mount(<NavItem menuOpen={false} id=""
-      linkDes="testing" icon={<FiLogIn/>} />);
+    const wrapper = mount(<Router><NavItem menuOpen={false} id=""
+      linkDes="testing" icon={<FiLogIn/>} link="/about" /></Router>, {
+      wrappingComponent: Context.Provider,
+      wrappingComponentProps: {
+        value: {
+          menuOpen: false, dispatch: () => {}
+        }
+      }
+    });
     expect(wrapper.find('[data-link-des]').hasClass('d-none')).toBe(true);
     // confirm its class is toggled
-    wrapper.setProps({
-      menuOpen: true, icon: <FiLogIn/>, linkDes: 'testing'
+    const provider = wrapper.getWrappingComponent();
+    provider.setProps({
+      value: {
+        menuOpen: true, dispatch: () => {}
+      }
     });
     expect(wrapper.find('[data-link-des]').hasClass('link-des')).toBe(true);
   });
