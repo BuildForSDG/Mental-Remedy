@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  GiHealing, GiDoctorFace
-} from 'react-icons/gi';
+import { GiHealing, GiDoctorFace } from 'react-icons/gi';
 import { FaHome } from 'react-icons/fa';
 import { IoIosPeople } from 'react-icons/io';
 import { FiLogIn } from 'react-icons/fi';
@@ -11,21 +9,21 @@ import DropDown from './DropDown';
 
 class NavList extends Component {
   render() {
-    const {
-      menuOpen, user, dropDownOpen, dispatch
-    } = this.props;
+    const { menuOpen, user, dropDownOpen, dispatch } = this.props;
     return (
-        <ul className="nav-list">
-            <NavItem linkDes="Home" icon={<FaHome/>} menuOpen={menuOpen} />
-            <NavItem linkDes="About" icon={<IoIosPeople/>} menuOpen={menuOpen} />
-            <NavItem linkDes="Mental Disorders" icon={<GiHealing/>} menuOpen={menuOpen} />
-            <NavItem linkDes="Specialists" icon={<GiDoctorFace/>} menuOpen={menuOpen} />
-            {user.id ? (
-              <DropDown dropDownOpen={dropDownOpen} menuOpen={menuOpen} dispatch={dispatch} />
-            ) : (
-              <NavItem linkDes="Login" icon={<FiLogIn/>} menuOpen={menuOpen} />
-            )}
-        </ul>
+      <ul className="nav-list">
+        <NavItem link="" linkDes="Home" icon={<FaHome />} />
+        <NavItem link="about" linkDes="About" icon={<IoIosPeople />} />
+        <NavItem link="mental-disorders" linkDes="Mental Disorders" icon={<GiHealing />} />
+
+        <NavItem link="specialists" linkDes="Specialists" icon={<GiDoctorFace />} />
+
+        {user.id ? (
+          <DropDown dropDownOpen={dropDownOpen} menuOpen={menuOpen} dispatch={dispatch} />
+        ) : (
+          <NavItem link="login" linkDes="Login" icon={<FiLogIn />} />
+        )}
+      </ul>
     );
   }
 }

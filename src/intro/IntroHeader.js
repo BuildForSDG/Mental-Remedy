@@ -7,7 +7,12 @@ export default class IntroHeader extends Component {
         <div className="content">
           <h1 className="heading">Mental Remedy</h1>
           <p className="small-text">Linking mental health specialist to the community.</p>
-          <input className="small-text" type="text" name="box" placeholder="mental disorders, specialists...." />
+          <input
+            className="intro-search small-text"
+            type="text"
+            name="box"
+            placeholder="mental disorders, specialists...."
+          />
         </div>
       </div>
     );

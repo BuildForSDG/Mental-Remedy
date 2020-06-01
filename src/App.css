@@ -41,6 +41,10 @@
   transition: 0.5s;
 }
 
+.sp-page {
+  left: 5rem;
+}
+
 .nav-link {
   height: 3.5rem;
   margin-left: 0.8rem;
@@ -147,7 +151,7 @@ main {
   font-size: var(--small-text);
 }
 
-input {
+.intro-search {
   border: 3px solid var(--bg-fallback);
   height: var(--search-box-h);
   width: var(--search-box-w);
@@ -252,7 +256,7 @@ input {
 
 .short-des {
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   height: auto;
@@ -380,12 +384,53 @@ input {
   font-weight: bolder;
 }
 
+.spc {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+.search-field {
+  height: auto;
+  padding: 10px;
+  border: 2px solid var(--bg-fallback);
+  border-radius: 25px;
+  outline: none;
+}
+
+.name {
+  width: 16rem;
+  margin-bottom: 2rem;
+}
+
+.city {
+  width: 10rem;
+}
+
+/* Mental Disorders Page */
+.md-wrapper {
+  padding: 0;
+  margin: 0 0 0 0.5rem;
+}
+
+.md-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  column-gap: 0.5rem;
+  row-gap: 0.3rem;
+  width: 100%;
+  height: auto;
+}
+
 /* footer css */
 .wrap-footer {
   overflow: hidden;
   display: flex;
   flex-direction: column;
   margin-left: 4rem;
+  margin-top: 1rem;
 }
 
 .main-footer {
@@ -441,6 +486,11 @@ input {
     grid-template-rows: auto;
   }
 
+  .spc {
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+
   :root {
     --nav-width: 60% !important;
     --left: 50% !important;
@@ -465,6 +515,11 @@ input {
   }
 
   .specialists {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+
+  .spc {
     grid-template-columns: auto;
     grid-gap: 20px;
   }
