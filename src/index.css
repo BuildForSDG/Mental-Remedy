@@ -7,6 +7,7 @@
   --color: #434343;
 
   /* font sizes */
+  --xxsmall-text: calc(10px + 1vmin);
   --small-text: calc(10px + 2vmin);
   --medium-text: calc(10px + 4vmin);
   --large-text: calc(10px + 5vmin);
@@ -83,6 +84,11 @@ body {
   font-family: var(--lato);
 }
 
+.xxsmall-text {
+  font-size: var(--xxsmall-text);
+  font-family: var(--lato);
+}
+
 .small-heading {
   font-size: var(--simple-text);
   font-family: var(--russo);
@@ -97,6 +103,10 @@ body {
 .black-text {
   --color: #434343;
   color: var(--color);
+}
+
+.list-unstyled {
+  list-style: none;
 }
 
 .large-btn {
