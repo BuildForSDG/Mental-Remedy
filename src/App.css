@@ -118,6 +118,26 @@
 
   color: var(--color);
 }
+/*** AboutPage Component ***/
+.head h1 {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  color: var(--color);
+}
+
+.head {
+  border-bottom-left-radius: 9rem;
+  border-bottom-right-radius: 9rem;
+  height: 20;
+  background: var(--bg);
+}
+
+.about-content {
+  height: auto;
+  margin: 3rem 5rem 0 5rem;
+}
+
 /*** LandingPage Component ***/
 
 main {
@@ -131,6 +151,13 @@ main {
 }
 
 .skew {
+  margin-top: -200px;
+  padding: 200px 0;
+  transform: skew(0deg, -10deg);
+  background: var(--bg);
+}
+
+.about-container {
   margin-top: -200px;
   padding: 200px 0;
   transform: skew(0deg, -10deg);

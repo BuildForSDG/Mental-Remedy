@@ -8,6 +8,7 @@ import LandingPage from './pages/LandingPage';
 import SpecialistsPage from './pages/SpecialistsPage';
 
 import Footer from './footer/Footer';
+import AboutPage from './pages/AboutPage';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={(props) => <LandingPage {...props} />} />
             <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
+            <Route exact path="/about" render={(props) => <AboutPage {...props} />} />
           </Switch>
           <Footer />
         </Provider>
