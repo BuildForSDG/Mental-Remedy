@@ -384,6 +384,29 @@ main {
   font-weight: bolder;
 }
 
+.spc {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+.search-field {
+  height: auto;
+  padding: 10px;
+  border: 2px solid var(--bg-fallback);
+  border-radius: 25px;
+  outline: none;
+}
+
+.name {
+  width: 16rem;
+  margin-bottom: 2rem;
+}
+
+.city {
+  width: 10rem;
+}
 /* footer css */
 .wrap-footer {
   overflow: hidden;
