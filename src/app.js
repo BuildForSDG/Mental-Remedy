@@ -7,6 +7,7 @@ import './App.css';
 import LandingPage from './pages/LandingPage';
 import SpecialistsPage from './pages/SpecialistsPage';
 import Footer from './footer/Footer';
+import MentalDisorders from './pages/MentalDisorders';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={(props) => <LandingPage {...props} />} />
             <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
+            <Route exact path="/mental-disorders" render={(props) => <MentalDisorders {...props} />} />
           </Switch>
           <Footer/>
         </Provider>

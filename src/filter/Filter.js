@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import FilterByName from './FilterByName';
 import FilterByCity from './FilterByCity';
+import FilterByTitle from './FilterByTitle';
 
 class Filter extends Component {
   render() {
@@ -24,6 +25,14 @@ class Filter extends Component {
                    list={this.props.list}
                    dispatchType={this.props.dispatchType}
                    />) : <span></span>}
+                {/* Filter by name */}
+                {this.props.titleFilter ? (
+                  <FilterByTitle
+                  getList={this.props.getList}
+                  list={this.props.list}
+                  dispatchType={this.props.dispatchType}
+                 />
+                ) : <span></span>}
               </form>
             </div>
     );
@@ -31,9 +40,9 @@ class Filter extends Component {
 }
 
 Filter.propTypes = {
-  getList: PropTypes.func.isRequired,
   list: PropTypes.array.isRequired,
-  dispatchType: PropTypes.string.isRequired
+  dispatchType: PropTypes.string.isRequired,
+  getList: PropTypes.func.isRequired
 };
 
 export default Filter;

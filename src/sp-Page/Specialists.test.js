@@ -16,6 +16,7 @@ describe('SpecialistPage Module', () => {
         value: {
           getSpecialists: () => 'success',
           specialists: specialists,
+          dispatchType: '',
           search: ''
         }
       }

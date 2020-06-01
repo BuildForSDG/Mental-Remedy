@@ -13,6 +13,7 @@ describe('Filter Component', () => {
       <Filter
         list={specialists}
         getList={() => 'success'}
+        dispatchType=""
         cityFilter={true}
         nameFilter={true}
         />
