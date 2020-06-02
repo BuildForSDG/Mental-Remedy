@@ -20,6 +20,21 @@ const reducer = (state, action) => {
         ...state,
         dropDownOpen: action.payload
       };
+    case 'FILTERSPECIALISTS':
+      return {
+        ...state,
+        specialists: action.payload
+      };
+    case 'FILTERMDLIST':
+      return {
+        ...state,
+        mentalDisorders: action.payload
+      };
+    case 'SEARCH':
+      return {
+        ...state,
+        search: action.payload
+      };
     default:
       return state;
   }
@@ -34,8 +49,7 @@ class Provider extends Component {
       dropDownOpen: false,
       user: { id: 1, email: '' },
       mentalDisorders: [],
-      filter: {},
-
+      search: '',
       aboutInfo:
         'Due to the Stigma and scrutiny associated with mental illnesses, individuals who notice change in behavioural attitude may desist from seeking professional help cause of this stigma. Our main goal is to educate and establish effective means of communication between specialists and the community.',
       services: [],

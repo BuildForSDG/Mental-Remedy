@@ -15,7 +15,9 @@ describe('SpecialistPage Module', () => {
       wrappingComponentProps: {
         value: {
           getSpecialists: () => 'success',
-          specialists: specialists
+          specialists: specialists,
+          dispatchType: '',
+          search: ''
         }
       }
     });

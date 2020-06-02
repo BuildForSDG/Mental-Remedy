@@ -10,6 +10,8 @@ import SpecialistsPage from './pages/SpecialistsPage';
 import Footer from './footer/Footer';
 import AboutPage from './pages/AboutPage';
 
+import MentalDisorders from './pages/MentalDisorders';
+
 class App extends Component {
   render() {
     return (
@@ -20,6 +22,7 @@ class App extends Component {
             <Route exact path="/" render={(props) => <LandingPage {...props} />} />
             <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
             <Route exact path="/about" render={(props) => <AboutPage {...props} />} />
+            <Route exact path="/mental-disorders" render={(props) => <MentalDisorders {...props} />} />
           </Switch>
           <Footer />
         </Provider>
