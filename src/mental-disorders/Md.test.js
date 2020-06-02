@@ -17,7 +17,9 @@ describe('Mental disorders Page', () => {
           getMdlist: () => 'success',
           mentalDisorders: mentalDisorders,
           dispatchType: '',
-          search: ''
+          titleSearch: '',
+          citySearch: '',
+          nameSearch: ''
         }
       }
     });
