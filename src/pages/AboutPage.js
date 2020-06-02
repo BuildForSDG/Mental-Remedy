@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Services from '../About/Services';
 
 export default class AboutPage extends Component {
   render() {
@@ -7,6 +8,7 @@ export default class AboutPage extends Component {
         <div className="head">
           <h1 className="heading">About us</h1>
         </div>
+
         <div className="about-content ">
           <p className="small-text">
             Welcome to Mental Remedy the one stop home for mental health. Our goal is to build a platform where we link
@@ -18,6 +20,8 @@ export default class AboutPage extends Component {
             city. Users will be able to schedhule appointments with mental health specialists of their choice.
           </p>
         </div>
+
+        <Services />
       </main>
     );
   }
