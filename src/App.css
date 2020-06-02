@@ -515,6 +515,10 @@ main {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .about-content p {
+    margin: 5rem 2rem 5rem 2rem;
+  }
+
   .services {
     grid-template-columns: auto auto;
     grid-gap: 20px;
@@ -547,6 +551,10 @@ main {
 */
 
 @media (max-width: 480px) {
+  .about-content p {
+    margin: 5rem 2rem 5rem 2rem;
+  }
+
   .services {
     grid-template-columns: auto;
     grid-gap: 20px;
