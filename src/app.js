@@ -6,7 +6,10 @@ import NavBar from './navbar/NavBar';
 import './App.css';
 import LandingPage from './pages/LandingPage';
 import SpecialistsPage from './pages/SpecialistsPage';
+
 import Footer from './footer/Footer';
+import AboutPage from './pages/AboutPage';
+
 import MentalDisorders from './pages/MentalDisorders';
 
 class App extends Component {
@@ -18,9 +21,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={(props) => <LandingPage {...props} />} />
             <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
+            <Route exact path="/about" render={(props) => <AboutPage {...props} />} />
             <Route exact path="/mental-disorders" render={(props) => <MentalDisorders {...props} />} />
           </Switch>
-          <Footer/>
+          <Footer />
         </Provider>
       </Router>
     );
