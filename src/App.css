@@ -73,7 +73,7 @@
 }
 
 .menu-active {
-  left: var(--left);
+  left: var(--left) !important;
 
   --color: #4facfe;
 
@@ -557,6 +557,10 @@ main {
 
   .navbar-wrapper {
     width: 3rem;
+  }
+
+  .menu {
+    left: 3.2rem;
   }
 
   .name {
