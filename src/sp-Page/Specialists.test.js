@@ -17,7 +17,9 @@ describe('SpecialistPage Module', () => {
           getSpecialists: () => 'success',
           specialists: specialists,
           dispatchType: '',
-          search: ''
+          titleSearch: '',
+          citySearch: '',
+          nameSearch: ''
         }
       }
     });

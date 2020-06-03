@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import PropTypes from 'prop-types';
 import { Consumer } from '../context/Context';
 
@@ -7,6 +7,7 @@ class FilterByTitle extends Component {
     super(props);
     this.filter = this.filter.bind(this);
     this.filterByTitle = this.filterByTitle.bind(this);
+    this.titleRef = createRef();
   }
 
   filter(list, keyword) {
@@ -16,16 +17,20 @@ class FilterByTitle extends Component {
   filterByTitle(event, search, dispatch) {
     event.preventDefault();
     // check if input is empty
-    if (event.target.value.length > 3) {
+    if (event.target.value.length > 1) {
+      // Scroll down a bit
+      window.scrollTo(0, this.titleRef.current.offsetTop - 20);
       // Get the list which is to be filtered
       const listToBeFiltered = this.props.list;
       // save input's value into a state
-      dispatch({ type: 'SEARCH', payload: event.target.value });
+      dispatch({ type: 'TITLESEARCH', payload: event.target.value });
       // filter the list
       const results = this.filter(listToBeFiltered, search);
       // update state with filtered list
       return dispatch({ type: this.props.dispatchType, payload: results });
     }
+    // Scroll back up a bit when input is empty
+    window.scrollTo(0, 0);
     // restore state if input is empty
     return this.props.getList();
   }
@@ -38,12 +43,13 @@ class FilterByTitle extends Component {
                         <>
                             <input
                               type="text"
-                              list={value.search.length > 2 ? 'filter-by-title' : ''}
+                              ref={this.titleRef}
+                              list={value.titleSearch.length > 2 ? 'filter-by-title' : ''}
                               className="search-field name"
                               placeholder="Title..."
                               autoComplete="off"
-                              onChange={(event) => this.filterByTitle(event, value.search, value.dispatch)}
-                              onInput={(event) => value.dispatch({ type: 'SEARCH', payload: event.target.value })}
+                              onChange={(event) => this.filterByTitle(event, value.titleSearch, value.dispatch)}
+                              onInput={(event) => value.dispatch({ type: 'TITLESEARCH', payload: event.target.value })}
                             />
                             <datalist id="filter-by-title" >
                               {this.props.list.map((key) => (
