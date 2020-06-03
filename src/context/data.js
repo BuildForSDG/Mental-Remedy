@@ -41,6 +41,7 @@ const mentalDisorders = [
     title: 'Clinical depression',
     description:
       'Also known as major depression, a mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life. The persistent feeling of sadness or loss of interest that characterises major depression can lead to a range of behavioural and physical symptoms. Depression can also be associated with thoughts of suicide. Depression can also be associated with thoughts of suicide. The good news is that with the right treatment and support, someone with depression can make a full recovery.',
+    diagnosis: 'Requires a medical diagnosis',
     symptoms: [
       {
         id: 301,
@@ -86,6 +87,7 @@ const mentalDisorders = [
     title: 'Bipolar disorder',
     description: `A disorder associated with episodes of mood swings ranging from depressive lows to manic highs.
     The exact cause of bipolar disorder isn’t known, but a combination of genetics, environment and altered brain structure and chemistry may play a role.`,
+    diagnosis: 'Requires a medical diagnosis',
     symptoms: [
       {
         id: 201,
