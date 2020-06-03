@@ -118,6 +118,42 @@
 
   color: var(--color);
 }
+/*** AboutPage Component ***/
+.head h1 {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  color: var(--color);
+}
+
+.head {
+  border-bottom-left-radius: 9rem;
+  border-bottom-right-radius: 9rem;
+  height: auto;
+  background: var(--bg);
+}
+
+.about-content {
+  height: auto;
+  text-align: center;
+  margin: 5rem 0 5rem 5;
+}
+
+.about-content p {
+  margin: 5rem 5rem 5rem 5rem;
+}
+
+.list {
+  list-style: none;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 /*** LandingPage Component ***/
 
 main {
@@ -131,6 +167,13 @@ main {
 }
 
 .skew {
+  margin-top: -200px;
+  padding: 200px 0;
+  transform: skew(0deg, -10deg);
+  background: var(--bg);
+}
+
+.about-container {
   margin-top: -200px;
   padding: 200px 0;
   transform: skew(0deg, -10deg);
@@ -525,6 +568,10 @@ main {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .about-content p {
+    margin: 5rem 2rem 5rem 2rem;
+  }
+
   .services {
     grid-template-columns: auto auto;
     grid-gap: 20px;
@@ -576,6 +623,9 @@ main {
 
   .name {
     width: auto;
+
+  .about-content p {
+    margin: 5rem 2rem 5rem 2rem;
   }
 
   .services {
