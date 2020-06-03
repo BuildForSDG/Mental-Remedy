@@ -10,6 +10,7 @@ import PreLoader from './pre-loader/PreLoader';
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const MentalDisorders = lazy(() => import('./pages/MentalDisorders'));
 const SpecialistsPage = lazy(() => import('./pages/SpecialistsPage'));
+const SingleMdPage = lazy(() => import('./pages/SingleMdPage'));
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path="/" render={(props) => <LandingPage {...props} />} />
             <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
             <Route exact path="/mental-disorders" render={(props) => <MentalDisorders {...props} />} />
+            <Route exact path="/mental-disorders/:id/:title" render={(props) => <SingleMdPage {...props} />}/>
           </Switch>
           <Footer/>
         </Provider>
