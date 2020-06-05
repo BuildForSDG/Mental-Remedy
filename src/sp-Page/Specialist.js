@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { withRouter } from 'react-router-dom';
 
-export default class Specialist extends Component {
+class Specialist extends Component {
+  constructor(props) {
+    super(props);
+    this.profileHandler = this.profileHandler.bind(this);
+  }
+
+  profileHandler() {
+    this.props.history.push({
+      pathname: `/specialist/${this.props.specialist.id}`,
+      state: {
+        specialist: this.props.specialist
+      }
+    });
+  }
+
   render() {
     return (
       <div>
@@ -17,7 +32,9 @@ export default class Specialist extends Component {
           <p className="review small-text">{this.props.specialist.reviews[0].review}</p>
           <button className="small-heading plain-btn">More reviews</button>
           <div className="btns">
-            <button className="btn1">View Profile</button>
+            <button className="btn1" onClick={this.profileHandler}>
+              View Profile
+            </button>
             <button className="btn2">Book Appointment</button>
           </div>
         </div>
@@ -25,3 +42,5 @@ export default class Specialist extends Component {
     );
   }
 }
+
+export default withRouter(Specialist);
