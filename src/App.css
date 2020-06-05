@@ -160,7 +160,6 @@
 .detail {
   height: auto;
   text-align: center;
-  border: 3px solid black;
   display: grid;
   grid-template-columns: 60% 40%;
   column-gap: 20px;
@@ -194,13 +193,14 @@
 .right {
   margin-top: 3rem;
   text-align: center;
-
   height: 80vh;
-  background: var(--bg);
+  background: whitesmoke;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
+  box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
 }
 
 .container-form {
-  border: '5px solid black';
   text-align: left;
   color: var(--color);
 }
@@ -231,18 +231,25 @@
   border-radius: 100px;
   width: 93%;
   margin: 0 auto;
+  cursor: pointer;
   margin-bottom: 0;
-  transition: ease-in-out 0.8s;
+  transition: ease-in-out 0.5s;
 }
 
 .btn:hover {
-  background-color: var(--bg);
-  columns: var(--color);
+  background-color: var(--bg-fallback);
+  color: #fff;
 }
 
 .ratings {
   color: var(--bg-fallback);
   font-size: 1.5rem;
+}
+
+.more-details {
+  height: auto;
+  margin: 5rem;
+  text-align: left;
 }
 /*** LandingPage Component ***/
 

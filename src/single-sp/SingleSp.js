@@ -21,7 +21,7 @@ export default class SingleSp extends Component {
                 {this.props.specialist.city}
               </h3>
               <h5>
-                <span>Languages :{this.props.specialist.languages} </span>
+                <span>Hospital :{this.props.specialist.hospital_associations} </span>
               </h5>
             </div>
             <div className="recent-reviews">
@@ -73,6 +73,20 @@ export default class SingleSp extends Component {
               </form>
             </div>
           </div>
+        </div>
+        <div className="more-details">
+          <h1>Languages spoken</h1>
+          <p>{this.props.specialist.languages}</p>
+          <h1>Education And Training</h1>
+          {this.props.specialist.education.map((item) => (
+            <p key={item.id}>
+              {item.facility}({item.type})
+            </p>
+          ))}
+          <h1>Provider Gender</h1>
+          <p>{this.props.specialist.gender}</p>
+          <h1>Liscence Number </h1>
+          <p>{this.props.specialist.liscence_number}</p>
         </div>
       </>
     );

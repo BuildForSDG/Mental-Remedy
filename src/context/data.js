@@ -351,7 +351,7 @@ const specialists = [
     city: 'Addis',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'female',
-    languages: 'English, Kiswahili',
+    languages: 'English, Spanish',
     liscence_number: 12345,
     hospital_associations: 'Kenyatta Hospital',
     education: [
@@ -653,11 +653,11 @@ const specialists = [
     id: 508,
     profile_pic: male,
     name: 'Dr. Mike Lyson',
-    city: 'Nairobi',
+    city: 'Lagos',
     location: 'Parklands/Highridge Third Parklands Ave Aga Khan University',
     gender: 'male',
     languages: 'English, Kiswahili',
-    liscence_number: 12345,
+    liscence_number: 54321,
     hospital_associations: 'Kenyatta Hospital',
     education: [
       {
