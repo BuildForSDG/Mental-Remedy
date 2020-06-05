@@ -30,10 +30,20 @@ const reducer = (state, action) => {
         ...state,
         mentalDisorders: action.payload
       };
-    case 'SEARCH':
+    case 'TITLESEARCH':
       return {
         ...state,
-        search: action.payload
+        titleSearch: action.payload
+      };
+    case 'NAMESEARCH':
+      return {
+        ...state,
+        nameSearch: action.payload
+      };
+    case 'CITYSEARCH':
+      return {
+        ...state,
+        citySearch: action.payload
       };
     default:
       return state;
@@ -49,7 +59,9 @@ class Provider extends Component {
       dropDownOpen: false,
       user: { id: 1, email: '' },
       mentalDisorders: [],
-      search: '',
+      nameSearch: '',
+      titleSearch: '',
+      citySearch: '',
       aboutInfo:
         'Due to the Stigma and scrutiny associated with mental illnesses, individuals who notice change in behavioural attitude may desist from seeking professional help cause of this stigma. Our main goal is to educate and establish effective means of communication between specialists and the community.',
       services: [],
@@ -60,7 +72,6 @@ class Provider extends Component {
       startSlider: () => startSlider(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
-    this.getServices = this.getServices.bind(this);
   }
 
   async getServices() {

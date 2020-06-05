@@ -5,6 +5,10 @@ import MdPreview from '../mdList-preview/MdPreview';
 import SpecialistsPrev from '../specialists/SpecialistsPrev';
 
 class LandingPage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <main>

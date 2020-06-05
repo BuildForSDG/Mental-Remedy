@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import MdMain from '../mental-disorders/MdMain';
 
-export default class MentalDisorders extends Component {
+class MentalDisorders extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
             <main>
@@ -11,3 +16,5 @@ export default class MentalDisorders extends Component {
     );
   }
 }
+
+export default withRouter(MentalDisorders);
