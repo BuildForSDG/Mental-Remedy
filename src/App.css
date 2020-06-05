@@ -561,6 +561,17 @@ main {
   height: auto;
 }
 
+/*** Forum ***/
+.forum-wrapper {
+  padding: 1rem;
+}
+.forum-post {
+  text-align: left;
+  background: var(--bg);
+  padding: 0.4rem;
+  border-bottom-right-radius: 20px;
+}
+
 /* Media Queries */
 
 /*
