@@ -77,7 +77,7 @@ export default class SingleSp extends Component {
         <div className="more-details">
           <h1>Languages spoken</h1>
           <p>{this.props.specialist.languages}</p>
-          <h1>Education And Training</h1>
+          <h1 className="">Education And Training</h1>
           {this.props.specialist.education.map((item) => (
             <p key={item.id}>
               {item.facility}({item.type})
