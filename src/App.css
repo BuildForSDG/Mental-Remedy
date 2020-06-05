@@ -180,8 +180,7 @@
 
 .single-sp {
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  margin-top: 3rem;
   display: inline-block;
 }
 
@@ -221,10 +220,11 @@
 
 .form-field input {
   pad: 10px 15px;
+  border-radius: 100px;
 }
 
 .btn {
-  background-color: var(--bg-fallback);
+  background-color: #fff;
   color: #000;
   padding: 10px 20px;
   font-size: 1.5rem;
@@ -236,7 +236,7 @@
 }
 
 .btn:hover {
-  background-color: #fff;
+  background-color: var(--bg);
   columns: var(--color);
 }
 
