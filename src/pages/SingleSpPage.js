@@ -9,7 +9,7 @@ export default class SingleSpPage extends Component {
   render() {
     return (
       <main>
-        <SingleSp md={this.props.history.location.state.md} />
+        <SingleSp specialist={this.props.history.location.state.specialist} />
       </main>
     );
   }

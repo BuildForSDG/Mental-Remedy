@@ -154,6 +154,41 @@
   margin: 0;
   padding: 0;
 }
+
+/*** Detail Component ***/
+
+.detail {
+  height: auto;
+  border: 5px solid black;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  column-gap: 20px;
+}
+
+.left {
+  display: grid;
+  grid-template-rows: auto auto;
+  height: auto;
+}
+
+.right {
+  border: 3px solid blue;
+}
+
+.single-sp {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+
+.recent-reviews {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 20px;
+  height: auto;
+}
+
 /*** LandingPage Component ***/
 
 main {

@@ -248,8 +248,8 @@ const specialists = [
     reviews: [
       {
         id: 513,
-        email: 'ali@doc.com',
-        intials: 'Ali',
+        email: 'abdi@doc.com',
+        intials: 'Ahmed',
         initial_status: 'hidden',
         review: 'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them.',
         date_posted: Date.now()
@@ -257,7 +257,7 @@ const specialists = [
       {
         id: 514,
         email: 'ali@doc.com',
-        intials: 'Ali',
+        intials: 'Abdul',
         initial_status: 'hidden',
         review:
           'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
@@ -266,7 +266,7 @@ const specialists = [
       {
         id: 515,
         email: 'ali@doc.com',
-        intials: 'Ali',
+        intials: 'faiza',
         initial_status: 'hidden',
         review:
           'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
@@ -275,7 +275,7 @@ const specialists = [
       {
         id: 516,
         email: 'ali@doc.com',
-        intials: 'Ali',
+        intials: 'james',
         initial_status: 'hidden',
         review:
           'I feel that Dr. Irungu really cares about his patients and genuinely wants to help them. I am going to continue seeing him. I’m very impressed with the Dr. and his assistant as well. I would recommend Dr. Ivanov as well as the application.',
