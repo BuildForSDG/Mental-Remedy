@@ -159,7 +159,8 @@
 
 .detail {
   height: auto;
-  border: 5px solid black;
+  text-align: center;
+
   display: grid;
   grid-template-columns: 60% 40%;
   column-gap: 20px;
@@ -172,7 +173,9 @@
 }
 
 .right {
-  border: 3px solid blue;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .single-sp {
@@ -189,6 +192,58 @@
   height: auto;
 }
 
+.right {
+  margin-top: 3rem;
+  text-align: center;
+
+  height: 80vh;
+  background: var(--bg);
+}
+
+.container-form {
+  border: '5px solid black';
+  text-align: left;
+  color: var(--color);
+}
+.container-form form {
+  display: grid;
+  row-gap: 20px;
+}
+
+.container-form form p {
+  font-weight: 300;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-field input {
+  pad: 10px 15px;
+}
+
+.btn {
+  background-color: var(--bg-fallback);
+  color: #000;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 100px;
+  width: 93%;
+  margin: 0 auto;
+  margin-bottom: 0;
+  transition: ease-in-out 0.8s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  columns: var(--color);
+}
+
+.ratings {
+  color: var(--bg-fallback);
+  font-size: 1.5rem;
+}
 /*** LandingPage Component ***/
 
 main {

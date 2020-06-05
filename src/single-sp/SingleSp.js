@@ -24,11 +24,7 @@ export default class SingleSp extends Component {
             </h5>
           </div>
           <div className="recent-reviews">
-            <div
-              style={{
-                color: 'var(--bg-fallback)'
-              }}
-            >
+            <div className="ratings">
               <h4>Overall Rating</h4>
               <h1>5/5</h1>
               <span>
@@ -52,7 +48,30 @@ export default class SingleSp extends Component {
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <h2>BOOK APPOINTMENT</h2>
+          <div className="container-form">
+            <form>
+              <div className="form-field">
+                <p>Name :</p>
+                <input type="name" placeholder="Name..." />
+              </div>
+              <div className="form-field">
+                <p>Email :</p>
+                <input type="email" placeholder="Email..." />
+              </div>
+              <div className="form-field">
+                <p>Date :</p>
+                <input type="date" placeholder="Appointment Date..." />
+              </div>
+              <div className="form-field">
+                <p>Time :</p>
+                <input type="time" placeholder="Time..." />
+              </div>
+              <button className="btn">BOOK APPOINTMENT</button>
+            </form>
+          </div>
+        </div>
       </div>
     );
   }
