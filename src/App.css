@@ -166,6 +166,11 @@ main {
   z-index: 1;
 }
 
+.logo {
+  height: 10vh;
+  width: auto;
+}
+
 .skew {
   margin-top: -200px;
   padding: 200px 0;
