@@ -570,11 +570,24 @@ main {
 .forum-wrapper {
   padding: 1rem;
 }
-.forum-post {
+.forum-post-intro {
   text-align: left;
   background: var(--bg);
   padding: 0.4rem;
   border-bottom-right-radius: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+}
+
+.post-intro-right {
+  height: 40vh;
+  margin-top: -50px;
+}
+
+.post-intro-img {
+  height: 100%;
+  width: auto;
 }
 
 /* Media Queries */
@@ -676,6 +689,11 @@ main {
   .md-list {
     grid-template-columns: auto;
     grid-template-rows: auto;
+  }
+
+  .forum-post-intro {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
   }
 
   :root {

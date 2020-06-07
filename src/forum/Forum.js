@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import ForumPost from './ForumPost';
+import ForumPostIntro from './ForumPostIntro';
 
 export default class Forum extends Component {
   render() {
     return (
             <div className="forum-wrapper">
-                <ForumPost/>
+                <ForumPostIntro />
             </div>
     );
   }

@@ -864,4 +864,12 @@ const services = [
   }
 ];
 
-export { services, mentalDisorders, specialists };
+const forumPosts = [
+  {
+    id: 1100,
+    userId: '#userid',
+    post: 'What are the causes and effect of stress?'
+  }
+];
+
+export { services, mentalDisorders, specialists, forumPosts };
