@@ -1,54 +1,13 @@
 import React, { Component } from 'react';
 import { services, mentalDisorders, specialists } from './data';
 import startSlider from '../swiper';
+import reducer from './Reducers';
+import { firebaseAuth } from '../firebase/firebase';
 
 export const Context = React.createContext();
 
 // This global variable is used to identify whether component is mounted or unmouted
 let isMounted = true;
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    // Functions for changing the state value are to be created here
-    case 'TOGGLEMENU':
-      return {
-        ...state,
-        menuOpen: action.payload
-      };
-    case 'TOGGLEDROPDOWN':
-      return {
-        ...state,
-        dropDownOpen: action.payload
-      };
-    case 'FILTERSPECIALISTS':
-      return {
-        ...state,
-        specialists: action.payload
-      };
-    case 'FILTERMDLIST':
-      return {
-        ...state,
-        mentalDisorders: action.payload
-      };
-    case 'TITLESEARCH':
-      return {
-        ...state,
-        titleSearch: action.payload
-      };
-    case 'NAMESEARCH':
-      return {
-        ...state,
-        nameSearch: action.payload
-      };
-    case 'CITYSEARCH':
-      return {
-        ...state,
-        citySearch: action.payload
-      };
-    default:
-      return state;
-  }
-};
 
 class Provider extends Component {
   constructor(props) {
@@ -57,7 +16,7 @@ class Provider extends Component {
       // All states are to be created here
       menuOpen: false,
       dropDownOpen: false,
-      user: { id: 1, email: '' },
+      user: {},
       mentalDisorders: [],
       nameSearch: '',
       titleSearch: '',
@@ -111,6 +70,16 @@ class Provider extends Component {
 
   componentDidMount() {
     isMounted = true;
+    firebaseAuth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          user: {
+            id: user.uid,
+            email: user.email
+          }
+        });
+      }
+    });
   }
 
   componentWillUnmount() {
