@@ -34,7 +34,6 @@ class Post extends Component {
                     <p className="small-text">{this.props.forumPost.post}</p>
                 </div>
             </div>
-
             <PostOptions
                 forumPost={this.props.forumPost}
                 dispatch={this.props.dispatch}

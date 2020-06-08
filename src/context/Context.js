@@ -45,10 +45,10 @@ const reducer = (state, action) => {
         ...state,
         citySearch: action.payload
       };
-    case 'TOGLECOMMENTS':
+    case 'TOGGLEPOSTFORM':
       return {
         ...state,
-        showComments: action.payload
+        forumPostForm: action.payload
       };
     default:
       return state;
@@ -78,7 +78,7 @@ class Provider extends Component {
       forumPosts: [],
       getForumPosts: () => this.getForumPosts(),
       getUsers: () => this.getUsers(),
-      showComments: false,
+      forumPostForm: true,
       startSlider: () => startSlider(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };

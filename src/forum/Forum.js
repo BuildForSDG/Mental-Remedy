@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ForumPostIntro from './ForumPostIntro';
 import ForumPosts from './ForumPosts';
 import { Consumer } from '../context/Context';
+import ForumPostForm from './ForumPostForm';
 
 export default class Forum extends Component {
   render() {
@@ -10,7 +11,11 @@ export default class Forum extends Component {
              {(value) => {
                return (
                 <div className="forum-wrapper">
-                  <ForumPostIntro />
+                  <ForumPostIntro
+                    dispatch={value.dispatch}
+                    currentUser={value.currentUser}
+                    formActive={value.forumPostForm} />
+                  <ForumPostForm formActive={value.forumPostForm} />
                   <ForumPosts
                     getForumPosts={value.getForumPosts}
                     forumPosts={value.forumPosts}
