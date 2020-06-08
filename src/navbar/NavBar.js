@@ -23,7 +23,7 @@ class NavBar extends Component {
         {(value) => {
           // Get states from context API
           const {
-            menuOpen, dispatch, user, dropDownOpen
+            menuOpen, dispatch, currentUser, dropDownOpen
           } = value;
           return (
             <nav className={menuOpen ? 'navbar-wrapper nav-active' : 'navbar-wrapper'}>
@@ -33,7 +33,7 @@ class NavBar extends Component {
                 onClick={(event) => this.toggleMenu(event, menuOpen, dispatch)} >
                 {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
               </a>
-              <NavList menuOpen={menuOpen} user={user}
+              <NavList menuOpen={menuOpen} user={currentUser}
               dropDownOpen={dropDownOpen} dispatch={dispatch} />
             </nav>
           );

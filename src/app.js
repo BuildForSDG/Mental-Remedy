@@ -12,7 +12,8 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const MentalDisorders = lazy(() => import('./pages/MentalDisorders'));
 const SpecialistsPage = lazy(() => import('./pages/SpecialistsPage'));
 const SingleMdPage = lazy(() => import('./pages/SingleMdPage'));
-const ForrumPage = lazy(() => import('./pages/ForumPage'));
+const ForumPage = lazy(() => import('./pages/ForumPage'));
+const ForumPostPage = lazy(() => import('./pages/ForumPostPage'));
 
 class App extends Component {
   render() {
@@ -27,7 +28,8 @@ class App extends Component {
             <Route exact path="/about" render={(props) => <AboutPage {...props} />} />
             <Route exact path="/mental-disorders" render={(props) => <MentalDisorders {...props} />} />
             <Route exact path="/mental-disorders/:id/:title" render={(props) => <SingleMdPage {...props} />}/>
-            <Route exact path="/forum" render={(props) => <ForrumPage {...props} />} />
+            <Route exact path="/forum" render={(props) => <ForumPage {...props} />} />
+            <Route exact path="/forum/:forumpostid" render={(props) => <ForumPostPage {...props} />} />
           </Switch>
           <Footer />
         </Provider>

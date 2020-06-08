@@ -574,6 +574,7 @@ main {
   text-align: left;
   background: var(--bg);
   padding: 0.4rem;
+  border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   display: grid;
   grid-template-columns: auto auto;
@@ -588,6 +589,45 @@ main {
 .post-intro-img {
   height: 100%;
   width: auto;
+}
+
+.forum-posts-wrapper {
+  background: var(--bg);
+  padding: 5px;
+  margin-top: 1rem;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: auto;
+  text-align: left;
+}
+
+.single-post {
+  --bg: #fff;
+
+  background: var(--bg);
+  padding: 5px;
+  border-radius: 20px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+
+.post {
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--bg-fallback);
+}
+
+.post img {
+  height: 10vh;
+  margin-right: 0.3rem;
+}
+
+.post-options {
+  padding: 5px;
+  width: 100%;
 }
 
 /* Media Queries */

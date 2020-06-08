@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { services, mentalDisorders, specialists, forumPosts } from './data';
+import { services, mentalDisorders, specialists, forumPosts, users, currentUser } from './data';
 import startSlider from '../swiper';
 
 export const Context = React.createContext();
@@ -45,6 +45,11 @@ const reducer = (state, action) => {
         ...state,
         citySearch: action.payload
       };
+    case 'TOGLECOMMENTS':
+      return {
+        ...state,
+        showComments: action.payload
+      };
     default:
       return state;
   }
@@ -57,7 +62,8 @@ class Provider extends Component {
       // All states are to be created here
       menuOpen: false,
       dropDownOpen: false,
-      user: { id: 1, email: '', username: 'abc123' },
+      users: [],
+      currentUser: currentUser,
       mentalDisorders: [],
       nameSearch: '',
       titleSearch: '',
@@ -71,6 +77,8 @@ class Provider extends Component {
       getSpecialists: () => this.getSpecialists(),
       forumPosts: [],
       getForumPosts: () => this.getForumPosts(),
+      getUsers: () => this.getUsers(),
+      showComments: false,
       startSlider: () => startSlider(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
@@ -118,6 +126,19 @@ class Provider extends Component {
       const posts = await forumPosts;
       posts.map((key) =>
         isMounted ? this.setState({ forumPosts: [...this.state.forumPosts, key] }) : null
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async getUsers() {
+    try {
+      this.setState({ users: [] });
+      //fetch data from backend
+      const allUsers = await users;
+      allUsers.map((key) =>
+        isMounted ? this.setState({ users: [...this.state.users, key] }) : null
       );
     } catch (error) {
       console.error(error);

@@ -757,30 +757,70 @@ const services = [{
 
 const forumPosts = [{
   id: 1100,
-  userId: '#userid',
+  userId: 1201,
   post: 'What are the causes and effect of stress?',
+  date: Date.now(),
+  showComment: false,
   comments: [{
     id: 1110,
-    userId: '#userid2',
-    comment: 'Chronic illness or injury, emotional problems (depression, anxiety, anger, grief, guilt, low self-esteem), taking care of an elderly or sick family member, traumatic event such as a natural disaster, theft, rape, or violence against you or a loved one.'
+    userId: 1203,
+    comment: 'Chronic illness or injury, emotional problems (depression, anxiety, anger, grief, guilt, low self-esteem), taking care of an elderly or sick family member, traumatic event such as a natural disaster, theft, rape, or violence against you or a loved one.',
+    date: Date.now()
   }]
 },
 {
   id: 1101,
-  userId: '#userid',
+  userId: 1202,
   post: 'Why do we stress?',
-  comment: [
+  date: Date.now(),
+  showComment: false,
+  comments: [
     {
       id: 1111,
-      userId: 'userid3',
-      comment: 'At the most basic level, stress is our body\'s response to pressures from a situation or life event. ... When we encounter stress, our body is stimulated to produce stress hormones that trigger a \'flight or fight\' response and activate our immune system 2. This response helps us to respond quickly to dangerous situations.'
+      userId: 1200,
+      comment: 'At the most basic level, stress is our body\'s response to pressures from a situation or life event. ... When we encounter stress, our body is stimulated to produce stress hormones that trigger a \'flight or fight\' response and activate our immune system 2. This response helps us to respond quickly to dangerous situations.',
+      date: Date.now()
     }
   ]
 }];
+
+const users = [
+  {
+    id: 1200,
+    username: 'Dr. Richard Broke',
+    profile_pic: male,
+    email: 'broke@abc.com'
+  },
+  {
+    id: 1201,
+    username: 'patient_zero',
+    profile_pic: male,
+    email: 'zero@abc.com'
+  },
+  {
+    id: 1202,
+    username: 'Mathew',
+    profile_pic: male,
+    email: 'mathew@abc.com'
+  },
+  {
+    id: 1203,
+    username: 'Dr. Mike Lyson',
+    profile_pic: male,
+    email: 'mike@abc.com'
+  }
+];
+
+const currentUser = {
+  id: 1201,
+  username: 'patient_zero',
+  profile_pic: male,
+  email: 'zero@abc.com'
+};
 
 export {
   services,
   mentalDisorders,
   specialists,
-  forumPosts
+  forumPosts, users, currentUser
 };
