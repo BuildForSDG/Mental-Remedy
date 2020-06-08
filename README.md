@@ -13,7 +13,9 @@ Welcome to Mental-Remedy, team-158 project based on the sustainable development 
 
 ## Why
 
-Talk about what problem this solves, what SDG(s) and SGD targets it addresses and why these are imoirtant
+Mental health problems appear to be increasing in importance in Africa. Between 2000 and 2015 the continent's population grew by 49%. As Africa's population is expected to double over the next three decades, the pressures on young people in particular, who across the region are already struggling to earn a livelihood in highly competitive labour markets, are likely to ratchet up. Many will experience psychological problems as they fail to realise their ambitions, and some will turn to substance misuse as a means of alleviating their frustration.
+
+Increased attention to mental health by governments, researchers, and journals is therefore essential.This project tackles the third sustainable development goal of good health and well-being by linking mental health specialists to our communities. Mental illness is stigmatized in our communities which has reduced health-seeking behaviour among those affected. People fail to realize that mental illness is an health condition of the mind which changes thinking, emotions and behaviour. With proper treatment, mentally ill individuals can return back to their communities and contribute meaningfully to the society. Our project aims to facilitate the process of getting health care at the community level.
 
 ## Usage
 
@@ -42,7 +44,7 @@ This starter uses [Parcel](https://parceljs.org/getting_started.html) as the bun
 
 ## Authors
 
-List the team behind this project. Their names linked to their Github, LinkedIn, or Twitter accounts should siffice. Ok to signify the role they play in the project, including the TTL and mentor
+Abdulwadud Haji - [a relative link](https://github.com/art-abdulwadud) - Team Technical Lead, Frontend Lead, UI/UX Designer
 
 ## Contributing
 
