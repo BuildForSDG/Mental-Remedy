@@ -6,14 +6,7 @@ A Product for findind innovative ways that can link mental health specialists to
 
 ## About
 
-What is this project about. Ok to enrich here or the section above it with an image.
-
-Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
-
-This is a simple JavaScript starter repo template for setting up your project. The setup contains
-
--   Jest: For runnung tests. We strongly recommend that JavaScript projects use Jest
--   Eslint & Prettier: For formatting code to match ESlint AirBnB coding standard. You might need to install the ESlint and Prettier plugins for your code editor to make the most of these utilities
+Welcome to Mental-Remedy, team-158 project based on the sustainable development goals solution to promoting good health and well-being by linking mental health specialists to our community.
 
 ## Why
 
