@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineClose } from 'react-icons/ai';
+import { BsChevronDoubleRight } from 'react-icons/bs';
 import NavList from './NavList';
 import { Consumer } from '../context/Context';
 
@@ -28,10 +27,10 @@ class NavBar extends Component {
           return (
             <nav className={menuOpen ? 'navbar-wrapper nav-active' : 'navbar-wrapper'}>
               <a data-menu-btn href="/" className={menuOpen
-                ? 'medium-text blue menu menu-active'
-                : 'medium-text blue menu inactive'}
+                ? 'small-text blue menu menu-active'
+                : 'small-text blue menu inactive'}
                 onClick={(event) => this.toggleMenu(event, menuOpen, dispatch)} >
-                {menuOpen ? <AiOutlineClose/> : <GiHamburgerMenu/>}
+                <BsChevronDoubleRight/>
               </a>
               <NavList menuOpen={menuOpen} user={user}
               dropDownOpen={dropDownOpen} dispatch={dispatch} />

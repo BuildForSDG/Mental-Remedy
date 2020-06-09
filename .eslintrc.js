@@ -53,6 +53,8 @@ module.exports = {
     'no-console': 0,
     'no-return-assign': 0,
     'linebreak-style': 0,
+    'no-nested-ternary': 0,
+    'max-lines-per-function': 0,
     'sort-imports': [
       'error',
       {

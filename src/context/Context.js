@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { services, mentalDisorders, specialists } from './data';
 import startSlider from '../swiper';
 import reducer from './Reducers';
@@ -17,6 +18,11 @@ class Provider extends Component {
       menuOpen: false,
       dropDownOpen: false,
       user: {},
+      errorMessage: '',
+      passwordError: '',
+      signUp: this.signUp,
+      logOut: this.logOut,
+      logIn: this.logIn,
       mentalDisorders: [],
       nameSearch: '',
       titleSearch: '',
@@ -86,6 +92,51 @@ class Provider extends Component {
     isMounted = false;
   }
 
+  signUp = async (email, password) => {
+    try {
+      await firebaseAuth.createUserWithEmailAndPassword(email, password);
+      this.setState({ errorMessage: 'Success' });
+      setTimeout(() => {
+        this.props.history.push('/');
+        this.setState({ errorMessage: '' });
+      }, 2000);
+    } catch (error) {
+      this.setState({
+        errorMessage: error.message
+      });
+    }
+  }
+
+  logOut = async () => {
+    try {
+      await firebaseAuth.signOut();
+      this.setState({ user: {} });
+      this.props.history.push('/login');
+    } catch (error) {
+      this.setState({
+        errorMessage: error.message
+      });
+    }
+  };
+
+  logIn = async (email, password, event) => {
+    try {
+      event.preventDefault();
+      await firebaseAuth.signInWithEmailAndPassword(email, password);
+      setTimeout(() => {
+        this.props.history.push('/');
+        this.setState({ errorMessage: '' });
+      }, 2000);
+      this.setState({
+        errorMessage: 'Success'
+      });
+    } catch (error) {
+      this.setState({
+        errorMessage: error.message
+      });
+    }
+  };
+
   render() {
     return <Context.Provider value={this.state}>{this.props.children}</Context.Provider>;
   }
@@ -95,4 +146,4 @@ class Provider extends Component {
 export const { Consumer } = Context;
 
 // Provider accepts a value prop to be passed to consuming components that are its descendants
-export default Provider;
+export default withRouter(Provider);

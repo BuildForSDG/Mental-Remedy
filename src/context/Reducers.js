@@ -36,6 +36,11 @@ const reducer = (state, action) => {
         ...state,
         citySearch: action.payload
       };
+    case 'PASSWORDERROR':
+      return {
+        ...state,
+        passwordError: action.payload
+      };
     default:
       return state;
   }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { GiHealing, GiDoctorFace } from 'react-icons/gi';
+import { GiHealing, GiDoctorFace, GiJoin } from 'react-icons/gi';
+import { GoSignIn } from 'react-icons/go';
 import { FaHome } from 'react-icons/fa';
 import { IoIosPeople } from 'react-icons/io';
-import { FiLogIn } from 'react-icons/fi';
 import NavItem from './NavItem';
 import DropDown from './DropDown';
 
@@ -21,7 +21,10 @@ class NavList extends Component {
         {user.id ? (
           <DropDown dropDownOpen={dropDownOpen} menuOpen={menuOpen} dispatch={dispatch} />
         ) : (
-          <NavItem link="login" linkDes="Login" icon={<FiLogIn />} />
+          <>
+          <NavItem link="login" linkDes="Login" icon={<GoSignIn />} />
+          <NavItem link="signup" linkDes="SignUp" icon={<GiJoin />} />
+          </>
         )}
       </ul>
     );
