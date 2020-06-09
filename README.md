@@ -43,10 +43,13 @@ This starter uses [Parcel](https://parceljs.org/getting_started.html) as the bun
 -   Run your app in local dev mode: `yarn start`. This puts the bundled app in a `dist` folder, set up a local web server at localhost:1234, and continues to watch for your code changes which it syncs with the local server. This means if you loaded the app in a browser, it will auto-refresh as you code along. Feel free to use whatever bundler best meets your needs. Parcel was only added as a sample and for those looking for a simple but effective solution to the hassle of bundlers.
 
 ## Authors
+Hammed Noibi - (https://github.com/hnobi) - Mentor
 
 Abdulwadud Haji - (https://github.com/art-abdulwadud) - Team Technical Lead, Frontend Lead, UI/UX Designer
 
 Abdullahi Hassan - (https://github.com/art-abdullahi) -  Frontend Engineer, UI/UX Designer
+
+Brandon Shumba - (https://github.com/BranTkS) - Frontend Engineer, UI/UX Designer
 
 
 ## Contributing
@@ -60,11 +63,8 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 
 ## Acknowledgements
 
-Did you use someone else’s code?
-Do you want to thank someone explicitly?
-Did someone’s blog post spark off a wonderful idea or give you a solution to nagging problem?
-
-It's powerful to always give credit.
+We would like to acknowledge the Lancet Global Health for providing us with the statistics on the mental health in africa.
+And also our dear friends at andela for giving us this oppurtunity to become part of the solution to a major issue facing our community.
 
 ## LICENSE
 
