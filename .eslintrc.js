@@ -42,6 +42,7 @@ module.exports = {
     'no-magic-numbers': 0,
     'arrow-body-style': 0,
     'no-alert': 0,
+    'eslint(quotes)': 0,
     'max-lines-per-function': 0,
     'object-curly-newline': 0,
     'no-confusing-arrow': 0,

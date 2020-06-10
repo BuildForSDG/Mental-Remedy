@@ -7,6 +7,7 @@ import './App.css';
 import Footer from './footer/Footer';
 import AboutPage from './pages/AboutPage';
 import PreLoader from './pre-loader/PreLoader';
+import AppointmentsPage from './pages/AppointmentsPage';
 
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const MentalDisorders = lazy(() => import('./pages/MentalDisorders'));
@@ -26,6 +27,7 @@ class App extends Component {
               <Route exact path="/specialists" render={(props) => <SpecialistsPage {...props} />} />
               <Route exact path="/about" render={(props) => <AboutPage {...props} />} />
               <Route exact path="/mental-disorders" render={(props) => <MentalDisorders {...props} />} />
+              <Route exact path="/user-appointments" render={(props) => <AppointmentsPage {...props} />} />
               <Route exact path="/mental-disorders/:id/:title" render={(props) => <SingleMdPage {...props} />} />
               <Route exact path="/specialist/:id" render={(props) => <SingleSpPage {...props} />} />
             </Switch>

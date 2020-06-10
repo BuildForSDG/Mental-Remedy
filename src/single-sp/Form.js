@@ -9,6 +9,7 @@ class Form extends Component {
       email: '',
       phoneNumber: 254,
       date: '',
+      type: '',
       specialist: this.props.name
     };
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -43,12 +44,9 @@ class Form extends Component {
   }
 
   handleSubmit(event) {
-    alert(`'Name'${this.state.name}
-    'phone'${this.state.phoneNumber}
-    'Email'${this.state.email}
-    'Date'${this.state.date}
-    'specialist'${this.state.specialist}
-   `);
+    this.props.history.push({
+      pathname: '/user-appointments'
+    });
     event.preventDefault();
   }
 
@@ -78,6 +76,13 @@ class Form extends Component {
             <div className="form-field">
               <p>Name :</p>
               <input type="date" placeholder="Date..." value={this.state.date} onChange={this.handleDateChange} />
+            </div>
+            <div className="form-field">
+              <p>Appointment type :</p>
+              <select>
+                <option>Walk-In</option>
+                <option disabled>Video visit</option>
+              </select>
             </div>
 
             <button className="btn" type="submit">
