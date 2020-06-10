@@ -204,6 +204,12 @@ main {
 
 .content p {
   font-size: var(--small-text);
+  background: var(--color);
+  color: white;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .intro-search {
