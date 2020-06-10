@@ -16,6 +16,7 @@ const ForumPage = lazy(() => import('./pages/ForumPage'));
 const ForumPostPage = lazy(() => import('./pages/ForumPostPage'));
 const Login = lazy(() => import('./login-signup/Login'));
 const SignUp = lazy(() => import('././login-signup/SignUp'));
+const UserAppointmentsPage = lazy(() => import('./pages/UserAppointmentsPage'));
 
 class App extends Component {
   render() {
@@ -34,6 +35,7 @@ class App extends Component {
             <Route exact path="/forum/:forumpostid" render={(props) => <ForumPostPage {...props} />} />
             <Route exact path="/signup" render={(props) => <SignUp {...props} />} />
             <Route exact path="/login" render={(props) => <Login {...props} />} />
+            <Route exact path="/user-appointments" render={(props) => <UserAppointmentsPage {...props} />} />
           </Switch>
           <Footer />
         </Provider>

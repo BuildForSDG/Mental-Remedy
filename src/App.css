@@ -6,7 +6,7 @@ body {
 .navbar-wrapper {
   position: fixed;
   height: 100vh;
-  width: 4rem;
+  width: 3rem;
 
   --bg: #434343; /* changing the value of a css variable */
 
@@ -165,7 +165,7 @@ body {
 
 main {
   text-align: center;
-  margin-left: 4rem;
+  margin-left: 3rem;
   color: var(--color);
   height: auto;
   min-height: 100vh;

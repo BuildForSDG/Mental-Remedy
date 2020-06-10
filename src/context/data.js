@@ -732,27 +732,31 @@ const specialists = [{
 
 const services = [{
   id: 1,
-  title: 'Create awarness',
+  title: 'Create awareness',
   description: 'Educate the community on mental health and change their view and how they approach this topic of mental health.',
-  image: img1
+  image: img1,
+  link: 'mental-disorders'
 },
 {
   id: 2,
   title: 'Specialist plattform',
   description: 'A platform where specialist can list their practices hence patients can view their profile and book appointments online',
-  image: img2
+  image: img2,
+  link: 'specialists'
 },
 {
   id: 3,
   title: 'Forum',
   description: 'A forum where individuals can share posts/questions , get answers from specialist and view other peoples questions and answers.',
-  image: img3
+  image: img3,
+  link: 'forum'
 },
 {
   id: 4,
   title: 'Book appointments',
   description: 'Patients can book appointments online after having access to diffrent specialist profiles.',
-  image: img4
+  image: img4,
+  link: 'user-appointments'
 }];
 
 const forumPosts = [{
@@ -784,43 +788,9 @@ const forumPosts = [{
   ]
 }];
 
-const users = [
-  {
-    id: 1200,
-    username: 'Dr. Richard Broke',
-    profile_pic: male,
-    email: 'broke@abc.com'
-  },
-  {
-    id: 1201,
-    username: 'patient_zero',
-    profile_pic: male,
-    email: 'zero@abc.com'
-  },
-  {
-    id: 1202,
-    username: 'Mathew',
-    profile_pic: male,
-    email: 'mathew@abc.com'
-  },
-  {
-    id: 1203,
-    username: 'Dr. Mike Lyson',
-    profile_pic: male,
-    email: 'mike@abc.com'
-  }
-];
-
-const currentUser = {
-  id: 1201,
-  username: 'patient_zero',
-  profile_pic: male,
-  email: 'zero@abc.com'
-};
-
 export {
   services,
   mentalDisorders,
   specialists,
-  forumPosts, users, currentUser
+  forumPosts
 };
