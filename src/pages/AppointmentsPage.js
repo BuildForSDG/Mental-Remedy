@@ -8,7 +8,33 @@ export default class AppointmentsPage extends Component {
   render() {
     return (
       <main>
-        <h1>{this.props.history.location.state.name}</h1>
+        <h1>My Appointments</h1>
+        <table className="appointment-table">
+          <thead>
+            <tr>
+              <td>
+                <h3>Specialist</h3>
+              </td>
+              <td>
+                <h3>Name</h3>
+              </td>
+              <td>
+                <h3>Date</h3>
+              </td>
+              <td>
+                <h3>type</h3>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{this.props.history.location.state.specialist}</td>
+              <td>{this.props.history.location.state.name}</td>
+              <td>{this.props.history.location.state.date}</td>
+              <td>Walk-In</td>
+            </tr>
+          </tbody>
+        </table>
       </main>
     );
   }

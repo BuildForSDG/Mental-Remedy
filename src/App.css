@@ -566,6 +566,19 @@ main {
   margin-bottom: 2rem;
 }
 
+/* Appointment Page */
+.appointment-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  margin: 25px auto;
+}
+
+.appointment-table thead tr {
+  background: var(--bg);
+  color: var(--color);
+}
 /* footer css */
 .wrap-footer {
   overflow: hidden;

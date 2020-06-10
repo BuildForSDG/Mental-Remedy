@@ -9,7 +9,7 @@ class Form extends Component {
       email: '',
       phoneNumber: 254,
       date: '',
-      type: '',
+      type: 'Walk-In',
       specialist: this.props.name
     };
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -80,7 +80,7 @@ class Form extends Component {
             </div>
             <div className="form-field">
               <p>Appointment type :</p>
-              <select>
+              <select value={this.state.type}>
                 <option>Walk-In</option>
                 <option disabled>Video visit</option>
               </select>
