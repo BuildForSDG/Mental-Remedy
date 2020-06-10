@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { MdComment } from 'react-icons/md';
+import { withRouter } from 'react-router-dom';
 import { Consumer } from '../context/Context';
+import { forumPosts } from '../firebase/firebase';
 
-export default class ForumPostForm extends Component {
+class ForumPostForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,17 +12,32 @@ export default class ForumPostForm extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.textRef = React.createRef();
   }
 
-  handleClick(event) {
+  addPost = async (post) => {
+    const forumPostsCollection = await forumPosts;
+    await forumPostsCollection.add({ post });
+    this.props.getForumPosts();
+  }
+
+  handleClick(event, user, dispatch) {
     event.preventDefault();
-    console.log(this.state.post);
+    if (user.id) {
+      const post = {
+        userId: user.id,
+        post: this.state.post,
+        date: Date.now()
+      };
+      this.addPost(post);
+      dispatch({ type: 'TOGGLEPOSTFORM', payload: false });
+    } else {
+      this.props.history.push('/login');
+    }
   }
 
   handleChange(event) {
     event.preventDefault();
-    this.setState({ post: this.textRef.current.value });
+    this.setState({ post: event.target.value });
   }
 
   render() {
@@ -29,7 +46,7 @@ export default class ForumPostForm extends Component {
                 {(value) => {
                   return (
                         <>
-                        {this.props.formActive ? (
+                        {value.forumPostForm ? (
                             <form>
                                 <div className="post-form mt-1">
                                     <textarea
@@ -38,12 +55,13 @@ export default class ForumPostForm extends Component {
                                         className="intro-search small-text"
                                         placeholder="Enter your question here..."
                                         onChange={this.handleChange}
-                                        ref={this.textRef}
                                         ></textarea>
                                     <br/>
                                     <button
                                         className="small-heading large-btn m-0"
-                                        onClick={(event) => this.handleClick(event)}
+                                        onClick={(event) => {
+                                          this.handleClick(event, value.user, value.dispatch);
+                                        }}
                                         ><MdComment/> Post</button>
                                 </div>
                             </form>
@@ -55,3 +73,5 @@ export default class ForumPostForm extends Component {
     );
   }
 }
+
+export default withRouter(ForumPostForm);

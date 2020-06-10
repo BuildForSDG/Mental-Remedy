@@ -10,7 +10,7 @@ class ForumPostIntro extends Component {
 
   handleClick(event, dispatch) {
     event.preventDefault();
-    if (this.props.currentUser.id) {
+    if (this.props.user.id) {
       dispatch({ type: 'TOGGLEPOSTFORM', payload: !this.props.formActive });
     } else {
       this.props.history.push('/login');

@@ -6,10 +6,16 @@ import PreLoader from '../pre-loader/PreLoader';
 export default class ForumPosts extends Component {
   componentDidMount() {
     this.props.getForumPosts();
-    this.props.getUsers();
+    this.props.getComments();
+  }
+
+  sortByDate = (itemA, itemB) => {
+    return new Date(itemB.date) - new Date(itemA.date);
   }
 
   render() {
+    const sortedPosts = this.props.forumPosts;
+    sortedPosts.sort(this.sortByDate);
     return (
         <div className="forum-posts-wrapper">
             <h1 className="sub-heading">Forum Posts</h1>

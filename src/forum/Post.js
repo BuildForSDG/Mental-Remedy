@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { GoComment } from 'react-icons/go';
 import { withRouter } from 'react-router-dom';
 import PostOptions from './PostOptions';
+import img from '../context/images/male.svg';
 
 class Post extends Component {
   constructor(props) {
@@ -9,39 +10,46 @@ class Post extends Component {
     this.goToComments = this.goToComments.bind(this);
   }
 
+  componentDidMount() {
+    this.props.getProfiles();
+  }
+
   goToComments(event, forumPost) {
     event.preventDefault();
+    let profiler = {};
+    this.props.profiles.map((key) => forumPost.userId === key.userId ? profiler = key : null);
     this.props.history.push({
       pathname: `/forum/${forumPost.id}`,
       state: {
         forumPost: forumPost,
-        users: this.props.users,
         user: this.props.user,
-        currentUser: this.props.currentUser
+        profile: profiler,
+        comments: this.props.comments
       }
     });
   }
 
   render() {
+    let profile = {};
+    this.props.profiles.map((key) => (
+      key.userId === this.props.forumPost.userId ? profile = key : null
+    ));
     return (
         <>
-        {this.props.user.id === this.props.forumPost.userId ? (
-            <>
-            <div className="post cursor" onClick={(event) => this.goToComments(event, this.props.forumPost)}>
-                <img src={this.props.user.profile_pic} alt={this.props.user.username} />
-                <div>
-                    <h5 className="xxsmall-text">{this.props.user.username}</h5>
-                    <p className="small-text">{this.props.forumPost.post}</p>
-                </div>
-            </div>
-            <PostOptions
-                forumPost={this.props.forumPost}
-                dispatch={this.props.dispatch}
-                goToComments={(event) => this.goToComments(event, this.props.forumPost)}
-                currentUser={this.props.currentUser}
-                />
-        </>
-        ) : (<span></span>)}
+        <div className="post cursor" onClick={(event) => this.goToComments(event, this.props.forumPost)}>
+              <img src={img} alt={profile.username} />
+              <div>
+                  <h5 className="xxsmall-text">{profile.username}</h5>
+                  <p className="small-text">{this.props.forumPost.post}</p>
+              </div>
+          </div>
+          <PostOptions
+              forumPost={this.props.forumPost}
+              comments={this.props.comments}
+              dispatch={this.props.dispatch}
+              goToComments={(event) => this.goToComments(event, this.props.forumPost)}
+              user={this.props.user}
+              />
         </>
     );
   }

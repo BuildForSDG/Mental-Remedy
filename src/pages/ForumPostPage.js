@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import ForumPost from '../forum-post-page/ForumPost';
+import { Consumer } from '../context/Context';
 
 class ForumPostPage extends Component {
   constructor(props) {
@@ -20,19 +21,25 @@ class ForumPostPage extends Component {
   render() {
     const historyLocation = this.props.history.location.state;
     return (
-            <main>
+            <Consumer>
+              {(value) => {
+                return (
+                  <main>
                 <h1 className="sub-heading">Forum Post</h1>
                 <div className="breadcrumbs">
                     <span className="xxsmall-text">
-                        <a href="/" onClick={this.handleClick}>Back to Forum</a> / {historyLocation.user.username}`s post
+                        <a href="/" onClick={this.handleClick}>Back to Forum</a> / {historyLocation.profile.username}`s post
                     </span>
                 </div>
                 <div className="forum-posts-wrapper">
                     <div className="single-post">
-                        <ForumPost historyLocation={historyLocation} />
+                        <ForumPost historyLocation={historyLocation} getComments={value.getComments} />
                     </div>
                 </div>
             </main>
+                );
+              }}
+            </Consumer>
     );
   }
 }

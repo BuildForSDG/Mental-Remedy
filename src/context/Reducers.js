@@ -41,6 +41,16 @@ const reducer = (state, action) => {
         ...state,
         forumPostForm: action.payload
       };
+    case 'TOGGLECOMMENTFORM':
+      return {
+        ...state,
+        commentForm: action.payload
+      };
+    case 'PASSWORDERROR':
+      return {
+        ...state,
+        passwordError: action.payload
+      };
     default:
       return state;
   }

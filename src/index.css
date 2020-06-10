@@ -149,6 +149,14 @@ body {
   cursor: pointer;
 }
 
+small {
+  color: sienna;
+}
+
+small:hover {
+  color: navy;
+}
+
 .m-1 {
   margin: 1rem;
 }

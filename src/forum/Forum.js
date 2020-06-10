@@ -13,16 +13,13 @@ export default class Forum extends Component {
                 <div className="forum-wrapper">
                   <ForumPostIntro
                     dispatch={value.dispatch}
-                    currentUser={value.currentUser}
+                    user={value.user}
                     formActive={value.forumPostForm} />
-                  <ForumPostForm formActive={value.forumPostForm} />
+                  <ForumPostForm getForumPosts={value.getForumPosts} />
                   <ForumPosts
                     getForumPosts={value.getForumPosts}
+                    getComments={value.getComments}
                     forumPosts={value.forumPosts}
-                    currentUser = {value.currentUser}
-                    users = {value.users}
-                    getUsers={value.getUsers}
-                    showComments={value.showComments}
                     />
                 </div>
                );

@@ -22,7 +22,7 @@ class DropDown extends Component {
     const { menuOpen, dropDownOpen, dispatch } = this.props;
     return (
         <li className="nav-item">
-            <a href="/" className="nav-link medium-text"
+            <a href="/" className="nav-link small-text"
             onClick={(event) => this.handleClick(event, dispatch, dropDownOpen)} >
                 {<MdAccountCircle/>}
                 <span className={menuOpen ? 'link-des' : 'd-none'}>My Account

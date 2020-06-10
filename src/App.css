@@ -1,3 +1,7 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
 /*** Navbar Component ***/
 .navbar-wrapper {
   position: fixed;
@@ -18,7 +22,7 @@
 .nav-list {
   display: flex;
   list-style: none;
-  padding: 1.3rem 0 0 0;
+  padding: 0;
   height: 100%;
   margin: 0;
   flex-direction: column;
@@ -27,15 +31,18 @@
 
 .nav-item {
   width: 100%;
-  padding: 3px;
+}
+
+.nav-list li:first-of-type {
+  margin-top: 2.3rem !important;
 }
 
 .menu {
   position: fixed;
   top: 0.2rem;
-  left: 5rem;
+  left: 1rem;
 
-  --color: #434343;
+  --color: #4facfe;
 
   color: var(--color);
   transition: 0.5s;
@@ -78,7 +85,7 @@
   --color: #4facfe;
 
   color: var(--color);
-  transform: rotate(360deg);
+  transform: rotate(180deg);
 }
 
 .menu-active:hover {
@@ -647,9 +654,88 @@ main {
   border-color: transparent;
 }
 
+#comment-textarea {
+  height: auto;
+  min-height: 15vh;
+}
+
 .post-form button {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
+}
+
+.comment-modal {
+  position: fixed;
+  z-index: 1;
+  left: 1rem;
+  top: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.comment-form {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto;
+  min-width: 70%;
+  height: 100%;
+}
+
+.comment-btns {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/** Sign up && Login **/
+.center-box-wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-box {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  min-height: 40vh;
+  text-align: center;
+  background-image: var(--bg);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5px;
+}
+
+.center-box input {
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+  width: 16rem;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+}
+
+.error {
+  background: rgba(238, 101, 101, 0.931);
+  color: #fff;
+}
+
+.success {
+  background: rgba(94, 240, 118, 0.931);
 }
 
 /* Media Queries */
@@ -710,10 +796,6 @@ main {
 
   .navbar-wrapper {
     width: 3rem;
-  }
-
-  .menu {
-    left: 3.2rem;
   }
 
   .name {
