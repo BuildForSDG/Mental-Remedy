@@ -154,6 +154,103 @@
   margin: 0;
   padding: 0;
 }
+
+/*** Detail Component ***/
+
+.detail {
+  height: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  column-gap: 20px;
+}
+
+.left {
+  display: grid;
+  grid-template-rows: auto auto;
+  height: auto;
+}
+
+.book-appoin {
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.single-sp {
+  text-align: center;
+  margin-top: 3rem;
+  display: inline-block;
+}
+
+.recent-reviews {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 20px;
+  height: auto;
+}
+
+.book-appoin {
+  margin-top: 3rem;
+  text-align: center;
+  height: 80vh;
+  background: whitesmoke;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
+  box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
+}
+
+.container-form {
+  text-align: left;
+  color: var(--color);
+}
+.container-form form {
+  display: grid;
+  row-gap: 20px;
+}
+
+.container-form form p {
+  font-weight: 400;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-field input {
+  pad: 10px 15px;
+  border-radius: 100px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  border-radius: 100px;
+  width: 93%;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-bottom: 0;
+  transition: ease-in-out 0.5s;
+}
+
+.btn:hover {
+  background-color: var(--bg-fallback);
+  color: #fff;
+}
+
+.ratings {
+  color: var(--bg-fallback);
+  font-size: 1.5rem;
+}
+
+.more-details {
+  height: auto;
+  margin: 5rem;
+  text-align: left;
+}
 /*** LandingPage Component ***/
 
 main {
@@ -469,6 +566,19 @@ main {
   margin-bottom: 2rem;
 }
 
+/* Appointment Page */
+.appointment-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  margin: 25px auto;
+}
+
+.appointment-table thead tr {
+  background: var(--bg);
+  color: var(--color);
+}
 /* footer css */
 .wrap-footer {
   overflow: hidden;
@@ -596,6 +706,16 @@ main {
     grid-template-rows: auto;
   }
 
+  .detail {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+
+  .recent-reviews {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
+
   :root {
     --nav-width: 60% !important;
     --left: 50% !important;
@@ -615,6 +735,16 @@ main {
 
   main {
     margin-left: 3rem;
+  }
+
+  .detail {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+
+  .recent-reviews {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
   }
 
   .navbar-wrapper {
