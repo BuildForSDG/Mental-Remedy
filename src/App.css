@@ -12,7 +12,7 @@
 }
 
 .nav-active {
-  width: var(--nav-width);
+  width: var(--nav-width) !important;
 }
 
 .nav-list {
@@ -73,7 +73,7 @@
 }
 
 .menu-active {
-  left: var(--left);
+  left: var(--left) !important;
 
   --color: #4facfe;
 
@@ -118,6 +118,42 @@
 
   color: var(--color);
 }
+/*** AboutPage Component ***/
+.head h1 {
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  color: var(--color);
+}
+
+.head {
+  border-bottom-left-radius: 9rem;
+  border-bottom-right-radius: 9rem;
+  height: auto;
+  background: var(--bg);
+}
+
+.about-content {
+  height: auto;
+  text-align: center;
+  margin: 5rem 0 5rem 5;
+}
+
+.about-content p {
+  margin: 5rem 5rem 5rem 5rem;
+}
+
+.list {
+  list-style: none;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 /*** LandingPage Component ***/
 
 main {
@@ -131,6 +167,13 @@ main {
 }
 
 .skew {
+  margin-top: -200px;
+  padding: 200px 0;
+  transform: skew(0deg, -10deg);
+  background: var(--bg);
+}
+
+.about-container {
   margin-top: -200px;
   padding: 200px 0;
   transform: skew(0deg, -10deg);
@@ -167,7 +210,7 @@ main {
 
 .about hr {
   border: 2px solid var(--bg-fallback);
-  margin: 0 5rem 0 5rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .container h1 {
@@ -176,16 +219,15 @@ main {
 
 .container hr {
   border: 2px solid var(--bg-fallback);
-  margin: 0 5rem 0 5rem;
+  margin: 0 1rem 0 1rem;
 }
 
 .services {
-  margin: 3rem;
   list-style: none;
-  justify-content: center;
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 20px;
+  row-gap: 20px;
+  column-gap: 20px;
 }
 
 .service {
@@ -387,6 +429,7 @@ main {
 
 .spc {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 20px;
@@ -423,6 +466,7 @@ main {
   row-gap: 0.3rem;
   width: 100%;
   height: auto;
+  margin-bottom: 2rem;
 }
 
 /* footer css */
@@ -506,6 +550,17 @@ main {
   }
 }
 
+/*** Single Mental disorder details Page ***/
+.symptoms-wrapper {
+  border: 1px solid transparent;
+  box-shadow: 0 1px 10px 1px var(--bg-fallback);
+  color: var(--color);
+  width: 100%;
+  display: grid;
+  text-align: left;
+  height: auto;
+}
+
 /* Media Queries */
 
 /*
@@ -513,6 +568,10 @@ main {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .about-content p {
+    margin: 5rem 2rem 5rem 2rem;
+  }
+
   .services {
     grid-template-columns: auto auto;
     grid-gap: 20px;
@@ -550,12 +609,20 @@ main {
 */
 
 @media (max-width: 480px) {
+  .about-content p {
+    margin: 5rem 2rem 5rem 2rem;
+  }
+
   main {
     margin-left: 3rem;
   }
 
   .navbar-wrapper {
     width: 3rem;
+  }
+
+  .menu {
+    left: 3.2rem;
   }
 
   .name {
@@ -584,6 +651,10 @@ main {
 
   .row {
     flex-direction: column;
+  }
+
+  .wrap-footer {
+    margin-left: 3rem;
   }
 
   .md-list {
