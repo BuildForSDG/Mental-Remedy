@@ -8,6 +8,7 @@ import { Consumer } from '../context/Context';
 export default class ForumPost extends Component {
   componentDidMount() {
     this.props.getComments();
+    this.props.getProfiles();
   }
 
   render() {

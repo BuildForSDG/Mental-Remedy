@@ -29,6 +29,11 @@
   --search-box-w: 70%;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;

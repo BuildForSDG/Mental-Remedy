@@ -33,7 +33,7 @@ class ForumPostPage extends Component {
                 </div>
                 <div className="forum-posts-wrapper">
                     <div className="single-post">
-                        <ForumPost historyLocation={historyLocation} getComments={value.getComments} />
+                        <ForumPost historyLocation={historyLocation} getComments={value.getComments} getProfiles={value.getProfiles} />
                     </div>
                 </div>
             </main>

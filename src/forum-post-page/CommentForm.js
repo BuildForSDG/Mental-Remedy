@@ -54,7 +54,7 @@ export default class CommentForm extends Component {
                         <textarea
                             name="comment-textarea"
                             id="comment-textarea"
-                            className="intro-search small-text"
+                            className="intro-search xxsmall-text"
                             placeholder="Enter your comment here..."
                             onChange={(event) => this.handleChange(event)}
                         ></textarea>
