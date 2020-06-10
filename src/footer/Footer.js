@@ -20,7 +20,7 @@ export default class Footer extends Component {
               {/* column 2*/}
               <div className="col">
                 <ul className="list-unstyled">
-                  <h1 className="small-text">Home</h1>
+                  <h1 className="small-text">Links</h1>
                   <li>About</li>
                   <li>Mental Disoders</li>
                   <li>Specialists</li>

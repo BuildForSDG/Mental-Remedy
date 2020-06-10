@@ -191,7 +191,7 @@ main {
 .content {
   text-align: center;
   transform: skew(0deg, 10deg);
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .content h1 {
