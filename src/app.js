@@ -16,7 +16,8 @@ const ForumPage = lazy(() => import('./pages/ForumPage'));
 const ForumPostPage = lazy(() => import('./pages/ForumPostPage'));
 const Login = lazy(() => import('./login-signup/Login'));
 const SignUp = lazy(() => import('././login-signup/SignUp'));
-const UserAppointmentsPage = lazy(() => import('./pages/UserAppointmentsPage'));
+const AppointmentsPage = lazy(() => import('./pages/AppointmentsPage'));
+const SingleSpPage = lazy(() => import('./pages/SingleSpPage'));
 
 class App extends Component {
   render() {
@@ -35,7 +36,8 @@ class App extends Component {
             <Route exact path="/forum/:forumpostid" render={(props) => <ForumPostPage {...props} />} />
             <Route exact path="/signup" render={(props) => <SignUp {...props} />} />
             <Route exact path="/login" render={(props) => <Login {...props} />} />
-            <Route exact path="/user-appointments" render={(props) => <UserAppointmentsPage {...props} />} />
+            <Route exact path="/user-appointments" render={(props) => <AppointmentsPage {...props} />} />
+            <Route exact path="/specialist/:id" render={(props) => <SingleSpPage {...props} />} />
           </Switch>
           <Footer />
         </Provider>
