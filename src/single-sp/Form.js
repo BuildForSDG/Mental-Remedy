@@ -8,14 +8,14 @@ class Form extends Component {
       name: '',
       email: '',
       phoneNumber: 254,
-      date: '',
+
       type: 'Walk-In',
       specialist: this.props.name
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handleDateChange = this.handleDateChange.bind(this);
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -37,12 +37,6 @@ class Form extends Component {
     });
   }
 
-  handleDateChange(event) {
-    this.setState({
-      date: event.target.value
-    });
-  }
-
   handleSubmit(event) {
     this.props.history.push({
       pathname: '/user-appointments',
@@ -53,7 +47,7 @@ class Form extends Component {
 
   render() {
     return (
-      <div className="right">
+      <div className="book-appoin">
         <h2>BOOK APPOINTMENT</h2>
         <div className="container-form">
           <form onSubmit={this.handleSubmit}>
@@ -74,10 +68,7 @@ class Form extends Component {
                 onChange={this.handlePhoneChange}
               />
             </div>
-            <div className="form-field">
-              <p>Name :</p>
-              <input type="date" placeholder="Date..." value={this.state.date} onChange={this.handleDateChange} />
-            </div>
+
             <div className="form-field">
               <p>Appointment type :</p>
               <select value={this.state.type}>

@@ -19,9 +19,6 @@ export default class AppointmentsPage extends Component {
                 <h3>Name</h3>
               </td>
               <td>
-                <h3>Date</h3>
-              </td>
-              <td>
                 <h3>type</h3>
               </td>
             </tr>
@@ -30,7 +27,6 @@ export default class AppointmentsPage extends Component {
             <tr>
               <td>{this.props.history.location.state.specialist}</td>
               <td>{this.props.history.location.state.name}</td>
-              <td>{this.props.history.location.state.date}</td>
               <td>Walk-In</td>
             </tr>
           </tbody>
