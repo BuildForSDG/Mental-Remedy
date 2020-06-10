@@ -45,7 +45,8 @@ class Form extends Component {
 
   handleSubmit(event) {
     this.props.history.push({
-      pathname: '/user-appointments'
+      pathname: '/user-appointments',
+      state: this.state
     });
     event.preventDefault();
   }
