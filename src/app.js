@@ -5,14 +5,15 @@ import Provider from './context/Context';
 import NavBar from './navbar/NavBar';
 import './App.css';
 import Footer from './footer/Footer';
-import AboutPage from './pages/AboutPage';
 import PreLoader from './pre-loader/PreLoader';
 
 const LandingPage = lazy(() => import('./pages/LandingPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
 const MentalDisorders = lazy(() => import('./pages/MentalDisorders'));
 const SpecialistsPage = lazy(() => import('./pages/SpecialistsPage'));
 const SingleMdPage = lazy(() => import('./pages/SingleMdPage'));
 const SingleSpPage = lazy(() => import('./pages/SingleSpPage'));
+
 
 class App extends Component {
   render() {
