@@ -153,3 +153,111 @@ body {
 .p-1 {
   margin: 1rem;
 }
+
+.skew {
+  margin-top: -120px;
+  padding: 70px 0;
+  transform: skew(0deg, -10deg);
+  background: var(--bg);
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-size: var(--super-large);
+  font-family: var(--russo);
+  font-weight: 200;
+  color: black;
+  text-align: center;
+  transform: skew(0deg, 10deg);
+  padding-top: 40px;
+  padding-bottom: 0;
+  font-size: 5rem;
+  border: 0px solid rgb(49, 255, 186);
+}
+
+.loginWrap {
+  min-height: 97%;
+  min-width: 30%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: skew(0deg, 10deg);
+  padding-top: 0px;
+  padding-bottom: 30px;
+  border: 0px solid rgb(49, 255, 186);
+}
+
+$primary: aqua;
+.loginPage {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 20%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.inputField {
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: white;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  padding: 7px 0;
+}
+
+.inputs {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: gray;
+}
+
+.inputField:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, aqua, black);
+  border-image-slice: 1;
+}
+
+.loginbtn {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0.5em 3em;
+  border: 0.16em solid white;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  transition: all 0.15s;
+}
+
+.loginbtn:hover {
+  color: gray;
+  border-color: gray;
+}
+
+.submitButton {
+  padding-bottom: 50px;
+  padding-top: 10px;
+}
