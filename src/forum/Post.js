@@ -37,7 +37,7 @@ class Post extends Component {
     return (
         <>
         <div className="post cursor" onClick={(event) => this.goToComments(event, this.props.forumPost)}>
-              <img src={img} alt={profile.username} />
+              <img src={profile.profile_pic} alt={profile.username} />
               <div>
                   <h5 className="xxsmall-text">{profile.username}</h5>
                   <p className="small-text">{this.props.forumPost.post}</p>

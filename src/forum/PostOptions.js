@@ -2,8 +2,34 @@ import React, { Component } from 'react';
 import { FaRegComments } from 'react-icons/fa';
 import { MdDeleteForever, MdAddToQueue } from 'react-icons/md';
 import { withRouter } from 'react-router-dom';
+import { forumPosts } from '../firebase/firebase';
 
 class PostOptions extends Component {
+  constructor(props) {
+    super(props);
+    this.deletePost = this.deletePost.bind(this);
+  }
+
+  deleteFromDb = async (currentForumId) => {
+    try {
+      const forumPostsCollection = await forumPosts.get();
+      forumPostsCollection.forEach((post) => {
+        if (currentForumId === post.id) {
+          post.ref.delete();
+          this.props.history.push('/forum');
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  deletePost(event) {
+    event.preventDefault();
+    const currentForumId = this.props.match.params.forumpostid;
+    this.deleteFromDb(currentForumId);
+  }
+
   render() {
     const commentsForThisPost = [];
     this.props.comments.map((key) => key.forumId === this.props.forumPost.id ? commentsForThisPost.push(key) : null);
@@ -26,7 +52,10 @@ class PostOptions extends Component {
                     {this.props.deleteOption ? (
                       <>
                       {this.props.user.id === this.props.forumPost.userId
-                        ? <button className="plain-btn xxsmall-text mr-1 right"><MdDeleteForever/> Delete</button>
+                        ? <button
+                            className="plain-btn xxsmall-text mr-1 right"
+                            onClick={this.deletePost}
+                          ><MdDeleteForever/> Delete Post</button>
                         : (<span></span>)
                       }
                       </>
