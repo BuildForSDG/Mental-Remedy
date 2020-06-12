@@ -4,6 +4,7 @@ import { services, mentalDisorders, specialists } from './data';
 import startSlider from '../swiper';
 import reducer from './Reducers';
 import { firebaseAuth, profiles, forumPosts, comments } from '../firebase/firebase';
+import defaultImg from './images/male.svg';
 
 export const Context = React.createContext();
 
@@ -159,7 +160,7 @@ class Provider extends Component {
   signUp = async (username, email, password) => {
     try {
       await firebaseAuth.createUserWithEmailAndPassword(email, password);
-      const profile = { username: username, user_type: 'user', userId: this.state.user.id };
+      const profile = { username: username, user_type: 'user', userId: this.state.user.id, profile_pic: defaultImg };
       const profilesCollection = await profiles;
       await profilesCollection.add({ profile });
       this.setState({ errorMessage: 'Success' });

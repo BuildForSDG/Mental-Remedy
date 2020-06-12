@@ -12,7 +12,7 @@ export default class Comment extends Component {
               <>
               <h1 className="medium-text">Comments</h1>
             <div className="post">
-                <img src={img} alt={commenter.username} />
+                {commenter.profile_pic ? (<img src={commenter.profile_pic} alt={commenter.username} ></img>) : (<span></span>)}
                 <div>
                     <h5 className="xxsmall-text">{commenter.username}</h5>
                     <p className="xxsmall-text">{this.props.comment.comment}</p>
