@@ -22,7 +22,7 @@ class Specialist extends Component {
       <div>
         <div className="profile-card">
           <img src={this.props.specialist.profile_pic} alt="" className="profile-pic" height="120" />
-          <h1 className="medium-text">{this.props.specialist.name}</h1>
+          <h1 className="small-heading">{this.props.specialist.name}</h1>
           <h4 className="small-text location">
             <FaMapMarkerAlt />
             <br />
