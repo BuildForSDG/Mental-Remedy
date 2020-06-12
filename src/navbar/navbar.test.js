@@ -24,7 +24,7 @@ describe('Navbar Component', () => {
     expect(wrapper.find('nav').hasClass('navbar-wrapper')).toBe(true);
     expect(wrapper.find('[data-menu-btn]').hasClass('inactive')).toBe(true);
     // confirm default icon
-    expect(wrapper.find('[data-menu-btn]').find('GiHamburgerMenu').length).toEqual(1);
+    expect(wrapper.find('[data-menu-btn]').find('BsChevronDoubleRight').length).toEqual(1);
     // toggle context value
     const provider = wrapper.getWrappingComponent();
     provider.setProps({
@@ -35,8 +35,6 @@ describe('Navbar Component', () => {
     // Confirm classes are toggled
     expect(wrapper.find('nav').hasClass('nav-active')).toBe(true);
     expect(wrapper.find('[data-menu-btn]').hasClass('menu-active')).toBe(true);
-    // Confirm icons are toggled
-    expect(wrapper.find('[data-menu-btn]').find('AiOutlineClose').length).toEqual(1);
   });
 });
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Context } from '../context/Context';
 import Forum from './Forum';
 
@@ -9,7 +10,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('Forum Page', () => {
   it('renders without craching and passes down data', () => {
     // Add sample data to Forum component using context
-    const wrapper = mount(<Forum />, {
+    const wrapper = mount(<Router><Forum /></Router>, {
       wrappingComponent: Context.Provider,
       wrappingComponentProps: {
         value: {
