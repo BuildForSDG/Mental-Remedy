@@ -8,9 +8,9 @@ class loginForm extends Component {
           <strong> Mental Remedy </strong>
         </h1>
         <div className="loginWrap">
-          <div class="loginPage field">
+          <div className="loginPage field">
             <input type="input" className="inputField" placeholder="Name" name="name" id="name" required />
-            <label htmlfor="name" className="inputs"></label>
+            <label htmlFor="name" className="inputs"></label>
             <input
               type="password"
               className="inputField"
@@ -19,7 +19,7 @@ class loginForm extends Component {
               id="password"
               required
             />
-            <label htmlfor="password" className="inputs"></label>
+            <label htmlFor="password" className="inputs"></label>
             <div className="submitButton">
               <a href="link" className="loginbtn">
                 login
