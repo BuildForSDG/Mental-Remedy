@@ -9,10 +9,17 @@ class loginForm extends Component {
         </h1>
         <div className="loginWrap">
           <div class="loginPage field">
-            <input type="input" class="inputField" placeholder="Name" name="name" id="name" required />
-            <label for="name" class="inputs"></label>
-            <input type="password" class="inputField" placeholder="password" name="password" id="password" required />
-            <label for="password" class="inputs"></label>
+            <input type="input" className="inputField" placeholder="Name" name="name" id="name" required />
+            <label htmlfor="name" className="inputs"></label>
+            <input
+              type="password"
+              className="inputField"
+              placeholder="password"
+              name="password"
+              id="password"
+              required
+            />
+            <label htmlfor="password" className="inputs"></label>
             <div className="submitButton">
               <a href="link" className="loginbtn">
                 login
