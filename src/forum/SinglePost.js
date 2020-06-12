@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Post from './Post';
 import { Consumer } from '../context/Context';
 
-
 export default class SinglePost extends Component {
   render() {
     return (

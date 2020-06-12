@@ -759,7 +759,6 @@ const services = [{
   link: 'user-appointments'
 }];
 
-
 export {
   services,
   mentalDisorders,

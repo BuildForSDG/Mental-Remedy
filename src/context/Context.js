@@ -138,7 +138,6 @@ class Provider extends Component {
     }
   }
 
-
   componentDidMount() {
     isMounted = true;
     firebaseAuth.onAuthStateChanged((user) => {
