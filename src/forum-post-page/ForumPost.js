@@ -29,16 +29,17 @@ export default class ForumPost extends Component {
                           />
                       <CommentModal historyLocation={this.props.historyLocation} />
                       <div className="comments">
-                          {value.comments.map((key) => (
-                              <Comment
-                                  key={key.id}
-                                  comment={key}
-                                  profiles={value.profiles}
-                                  user={this.props.historyLocation.user}
-                                  forumPost={this.props.historyLocation.forumPost}
-                                  getComments={value.getComments}
-                                  />
-                          ))}
+                        <h1 className="medium-text">Comments</h1>
+                        {value.comments.map((key) => (
+                            <Comment
+                                key={key.id}
+                                comment={key}
+                                profiles={value.profiles}
+                                user={this.props.historyLocation.user}
+                                forumPost={this.props.historyLocation.forumPost}
+                                getComments={value.getComments}
+                                />
+                        ))}
                       </div>
                     </>
                   );
