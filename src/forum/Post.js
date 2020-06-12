@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 //import { GoComment } from 'react-icons/go';
 import { withRouter } from 'react-router-dom';
 import PostOptions from './PostOptions';
-import img from '../context/images/male.svg';
 
 class Post extends Component {
   constructor(props) {

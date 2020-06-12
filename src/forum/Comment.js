@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { MdDeleteForever } from 'react-icons/md';
-import img from '../context/images/male.svg';
 import { comments } from '../firebase/firebase';
 
 export default class Comment extends Component {
