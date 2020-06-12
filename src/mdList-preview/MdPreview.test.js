@@ -4,11 +4,38 @@ import Adapter from 'enzyme-adapter-react-16';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Context } from '../context/Context';
 import MdPreview from './MdPreview';
-import { mentalDisorders } from '../context/data';
-import MdListPreview from './MdListPreview';
-import MdItemPreview from './MdItemPreview';
 
 Enzyme.configure({ adapter: new Adapter() });
+
+const mentalDisorders = [
+  {
+    id: 101,
+    title: 'Anxiety disorder',
+    description: "A mental health disorder characterised by feelings of worry, anxiety or fear that are strong enough to interfere with one's daily activities.",
+    diagnosis: 'Usually self-diagnosable',
+    symptoms: [{
+      id: 401,
+      type: 'Cognitive',
+      description: 'lack of concentration, racing thoughts, or unwanted thoughts'
+    },
+    {
+      id: 402,
+      type: 'Behavioural',
+      description: 'hypervigilance, irritability, or restlessness'
+    },
+    {
+      id: 403,
+      type: 'Whole Body',
+      description: 'fatigue or sweating'
+    },
+    {
+      id: 404,
+      type: 'Common',
+      description: 'anxiety, excessive worry, angor animi, fear, insomnia, nausea, palpitations, or trembling'
+    }],
+    treatment: 'Treatment includes counselling or medication, including antidepressants.'
+  }
+];
 
 describe('MdPreview component', () => {
   it('it consumes data from context', () => {
@@ -21,37 +48,11 @@ describe('MdPreview component', () => {
         }
       }
     });
-    // confirm sample data is consumed and passed down to MdListPreview component
-    expect(wrapper.find('MdListPreview').props().mdList.length).toBeGreaterThan(1);
     // confirm getMdList method is consumed and passed down to MdListPreview component
     expect(wrapper.find('MdListPreview').props().getMdlist()).toBe('success');
-  });
-});
-
-describe('MdListPreview component', () => {
-  it('receives data in props', () => {
-    // receive data in props
-    const wrapper = mount(<MdListPreview mdList={mentalDisorders} getMdlist={() => 'success'} />);
-    // confirm list of mental disorders is recieved in props
-    expect(wrapper.props().mdList).toBe(mentalDisorders);
-    // confirm get mental disorders method is received in props
-    expect(wrapper.props().getMdlist()).toBe('success');
-  });
-});
-
-describe('MdItemPreview component', () => {
-  it('receives data in props', () => {
-    let mentalDisorder = {};
-    mentalDisorders.map((key) => (
-      mentalDisorders.indexOf(key) < 1 ? mentalDisorder = key : null
-    ));
-    // receive data in props
-    const wrapper = mount(
-    <MdItemPreview mentalDisorder={mentalDisorder} mdList={mentalDisorders} />
-    );
-    // confirm it has properties required by this component
-    expect(wrapper.props().mentalDisorder).toHaveProperty('id');
-    expect(wrapper.props().mentalDisorder).toHaveProperty('title');
-    expect(wrapper.props().mentalDisorder).toHaveProperty('description');
+    // confirm MdItemPreview has the required properties
+    expect(wrapper.find('MdListPreview').find('MdItemPreview').props().mentalDisorder).toHaveProperty('id');
+    expect(wrapper.find('MdListPreview').find('MdItemPreview').props().mentalDisorder).toHaveProperty('title');
+    expect(wrapper.find('MdListPreview').find('MdItemPreview').props().mentalDisorder).toHaveProperty('description');
   });
 });
