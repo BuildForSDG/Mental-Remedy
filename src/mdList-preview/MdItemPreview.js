@@ -21,7 +21,7 @@ class MdItemPreview extends Component {
     const { mentalDisorder, mdList } = this.props;
     return (
         <>
-            {mdList.indexOf(mentalDisorder) < 6 ? (
+            {mdList.indexOf(mentalDisorder) < 4 ? (
                 <li className="md-item-prev" onClick={this.handleClick}>
                     <div className="title">
                       <h5 className="small-heading">{mentalDisorder.title}</h5>
