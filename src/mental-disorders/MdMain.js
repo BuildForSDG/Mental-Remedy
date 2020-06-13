@@ -16,7 +16,13 @@ export default class MdMain extends Component {
                                 titleFilter={true}
                                 dispatchType="FILTERMDLIST"
                             />
-                            <MdList mdList={value.mentalDisorders} getMdList={value.getMdlist}/>
+                            <MdList
+                              mdList={value.mentalDisorders}
+                              getMdList={value.getMdlist}
+                              admin={value.admin}
+                              mdForm={value.mdForm}
+                              dispatch={value.dispatch}
+                            />
                         </div>
                   );
                 }}

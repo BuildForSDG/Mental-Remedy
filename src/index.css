@@ -106,7 +106,7 @@ body {
 }
 
 .black-text {
-  --color: #434343;
+  --color: #434343 !important;
   color: var(--color);
 }
 
@@ -151,6 +151,14 @@ body {
 
 .right {
   text-align: right;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.left-text {
+  text-align: left !important;
 }
 
 .cursor {

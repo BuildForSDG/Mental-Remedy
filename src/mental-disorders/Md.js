@@ -19,7 +19,7 @@ class Md extends Component {
 
   render() {
     return (
-            <div className="md-item-prev md-item" onClick={this.handleClick}>
+            <div className="md-item-prev" onClick={this.handleClick}>
                 <div className="title">
                   <h5 className="small-heading">{this.props.md.title}</h5>
                 </div>

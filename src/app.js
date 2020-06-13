@@ -18,6 +18,7 @@ const Login = lazy(() => import('./login-signup/Login'));
 const SignUp = lazy(() => import('././login-signup/SignUp'));
 const AppointmentsPage = lazy(() => import('./pages/AppointmentsPage'));
 const SingleSpPage = lazy(() => import('./pages/SingleSpPage'));
+const AdminLogin = lazy(() => import('./admin/AdminLogin'));
 
 class App extends Component {
   render() {
@@ -38,6 +39,7 @@ class App extends Component {
             <Route exact path="/login" render={(props) => <Login {...props} />} />
             <Route exact path="/user-appointments" render={(props) => <AppointmentsPage {...props} />} />
             <Route exact path="/specialist/:id" render={(props) => <SingleSpPage {...props} />} />
+            <Route exact path="/admin/add" render={(props) => <AdminLogin {...props} />} />
           </Switch>
           <Footer />
         </Provider>

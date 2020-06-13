@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { services, mentalDisorders, specialists } from './data';
 import startSlider from '../swiper';
 import reducer from './Reducers';
-import { firebaseAuth, profiles, forumPosts, comments } from '../firebase/firebase';
+import { firebaseAuth, profiles, forumPosts, comments, functions } from '../firebase/firebase';
 import defaultImg from './images/male.svg';
 
 export const Context = React.createContext();
@@ -35,6 +35,7 @@ class Provider extends Component {
       services: [],
       getServices: () => this.getServices(),
       getMdlist: () => this.getMdlist(),
+      mdForm: false,
       specialists: [],
       getSpecialists: () => this.getSpecialists(),
       forumPosts: [],
@@ -44,6 +45,8 @@ class Provider extends Component {
       comments: [],
       commentForm: false,
       getComments: this.getComments,
+      makeUserAdmin: this.makeUserAdmin,
+      admin: false,
       startSlider: () => startSlider(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
@@ -142,6 +145,10 @@ class Provider extends Component {
     isMounted = true;
     firebaseAuth.onAuthStateChanged((user) => {
       if (user) {
+        user.getIdTokenResult().then((idToken) => {
+          user.admin = idToken.claims.admin;
+          this.confirmIfUserIsAdmin(user);
+        });
         this.setState({
           user: {
             id: user.uid,
@@ -156,6 +163,30 @@ class Provider extends Component {
     isMounted = false;
   }
 
+  // Add admin
+  makeUserAdmin = async (email, event) => {
+    event.preventDefault();
+    try {
+      const addAdmin = await functions.httpsCallable('addAdmin');
+      const result = await addAdmin({ email: email });
+      console.log(result);
+      this.setState({ errorMessage: 'Success' });
+      setTimeout(() => {
+        this.props.history.push('/');
+        this.setState({ errorMessage: '' });
+      }, 2000);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  confirmIfUserIsAdmin = async (user) => {
+    if (await user.admin) {
+      this.setState({ admin: true });
+    }
+  }
+
+  // Add users
   signUp = async (username, email, password) => {
     try {
       await firebaseAuth.createUserWithEmailAndPassword(email, password);
@@ -180,6 +211,7 @@ class Provider extends Component {
       await firebaseAuth.signOut();
       this.setState({ user: {} });
       this.props.history.push('/login');
+      this.setState({ admin: false });
     } catch (error) {
       this.setState({
         errorMessage: error.message

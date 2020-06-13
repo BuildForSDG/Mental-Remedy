@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 const reducer = (state, action) => {
   switch (action.type) {
     // Functions for changing the state value are to be created here
@@ -50,6 +51,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         passwordError: action.payload
+      };
+    case 'TOGGLEMDFORM':
+      return {
+        ...state,
+        mdForm: action.payload
       };
     default:
       return state;

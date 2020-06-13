@@ -48,8 +48,8 @@ export default class CommentForm extends Component {
            <Consumer>
                {(value) => {
                  return (
-                <div className="comment-modal">
-                    <div className="comment-form post-form mt-1">
+                <div className="modal">
+                    <div className="modal-form post-form mt-1">
                         <PostDetails historyLocation={this.props.historyLocation} />
                         <textarea
                             name="comment-textarea"
@@ -60,14 +60,14 @@ export default class CommentForm extends Component {
                         ></textarea>
                         <div className="comment-btns">
                             <button
-                                className="small-heading large-btn mr-1"
+                                className="xxsmall-text large-btn mr-1"
                                 onClick={(event) => {
                                   this.handleClick(event, value.user, value.dispatch);
                                 }}
                                 ><MdComment/> Comment
                             </button>
                             <button
-                                className="small-heading large-btn"
+                                className="xxsmall-text large-btn"
                                 onClick={() => value.dispatch({ type: 'TOGGLECOMMENTFORM', payload: false })}
                                 ><MdCancel/> Cancel
                             </button>

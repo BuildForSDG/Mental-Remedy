@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "private": false,
   "description": "A boilerplate for starting js code",
-  "keywords": ["js-starter", "boilerplate"],
+  "keywords": [
+    "js-starter",
+    "boilerplate"
+  ],
   "homepage": "https://github.com/BuildForSDG/js-starter#readme",
   "bugs": {
     "url": "https://github.com/BuildForSDG/js-starter/issues"
@@ -30,11 +33,14 @@
     "test:cover": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "browserslist": ["last 1 Chrome versions"],
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
   "dependencies": {
     "@firebase/app": "^0.6.5",
     "@firebase/auth": "^0.14.6",
     "@firebase/firestore": "^1.15.0",
+    "@firebase/functions": "^0.4.45",
     "prop-types": "^15.7.2",
     "react": ">=15",
     "react-dom": "^16.13.1",
