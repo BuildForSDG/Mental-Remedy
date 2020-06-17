@@ -15,7 +15,7 @@ const SingleMdPage = lazy(() => import('./pages/SingleMdPage'));
 const ForumPage = lazy(() => import('./pages/ForumPage'));
 const ForumPostPage = lazy(() => import('./pages/ForumPostPage'));
 const Login = lazy(() => import('./login-signup/Login'));
-const SignUp = lazy(() => import('././login-signup/SignUp'));
+const SignUp = lazy(() => import('./login-signup/SignUp'));
 const AppointmentsPage = lazy(() => import('./pages/AppointmentsPage'));
 const SingleSpPage = lazy(() => import('./pages/SingleSpPage'));
 
