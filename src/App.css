@@ -121,6 +121,7 @@
 
   color: var(--color);
 }
+
 /*** AboutPage Component ***/
 .head h1 {
   text-align: center;
@@ -174,12 +175,6 @@
   height: auto;
 }
 
-.book-appoin {
-  height: auto;
-  text-align: center;
-  margin: 0 auto;
-}
-
 .single-sp {
   text-align: center;
   margin-top: 3rem;
@@ -198,15 +193,16 @@
   text-align: center;
   height: 80vh;
   background: whitesmoke;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
-  box-shadow: 10px 10px 5px 0px rgba(79, 172, 254, 1);
+  -webkit-box-shadow: 10px 10px 5px 0 rgba(79, 172, 254, 1);
+  -moz-box-shadow: 10px 10px 5px 0 rgba(79, 172, 254, 1);
+  box-shadow: 10px 10px 5px 0 rgba(79, 172, 254, 1);
 }
 
 .container-form {
   text-align: left;
   color: var(--color);
 }
+
 .container-form form {
   display: grid;
   row-gap: 20px;
@@ -222,7 +218,7 @@
 }
 
 .form-field input {
-  pad: 10px 15px;
+  padding: 10px 15px;
   border-radius: 100px;
   outline: none;
 }
@@ -244,6 +240,7 @@
 
 .btn:hover {
   background-color: var(--bg-fallback);
+  
   --color: #fff;
 }
 
@@ -257,8 +254,8 @@
   margin: 5rem;
   text-align: left;
 }
-/*** LandingPage Component ***/
 
+/*** LandingPage Component ***/
 main {
   text-align: center;
   margin-left: 3rem;
@@ -375,58 +372,6 @@ main {
   top: 0;
 }
 
-/*** Mental Disorders preview list ***/
-.md-preview {
-  height: auto;
-
-  --bg: #fff;
-
-  background: var(--bg);
-  width: 100%;
-}
-
-.md-list-prev {
-  list-style: none;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
-  row-gap: 1rem;
-  column-gap: 1rem;
-}
-
-.md-item-prev {
-  border: 1px solid transparent;
-  --bg: #fff;
-
-  background: var(--bg);
-  box-shadow: 0 1px 10px 1px var(--bg-fallback);
-  color: var(--color);
-  width: auto;
-  display: grid;
-  text-align: left;
-  height: auto;
-  cursor: pointer;
-  padding-left: 0.4rem;
-  transition: 0.4s;
-}
-
-.short-des {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  height: auto;
-}
-
-.md-item-prev:hover {
-  background: var(--bg-fallback);
-}
-
-.md-item-prev:hover button {
-  --bg-fallback: #fff;
-}
-
 /*** Specialist ***/
 .preview {
   height: auto;
@@ -518,6 +463,58 @@ main {
   margin: 0 5rem 0 5rem;
 }
 
+/*** Mental Disorders preview list ***/
+.md-preview {
+  height: auto;
+
+  --bg: #fff;
+
+  background: var(--bg);
+  width: 100%;
+}
+
+.md-list-prev {
+  list-style: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.md-item-prev {
+  border: 1px solid transparent;
+  --bg: #fff;
+
+  background: var(--bg);
+  box-shadow: 0 1px 10px 1px var(--bg-fallback);
+  color: var(--color);
+  width: auto;
+  display: grid;
+  text-align: left;
+  height: auto;
+  cursor: pointer;
+  padding-left: 0.4rem;
+  transition: 0.4s;
+}
+
+.short-des {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: auto;
+}
+
+.md-item-prev:hover {
+  background: var(--bg-fallback);
+}
+
+.md-item-prev:hover button {
+  --bg-fallback: #fff;
+}
+
 /* Swiper */
 
 .swiper-container {
@@ -586,7 +583,6 @@ main {
 /* Appointment Page */
 .appointment-table {
   border-collapse: collapse;
-  margin: 25px 0;
   font-size: 0.9em;
   min-width: 400px;
   margin: 25px auto;
@@ -596,6 +592,7 @@ main {
   background: var(--bg);
   color: var(--color);
 }
+
 /* footer css */
 .wrap-footer {
   overflow: hidden;
@@ -663,6 +660,7 @@ main {
   from {
     transform: rotate(0deg);
   }
+  
   to {
     transform: rotate(360deg);
   }
@@ -702,6 +700,7 @@ main {
 .forum-wrapper {
   padding: 1rem;
 }
+
 .forum-post-intro {
   text-align: left;
   background: var(--bg);
@@ -765,7 +764,6 @@ main {
 /* Form for posting in forum */
 .post-form {
   background: var(--bg);
-
   border-bottom-left-radius: 20px;
   display: flex;
   flex-direction: column;
