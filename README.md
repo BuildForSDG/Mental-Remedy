@@ -43,13 +43,13 @@ This starter uses [Parcel](https://parceljs.org/getting_started.html) as the bun
 
 ## Authors
 
-Abdulwadud Haji - (https://github.com/art-abdulwadud) - Team Technical Lead, Frontend Lead, UI/UX Designer
+Abdulwadud Haji - (art-abdulwadud)[https://github.com/art-abdulwadud] - Team Technical Lead, Frontend Lead, UI/UX Designer
 
-Abdullahi Hassan - (https://github.com/art-abdullahi) - Frontend Engineer, UI/UX Designer
+Abdullahi Hassan - (art-abdullahi)[https://github.com/art-abdullahi] - Frontend Engineer, UI/UX Designer
 
-Brandon Shumba - (https://github.com/BranTkS) - Frontend Engineer, UI/UX Designer
+Brandon Shumba - (BranTkS)[https://github.com/BranTkS] - Frontend Engineer, UI/UX Designer
 
-Hammed Noibi - (https://github.com/hnobi) - Mentor
+Hammed Noibi - (hnobi)[https://github.com/hnobi] - Mentor
 
 ## Contributing
 
