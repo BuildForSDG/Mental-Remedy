@@ -6,7 +6,8 @@ module.exports = {
   // Transform here was used to fix the issue of importing SVG files
   transform: {
     '^.+\\.js$': 'babel-jest',
-    '\\.svg$': './mockSVG.js'
+    '\\.svg$': './mockSVG.js',
+    '\\.png$': './mockSVG.js'
   },
   // Enviroment set to jsdom instead of node
   testEnvironment: 'jsdom',

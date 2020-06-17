@@ -33,7 +33,7 @@ class MdPreview extends Component {
                             <MdListPreview mdList={mentalDisorders}
                             getMdlist={() => getMdlist()} />
                           <button className="small-heading large-btn"
-                          onClick={this.handleClick}><MdFindReplace/> Browse All</button>
+                          onClick={this.handleClick}><MdFindReplace/> Show All</button>
                         </div>
                   );
                 }}

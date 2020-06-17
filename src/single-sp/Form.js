@@ -53,25 +53,25 @@ class Form extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-field">
               <p>Name :</p>
-              <input type="name" placeholder="Name..." value={this.state.name} onChange={this.handleNameChange} />
+              <input type="name" placeholder="Name..." defaultValue={this.state.name} onChange={this.handleNameChange} />
             </div>
             <div className="form-field">
               <p>Email :</p>
-              <input type="email" placeholder="Email..." value={this.state.email} onChange={this.handleEmailChange} />
+              <input type="email" placeholder="Email..." defaultValue={this.state.email} onChange={this.handleEmailChange} />
             </div>
             <div className="form-field">
               <p>Phone Number :</p>
               <input
                 type="number"
                 placeholder="Phone Number..."
-                value={this.state.phoneNumber}
+                defaultValue={this.state.phoneNumber}
                 onChange={this.handlePhoneChange}
               />
             </div>
 
             <div className="form-field">
               <p>Appointment type :</p>
-              <select value={this.state.type}>
+              <select defaultValue={this.state.type}>
                 <option>Walk-In</option>
                 <option disabled>Video visit</option>
               </select>

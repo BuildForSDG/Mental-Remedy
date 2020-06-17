@@ -8,7 +8,7 @@ export default class AppointmentsPage extends Component {
   render() {
     return (
       <main>
-        <h1>My Appointments</h1>
+        <h1 className="sub-heading">My Appointments</h1>
         <table className="appointment-table">
           <thead>
             <tr>

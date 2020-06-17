@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Service from './Service';
+import { Consumer } from '../context/Context';
 
 class ServiceList extends Component {
   componentDidMount() {
@@ -9,11 +10,17 @@ class ServiceList extends Component {
 
   render() {
     return (
-      <ul className="services">
-        {this.props.services.map((service) => (
-          <Service service={service} key={service.id} />
-        ))}
-      </ul>
+      <Consumer>
+        {(value) => {
+          return (
+            <ul className="services">
+              {this.props.services.map((service) => (
+                <Service service={service} key={service.id} user={value.user} />
+              ))}
+            </ul>
+          );
+        }}
+      </Consumer>
     );
   }
 }

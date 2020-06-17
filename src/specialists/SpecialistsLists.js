@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Specialist from './Specialist';
 
-
 class SpecialistsLists extends Component {
   componentDidMount() {
     this.props.getSpecialists();
