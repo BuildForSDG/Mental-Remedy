@@ -1,16 +1,23 @@
 import React from 'react';
 import Enzyme, { mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Context } from '../context/Context';
 import About from './About';
 import Bio from './Bio';
 import Services from './Services';
-import { services } from '../context/data';
-import ServiceList from './ServiceList';
-import Service from './Service';
 
 Enzyme.configure({ adapter: new Adapter() });
 
+const services = [
+  {
+    id: 1,
+    title: 'Specialist plattform',
+    description: 'A platform for specialist',
+    image: '',
+    link: 'specialists'
+  }
+];
 
 describe('About component', () => {
   it('renders without crashing', () => {
@@ -26,7 +33,8 @@ describe('Bio component', () => {
       wrappingComponent: Context.Provider,
       wrappingComponentProps: {
         value: {
-          aboutInfo: 'testing'
+          aboutInfo: 'testing',
+          user: {}
         }
       }
     });
@@ -37,47 +45,20 @@ describe('Bio component', () => {
 describe('Services component', () => {
   it('consumes data from context', () => {
     // Add sample data to services component using context
-    const wrapper = mount(<Services />, {
+    const wrapper = mount(<Router><Services /></Router>, {
       wrappingComponent: Context.Provider,
       wrappingComponentProps: {
         value: {
-          getServices: () => 'success', services: services
+          getServices: () => 'success', services: services, user: {}
         }
       }
     });
-    // confirm services are consumed and passed down to ServiceList component
-    expect(wrapper.find('ServiceList').props().services.length).toBeGreaterThan(1);
     // confirm get services method is consumed and passed down to ServiceList component
     expect(wrapper.find('ServiceList').props().getServices()).toBe('success');
-  });
-});
-
-describe('ServiceList component', () => {
-  it('receives data in props', () => {
-    // receive sample data in props
-    const wrapper = mount(<ServiceList services={services} getServices={() => 'success'} />);
-    // confirm services are recieved in props
-    expect(wrapper.props().services.length).toBeGreaterThanOrEqual(1);
-    // confirm get services is recieved in props
-    expect(wrapper.props().getServices()).toBe('success');
-  });
-});
-
-describe('Service component', () => {
-  let service = {};
-  services.map((key) => (
-    services.indexOf(key) < 1 ? service = key : null
-  ));
-  it('receives data in props', () => {
-    // receive sample data in props
-    const wrapper = mount(<Service service={service} />);
-    // confirm it has id property
-    expect(wrapper.props().service).toHaveProperty('id');
-    // confirm it has title property
-    expect(wrapper.props().service).toHaveProperty('title');
-    // confirm it has description property
-    expect(wrapper.props().service).toHaveProperty('description');
-    // confirm it has image property
-    expect(wrapper.props().service).toHaveProperty('image');
+    // confirm Service has required props
+    expect(wrapper.find('ServiceList').find('Service').props().service).toHaveProperty('id');
+    expect(wrapper.find('ServiceList').find('Service').props().service).toHaveProperty('title');
+    expect(wrapper.find('ServiceList').find('Service').props().service).toHaveProperty('description');
+    expect(wrapper.find('ServiceList').find('Service').props().service).toHaveProperty('image');
   });
 });

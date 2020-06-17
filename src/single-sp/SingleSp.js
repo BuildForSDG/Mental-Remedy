@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FaMapMarkerAlt, FaStar } from 'react-icons/fa';
+import Form from './Form';
 
 export default class SingleSp extends Component {
   constructor(props) {
@@ -49,30 +50,7 @@ export default class SingleSp extends Component {
               </div>
             </div>
           </div>
-          <div className="right">
-            <h2>BOOK APPOINTMENT</h2>
-            <div className="container-form">
-              <form>
-                <div className="form-field">
-                  <p>Name :</p>
-                  <input type="name" placeholder="Name..." />
-                </div>
-                <div className="form-field">
-                  <p>Email :</p>
-                  <input type="email" placeholder="Email..." />
-                </div>
-                <div className="form-field">
-                  <p>Date :</p>
-                  <input type="date" placeholder="Appointment Date..." />
-                </div>
-                <div className="form-field">
-                  <p>Time :</p>
-                  <input type="time" placeholder="Time..." />
-                </div>
-                <button className="btn">BOOK APPOINTMENT</button>
-              </form>
-            </div>
-          </div>
+          <Form name={this.props.specialist.name} />
         </div>
         <div className="more-details">
           <h1>Languages spoken</h1>

@@ -1,54 +1,15 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { services, mentalDisorders, specialists } from './data';
 import startSlider from '../swiper';
+import reducer from './Reducers';
+import { firebaseAuth, profiles, forumPosts, comments } from '../firebase/firebase';
+import defaultImg from './images/male.svg';
 
 export const Context = React.createContext();
 
 // This global variable is used to identify whether component is mounted or unmouted
 let isMounted = true;
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    // Functions for changing the state value are to be created here
-    case 'TOGGLEMENU':
-      return {
-        ...state,
-        menuOpen: action.payload
-      };
-    case 'TOGGLEDROPDOWN':
-      return {
-        ...state,
-        dropDownOpen: action.payload
-      };
-    case 'FILTERSPECIALISTS':
-      return {
-        ...state,
-        specialists: action.payload
-      };
-    case 'FILTERMDLIST':
-      return {
-        ...state,
-        mentalDisorders: action.payload
-      };
-    case 'TITLESEARCH':
-      return {
-        ...state,
-        titleSearch: action.payload
-      };
-    case 'NAMESEARCH':
-      return {
-        ...state,
-        nameSearch: action.payload
-      };
-    case 'CITYSEARCH':
-      return {
-        ...state,
-        citySearch: action.payload
-      };
-    default:
-      return state;
-  }
-};
 
 class Provider extends Component {
   constructor(props) {
@@ -57,7 +18,14 @@ class Provider extends Component {
       // All states are to be created here
       menuOpen: false,
       dropDownOpen: false,
-      user: { id: 1, email: '' },
+      profiles: [],
+      userProfile: {},
+      user: {},
+      errorMessage: '',
+      passwordError: '',
+      signUp: this.signUp,
+      logOut: this.logOut,
+      logIn: this.logIn,
       mentalDisorders: [],
       nameSearch: '',
       titleSearch: '',
@@ -69,6 +37,13 @@ class Provider extends Component {
       getMdlist: () => this.getMdlist(),
       specialists: [],
       getSpecialists: () => this.getSpecialists(),
+      forumPosts: [],
+      getForumPosts: this.getForumPosts,
+      getProfiles: this.getProfiles,
+      forumPostForm: false,
+      comments: [],
+      commentForm: false,
+      getComments: this.getComments,
       startSlider: () => startSlider(),
       dispatch: (action) => this.setState((state) => reducer(state, action))
     };
@@ -109,13 +84,128 @@ class Provider extends Component {
     }
   }
 
+  getForumPosts = async () => {
+    try {
+      this.setState({ forumPosts: [] });
+      //fetch data from backend
+      const forumPostsCollection = await forumPosts.get();
+      forumPostsCollection.forEach((post) => {
+        const data = post.data().post;
+        const postObj = {
+          id: post.id,
+          ...data
+        };
+        this.setState({ forumPosts: [...this.state.forumPosts, postObj] });
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  getComments = async () => {
+    try {
+      this.setState({ comments: [] });
+      //fetch comments from firestore
+      const commentsCollection = await comments.get();
+      commentsCollection.forEach((comment) => {
+        const data = comment.data().comment;
+        const commentObj = {
+          id: comment.id,
+          ...data
+        };
+        this.setState({ comments: [...this.state.comments, commentObj] });
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  getProfiles = async () => {
+    try {
+      this.setState({ profiles: [] });
+      //fetch data from backend
+      const profilesCollection = await profiles.get();
+      profilesCollection.forEach((profile) => {
+        const data = profile.data().profile;
+        const profObj = {
+          id: profile.id,
+          ...data
+        };
+        this.setState({ profiles: [...this.state.profiles, profObj] });
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   componentDidMount() {
     isMounted = true;
+    firebaseAuth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          user: {
+            id: user.uid,
+            email: user.email
+          }
+        });
+      }
+    });
   }
 
   componentWillUnmount() {
     isMounted = false;
   }
+
+  signUp = async (username, email, password) => {
+    try {
+      await firebaseAuth.createUserWithEmailAndPassword(email, password);
+      const profile = { username: username, user_type: 'user', userId: this.state.user.id, profile_pic: defaultImg };
+      const profilesCollection = await profiles;
+      await profilesCollection.add({ profile });
+      this.setState({ errorMessage: 'Success' });
+      setTimeout(() => {
+        this.props.history.push('/');
+        this.setState({ errorMessage: '' });
+      }, 2000);
+    } catch (error) {
+      this.setState({
+        errorMessage: error.message
+      });
+      setTimeout(() => this.setState({ errorMessage: '' }), 3000);
+    }
+  }
+
+  logOut = async () => {
+    try {
+      await firebaseAuth.signOut();
+      this.setState({ user: {} });
+      this.props.history.push('/login');
+    } catch (error) {
+      this.setState({
+        errorMessage: error.message
+      });
+      setTimeout(() => this.setState({ errorMessage: '' }), 3000);
+    }
+  };
+
+  logIn = async (email, password, event) => {
+    try {
+      event.preventDefault();
+      await firebaseAuth.signInWithEmailAndPassword(email, password);
+      setTimeout(() => {
+        this.props.history.push('/');
+        this.setState({ errorMessage: '' });
+      }, 1000);
+      this.setState({
+        errorMessage: 'Success'
+      });
+    } catch (error) {
+      this.setState({
+        errorMessage: error.message
+      });
+      setTimeout(() => this.setState({ errorMessage: '' }), 3000);
+    }
+  };
 
   render() {
     return <Context.Provider value={this.state}>{this.props.children}</Context.Provider>;
@@ -126,4 +216,4 @@ class Provider extends Component {
 export const { Consumer } = Context;
 
 // Provider accepts a value prop to be passed to consuming components that are its descendants
-export default Provider;
+export default withRouter(Provider);

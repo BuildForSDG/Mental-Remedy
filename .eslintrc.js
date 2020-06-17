@@ -35,11 +35,14 @@ module.exports = {
     'react/prop-types': 0,
     'spaced-comment': 0,
     'max-lines': 0,
+    'import/no-named-as-default': 0,
     'no-shadow': 0,
     'array-element-newline': 0,
     'multiline-ternary': 0,
     'no-magic-numbers': 0,
     'arrow-body-style': 0,
+    'no-alert': 0,
+    'eslint(quotes)': 0,
     'max-lines-per-function': 0,
     'object-curly-newline': 0,
     'no-confusing-arrow': 0,
@@ -53,6 +56,7 @@ module.exports = {
     'no-console': 0,
     'no-return-assign': 0,
     'linebreak-style': 0,
+    'no-nested-ternary': 0,
     'sort-imports': [
       'error',
       {

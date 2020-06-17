@@ -22,7 +22,7 @@ class NavItem extends Component {
         {(value) => {
           return (
             <li className="nav-item">
-              <a href="/" className="nav-link medium-text"
+              <a href="/" className="nav-link small-text"
               onClick={(event) => this.handleClick(event, value.dispatch)}>
               {this.props.icon}
               <span data-link-des className={value.menuOpen ? 'link-des' : 'd-none'}>
