@@ -9,6 +9,10 @@ A Product for findind innovative ways that can link mental health specialists to
 Welcome to Mental-Remedy, team-158's project based on the sustainable development goals solution to promoting good health and well-being by linking mental health specialists to our community.
 
 ![Screenshot](readme.png)
+<<<<<<< HEAD
+=======
+
+> > > > > > > e398c8bdd3ba1f05a65d5db88131725f3c892401
 
 ## Why
 
