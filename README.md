@@ -6,22 +6,20 @@ A Product for findind innovative ways that can link mental health specialists to
 
 ## About
 
-What is this project about. Ok to enrich here or the section above it with an image.
+Welcome to Mental-Remedy, team-158's project based on the sustainable development goals solution to promoting good health and well-being by linking mental health specialists to our community.
 
-Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
+![Screenshot](readme.png)
 
-This is a simple JavaScript starter repo template for setting up your project. The setup contains
-
--   Jest: For runnung tests. We strongly recommend that JavaScript projects use Jest
--   Eslint & Prettier: For formatting code to match ESlint AirBnB coding standard. You might need to install the ESlint and Prettier plugins for your code editor to make the most of these utilities
 
 ## Why
 
-Talk about what problem this solves, what SDG(s) and SGD targets it addresses and why these are imoirtant
+Mental health problems appear to be increasing in importance in Africa. Between 2000 and 2015 the continent's population grew by 49%. As Africa's population is expected to double over the next three decades, the pressures on young people in particular, who across the region are already struggling to earn a livelihood in highly competitive labour markets, are likely to ratchet up. Many will experience psychological problems as they fail to realise their ambitions, and some will turn to substance misuse as a means of alleviating their frustration.
+
+Increased attention to mental health by governments, researchers, and journals is therefore essential.This project tackles the third sustainable development goal of good health and well-being by linking mental health specialists to our communities. Mental illness is stigmatized in our communities which has reduced health-seeking behaviour among those affected. People fail to realize that mental illness is an health condition of the mind which changes thinking, emotions and behaviour. With proper treatment, mentally ill individuals can return back to their communities and contribute meaningfully to the society. Our project aims to facilitate the process of getting health care at the community level.
 
 ## Usage
 
-How would someone use what you have built, include URLs to the deployed app, service e.t.c when you have it setup
+Users are to log on to the url provided: 
 
 ## Setup
 
@@ -45,8 +43,14 @@ This starter uses [Parcel](https://parceljs.org/getting_started.html) as the bun
 -   Run your app in local dev mode: `yarn start`. This puts the bundled app in a `dist` folder, set up a local web server at localhost:1234, and continues to watch for your code changes which it syncs with the local server. This means if you loaded the app in a browser, it will auto-refresh as you code along. Feel free to use whatever bundler best meets your needs. Parcel was only added as a sample and for those looking for a simple but effective solution to the hassle of bundlers.
 
 ## Authors
+Hammed Noibi - (https://github.com/hnobi) - Mentor
 
-List the team behind this project. Their names linked to their Github, LinkedIn, or Twitter accounts should siffice. Ok to signify the role they play in the project, including the TTL and mentor
+Abdulwadud Haji - (https://github.com/art-abdulwadud) - Team Technical Lead, Frontend Lead, UI/UX Designer
+
+Abdullahi Hassan - (https://github.com/art-abdullahi) -  Frontend Engineer, UI/UX Designer
+
+Brandon Shumba - (https://github.com/BranTkS) - Frontend Engineer, UI/UX Designer
+
 
 ## Contributing
 
@@ -59,11 +63,8 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 
 ## Acknowledgements
 
-Did you use someone else’s code?
-Do you want to thank someone explicitly?
-Did someone’s blog post spark off a wonderful idea or give you a solution to nagging problem?
-
-It's powerful to always give credit.
+We would like to acknowledge the Lancet Global Health for providing us with the statistics on the mental health in africa.
+And also our dear friends at andela for giving us this oppurtunity to become part of the solution to a major issue facing our community.
 
 ## LICENSE
 
