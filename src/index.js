@@ -1,11 +1,9 @@
-import app from './app';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const startApp = async () => {
-  const header = document.querySelector('[data-app-name]');
-  if (!header) return;
+import App from './app';
+import './index.css';
+import './fonts.css';
+import 'swiper/css/swiper.css';
 
-  const programName = await app();
-  header.textContent = programName;
-};
-
-document.addEventListener('DOMContentLoaded', startApp);
+ReactDOM.render(<App />, document.getElementById('root'));
