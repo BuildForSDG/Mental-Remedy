@@ -1,6 +1,6 @@
 # Mental Remedy
 
-A Product for findind innovative ways that can link mental health specialists to your community. Check it out [here](https://mental-remedy.netlify.app/)
+A Product for finding innovative ways that can link mental health specialists to your community. Check it out [here](https://mental-remedy.netlify.app/)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1c5fc8ef3dac434aa4ea5f6c9a0e83c6)](https://app.codacy.com/gh/BuildForSDG/Mental-Remedy?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Mental-Remedy&utm_campaign=Badge_Grade_Settings)
 
